@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>  
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!--
+    ВАЖНО:
+    В проекте лежат другие csproj (domain/app/unit_tests). Их obj/bin содержат auto-generated *.cs
+    (AssemblyInfo/AssemblyAttributes). Если они попадают в Compile-элементы этого проекта,
+    C# компилятор получает дубликаты assembly-атрибутов (CS0579).
+    Явно исключаем любые **/obj/** и **/bin/** из компиляции.
+  -->
+  <ItemGroup>
+    <Compile Remove="**\obj\**\*.cs" />
+    <Compile Remove="**\bin\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.9.3" />
+  </ItemGroup>
+
+</Project>

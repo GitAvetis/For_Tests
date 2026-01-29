@@ -1,0 +1,54 @@
+{
+  "Hero": {
+    "PosX": 1,
+    "PosY": 1,
+    "CurrentHp": 150,
+    "BaseMaxHp": 150,
+    "BaseStrength": 5,
+    "BaseAgility": 5,
+    "ActiveEffects": [
+      {
+        "Type": 0,
+        "RemainingTicks": 5
+      }
+    ],
+    "HeroBackpack": [],
+    "IsHeroSleep": false
+  },
+  "Enemies": [
+    {
+      "EnemyType": 0,
+      "PosX": 5,
+      "PosY": 5,
+      "ActualHp": 150,
+      "IsTriggered": true
+    },
+    {
+      "EnemyType": 3,
+      "PosX": 10,
+      "PosY": 3,
+      "ActualHp": 175,
+      "IsTriggered": false,
+      "RestTicksCounter": 0,
+      "IsResting": false,
+      "IsCounterattackReady": false
+    }
+  ],
+  "Items": [
+    {
+      "Type": 2,
+      "PosX": 2,
+      "PosY": 2,
+      "GameLevel": 0,
+      "ElixirType": 1
+    },
+    {
+      "Type": 0,
+      "PosX": 4,
+      "PosY": 4,
+      "GameLevel": 0,
+      "Price": 50
+    }
+  ],
+  "GameLevel": 1
+}
