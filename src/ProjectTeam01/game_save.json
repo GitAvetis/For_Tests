@@ -1,0 +1,1011 @@
+{
+  "Hero": {
+    "PosX": 7,
+    "PosY": 13,
+    "CurrentHp": 71,
+    "BaseMaxHp": 150,
+    "BaseStrength": 5,
+    "BaseAgility": 5,
+    "ActiveEffects": [],
+    "HeroBackpack": [
+      {
+        "Type": 0,
+        "PosX": 12,
+        "PosY": 13,
+        "GameLevel": 0,
+        "Price": 15
+      },
+      {
+        "Type": 1,
+        "PosX": 13,
+        "PosY": 13,
+        "GameLevel": 0,
+        "HealthValue": 18
+      },
+      {
+        "Type": 1,
+        "PosX": 2,
+        "PosY": 13,
+        "GameLevel": 0,
+        "HealthValue": 9
+      },
+      {
+        "Type": 2,
+        "PosX": 21,
+        "PosY": 13,
+        "GameLevel": 0,
+        "ElixirType": 2
+      },
+      {
+        "Type": 2,
+        "PosX": 11,
+        "PosY": 13,
+        "GameLevel": 0,
+        "ElixirType": 1
+      },
+      {
+        "Type": 3,
+        "PosX": 40,
+        "PosY": 13,
+        "GameLevel": 0,
+        "ScrollType": 2
+      }
+    ],
+    "IsHeroSleep": false
+  },
+  "Enemies": [
+    {
+      "EnemyType": 4,
+      "PosX": 11,
+      "PosY": 7,
+      "ActualHp": 100,
+      "IsTriggered": false
+    },
+    {
+      "EnemyType": 4,
+      "PosX": 13,
+      "PosY": 25,
+      "ActualHp": 100,
+      "IsTriggered": false
+    },
+    {
+      "EnemyType": 2,
+      "PosX": 44,
+      "PosY": 24,
+      "ActualHp": 100,
+      "IsTriggered": false,
+      "IsInvisible": true
+    },
+    {
+      "EnemyType": 0,
+      "PosX": 47,
+      "PosY": 26,
+      "ActualHp": 150,
+      "IsTriggered": false
+    }
+  ],
+  "Items": [
+    {
+      "Type": 2,
+      "PosX": 74,
+      "PosY": 14,
+      "GameLevel": 0,
+      "ElixirType": 0
+    },
+    {
+      "Type": 3,
+      "PosX": 72,
+      "PosY": 15,
+      "GameLevel": 0,
+      "ScrollType": 2
+    },
+    {
+      "Type": 3,
+      "PosX": 22,
+      "PosY": 6,
+      "GameLevel": 0,
+      "ScrollType": 1
+    },
+    {
+      "Type": 4,
+      "PosX": 7,
+      "PosY": 5,
+      "GameLevel": 0,
+      "WeaponType": 3
+    },
+    {
+      "Type": 4,
+      "PosX": 79,
+      "PosY": 15,
+      "GameLevel": 0,
+      "WeaponType": 0
+    },
+    {
+      "Type": 1,
+      "PosX": 76,
+      "PosY": 23,
+      "GameLevel": 0,
+      "HealthValue": 11
+    },
+    {
+      "Type": 1,
+      "PosX": 72,
+      "PosY": 16,
+      "GameLevel": 0,
+      "HealthValue": 18
+    },
+    {
+      "Type": 1,
+      "PosX": 3,
+      "PosY": 7,
+      "GameLevel": 0,
+      "HealthValue": 16
+    },
+    {
+      "Type": 2,
+      "PosX": 20,
+      "PosY": 25,
+      "GameLevel": 0,
+      "ElixirType": 2
+    }
+  ],
+  "Level": {
+    "LevelNumber": 1,
+    "Rooms": [
+      {
+        "Sector": 0,
+        "TopLeft": {
+          "X": 1,
+          "Y": 1
+        },
+        "BottomRight": {
+          "X": 27,
+          "Y": 8
+        },
+        "Doors": [
+          {
+            "X": 25,
+            "Y": 8
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 1,
+        "TopLeft": {
+          "X": 42,
+          "Y": 1
+        },
+        "BottomRight": {
+          "X": 56,
+          "Y": 5
+        },
+        "Doors": [
+          {
+            "X": 56,
+            "Y": 3
+          },
+          {
+            "X": 48,
+            "Y": 5
+          }
+        ],
+        "IsStartRoom": true,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 2,
+        "TopLeft": {
+          "X": 61,
+          "Y": 1
+        },
+        "BottomRight": {
+          "X": 88,
+          "Y": 8
+        },
+        "Doors": [
+          {
+            "X": 61,
+            "Y": 6
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 3,
+        "TopLeft": {
+          "X": 1,
+          "Y": 11
+        },
+        "BottomRight": {
+          "X": 28,
+          "Y": 16
+        },
+        "Doors": [
+          {
+            "X": 11,
+            "Y": 11
+          },
+          {
+            "X": 28,
+            "Y": 15
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 4,
+        "TopLeft": {
+          "X": 37,
+          "Y": 12
+        },
+        "BottomRight": {
+          "X": 56,
+          "Y": 17
+        },
+        "Doors": [
+          {
+            "X": 38,
+            "Y": 12
+          },
+          {
+            "X": 48,
+            "Y": 17
+          },
+          {
+            "X": 37,
+            "Y": 13
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 5,
+        "TopLeft": {
+          "X": 64,
+          "Y": 12
+        },
+        "BottomRight": {
+          "X": 80,
+          "Y": 17
+        },
+        "Doors": [
+          {
+            "X": 70,
+            "Y": 17
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 6,
+        "TopLeft": {
+          "X": 4,
+          "Y": 21
+        },
+        "BottomRight": {
+          "X": 21,
+          "Y": 28
+        },
+        "Doors": [
+          {
+            "X": 21,
+            "Y": 22
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 7,
+        "TopLeft": {
+          "X": 36,
+          "Y": 23
+        },
+        "BottomRight": {
+          "X": 53,
+          "Y": 27
+        },
+        "Doors": [
+          {
+            "X": 47,
+            "Y": 23
+          },
+          {
+            "X": 53,
+            "Y": 26
+          },
+          {
+            "X": 36,
+            "Y": 25
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 8,
+        "TopLeft": {
+          "X": 73,
+          "Y": 21
+        },
+        "BottomRight": {
+          "X": 80,
+          "Y": 28
+        },
+        "Doors": [
+          {
+            "X": 76,
+            "Y": 21
+          },
+          {
+            "X": 73,
+            "Y": 22
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": true
+      }
+    ],
+    "Corridors": [
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 25,
+            "Y": 8
+          },
+          {
+            "X": 25,
+            "Y": 9
+          },
+          {
+            "X": 11,
+            "Y": 9
+          },
+          {
+            "X": 11,
+            "Y": 11
+          }
+        ],
+        "Cells": [
+          {
+            "X": 25,
+            "Y": 8
+          },
+          {
+            "X": 25,
+            "Y": 9
+          },
+          {
+            "X": 24,
+            "Y": 9
+          },
+          {
+            "X": 23,
+            "Y": 9
+          },
+          {
+            "X": 22,
+            "Y": 9
+          },
+          {
+            "X": 21,
+            "Y": 9
+          },
+          {
+            "X": 20,
+            "Y": 9
+          },
+          {
+            "X": 19,
+            "Y": 9
+          },
+          {
+            "X": 18,
+            "Y": 9
+          },
+          {
+            "X": 17,
+            "Y": 9
+          },
+          {
+            "X": 16,
+            "Y": 9
+          },
+          {
+            "X": 15,
+            "Y": 9
+          },
+          {
+            "X": 14,
+            "Y": 9
+          },
+          {
+            "X": 13,
+            "Y": 9
+          },
+          {
+            "X": 12,
+            "Y": 9
+          },
+          {
+            "X": 11,
+            "Y": 9
+          },
+          {
+            "X": 11,
+            "Y": 10
+          }
+        ]
+      },
+      {
+        "Type": 0,
+        "Points": [
+          {
+            "X": 56,
+            "Y": 3
+          },
+          {
+            "X": 59,
+            "Y": 3
+          },
+          {
+            "X": 59,
+            "Y": 6
+          },
+          {
+            "X": 61,
+            "Y": 6
+          }
+        ],
+        "Cells": [
+          {
+            "X": 56,
+            "Y": 3
+          },
+          {
+            "X": 57,
+            "Y": 3
+          },
+          {
+            "X": 58,
+            "Y": 3
+          },
+          {
+            "X": 59,
+            "Y": 3
+          },
+          {
+            "X": 59,
+            "Y": 4
+          },
+          {
+            "X": 59,
+            "Y": 5
+          },
+          {
+            "X": 59,
+            "Y": 6
+          },
+          {
+            "X": 60,
+            "Y": 6
+          }
+        ]
+      },
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 48,
+            "Y": 5
+          },
+          {
+            "X": 48,
+            "Y": 11
+          },
+          {
+            "X": 38,
+            "Y": 11
+          },
+          {
+            "X": 38,
+            "Y": 12
+          }
+        ],
+        "Cells": [
+          {
+            "X": 48,
+            "Y": 5
+          },
+          {
+            "X": 48,
+            "Y": 6
+          },
+          {
+            "X": 48,
+            "Y": 7
+          },
+          {
+            "X": 48,
+            "Y": 8
+          },
+          {
+            "X": 48,
+            "Y": 9
+          },
+          {
+            "X": 48,
+            "Y": 10
+          },
+          {
+            "X": 48,
+            "Y": 11
+          },
+          {
+            "X": 47,
+            "Y": 11
+          },
+          {
+            "X": 46,
+            "Y": 11
+          },
+          {
+            "X": 45,
+            "Y": 11
+          },
+          {
+            "X": 44,
+            "Y": 11
+          },
+          {
+            "X": 43,
+            "Y": 11
+          },
+          {
+            "X": 42,
+            "Y": 11
+          },
+          {
+            "X": 41,
+            "Y": 11
+          },
+          {
+            "X": 40,
+            "Y": 11
+          },
+          {
+            "X": 39,
+            "Y": 11
+          },
+          {
+            "X": 38,
+            "Y": 11
+          }
+        ]
+      },
+      {
+        "Type": 0,
+        "Points": [
+          {
+            "X": 28,
+            "Y": 15
+          },
+          {
+            "X": 35,
+            "Y": 15
+          },
+          {
+            "X": 35,
+            "Y": 13
+          },
+          {
+            "X": 37,
+            "Y": 13
+          }
+        ],
+        "Cells": [
+          {
+            "X": 28,
+            "Y": 15
+          },
+          {
+            "X": 29,
+            "Y": 15
+          },
+          {
+            "X": 30,
+            "Y": 15
+          },
+          {
+            "X": 31,
+            "Y": 15
+          },
+          {
+            "X": 32,
+            "Y": 15
+          },
+          {
+            "X": 33,
+            "Y": 15
+          },
+          {
+            "X": 34,
+            "Y": 15
+          },
+          {
+            "X": 35,
+            "Y": 15
+          },
+          {
+            "X": 35,
+            "Y": 14
+          },
+          {
+            "X": 35,
+            "Y": 13
+          },
+          {
+            "X": 36,
+            "Y": 13
+          }
+        ]
+      },
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 48,
+            "Y": 17
+          },
+          {
+            "X": 48,
+            "Y": 20
+          },
+          {
+            "X": 47,
+            "Y": 20
+          },
+          {
+            "X": 47,
+            "Y": 23
+          }
+        ],
+        "Cells": [
+          {
+            "X": 48,
+            "Y": 17
+          },
+          {
+            "X": 48,
+            "Y": 18
+          },
+          {
+            "X": 48,
+            "Y": 19
+          },
+          {
+            "X": 48,
+            "Y": 20
+          },
+          {
+            "X": 47,
+            "Y": 20
+          },
+          {
+            "X": 47,
+            "Y": 21
+          },
+          {
+            "X": 47,
+            "Y": 22
+          }
+        ]
+      },
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 70,
+            "Y": 17
+          },
+          {
+            "X": 70,
+            "Y": 19
+          },
+          {
+            "X": 76,
+            "Y": 19
+          },
+          {
+            "X": 76,
+            "Y": 21
+          }
+        ],
+        "Cells": [
+          {
+            "X": 70,
+            "Y": 17
+          },
+          {
+            "X": 70,
+            "Y": 18
+          },
+          {
+            "X": 70,
+            "Y": 19
+          },
+          {
+            "X": 71,
+            "Y": 19
+          },
+          {
+            "X": 72,
+            "Y": 19
+          },
+          {
+            "X": 73,
+            "Y": 19
+          },
+          {
+            "X": 74,
+            "Y": 19
+          },
+          {
+            "X": 75,
+            "Y": 19
+          },
+          {
+            "X": 76,
+            "Y": 19
+          },
+          {
+            "X": 76,
+            "Y": 20
+          }
+        ]
+      },
+      {
+        "Type": 0,
+        "Points": [
+          {
+            "X": 21,
+            "Y": 22
+          },
+          {
+            "X": 23,
+            "Y": 22
+          },
+          {
+            "X": 23,
+            "Y": 25
+          },
+          {
+            "X": 36,
+            "Y": 25
+          }
+        ],
+        "Cells": [
+          {
+            "X": 21,
+            "Y": 22
+          },
+          {
+            "X": 22,
+            "Y": 22
+          },
+          {
+            "X": 23,
+            "Y": 22
+          },
+          {
+            "X": 23,
+            "Y": 23
+          },
+          {
+            "X": 23,
+            "Y": 24
+          },
+          {
+            "X": 23,
+            "Y": 25
+          },
+          {
+            "X": 24,
+            "Y": 25
+          },
+          {
+            "X": 25,
+            "Y": 25
+          },
+          {
+            "X": 26,
+            "Y": 25
+          },
+          {
+            "X": 27,
+            "Y": 25
+          },
+          {
+            "X": 28,
+            "Y": 25
+          },
+          {
+            "X": 29,
+            "Y": 25
+          },
+          {
+            "X": 30,
+            "Y": 25
+          },
+          {
+            "X": 31,
+            "Y": 25
+          },
+          {
+            "X": 32,
+            "Y": 25
+          },
+          {
+            "X": 33,
+            "Y": 25
+          },
+          {
+            "X": 34,
+            "Y": 25
+          },
+          {
+            "X": 35,
+            "Y": 25
+          }
+        ]
+      },
+      {
+        "Type": 0,
+        "Points": [
+          {
+            "X": 53,
+            "Y": 26
+          },
+          {
+            "X": 57,
+            "Y": 26
+          },
+          {
+            "X": 57,
+            "Y": 22
+          },
+          {
+            "X": 73,
+            "Y": 22
+          }
+        ],
+        "Cells": [
+          {
+            "X": 53,
+            "Y": 26
+          },
+          {
+            "X": 54,
+            "Y": 26
+          },
+          {
+            "X": 55,
+            "Y": 26
+          },
+          {
+            "X": 56,
+            "Y": 26
+          },
+          {
+            "X": 57,
+            "Y": 26
+          },
+          {
+            "X": 57,
+            "Y": 25
+          },
+          {
+            "X": 57,
+            "Y": 24
+          },
+          {
+            "X": 57,
+            "Y": 23
+          },
+          {
+            "X": 57,
+            "Y": 22
+          },
+          {
+            "X": 58,
+            "Y": 22
+          },
+          {
+            "X": 59,
+            "Y": 22
+          },
+          {
+            "X": 60,
+            "Y": 22
+          },
+          {
+            "X": 61,
+            "Y": 22
+          },
+          {
+            "X": 62,
+            "Y": 22
+          },
+          {
+            "X": 63,
+            "Y": 22
+          },
+          {
+            "X": 64,
+            "Y": 22
+          },
+          {
+            "X": 65,
+            "Y": 22
+          },
+          {
+            "X": 66,
+            "Y": 22
+          },
+          {
+            "X": 67,
+            "Y": 22
+          },
+          {
+            "X": 68,
+            "Y": 22
+          },
+          {
+            "X": 69,
+            "Y": 22
+          },
+          {
+            "X": 70,
+            "Y": 22
+          },
+          {
+            "X": 71,
+            "Y": 22
+          },
+          {
+            "X": 72,
+            "Y": 22
+          }
+        ]
+      }
+    ],
+    "StartPosition": {
+      "X": 54,
+      "Y": 2
+    },
+    "ExitPosition": {
+      "X": 75,
+      "Y": 23
+    }
+  },
+  "Statistics": {
+    "TreasuresCollected": 15,
+    "MaxLevelReached": 1,
+    "EnemiesDefeated": 1,
+    "FoodConsumed": 0,
+    "ElixirsConsumed": 0,
+    "ScrollsConsumed": 0,
+    "HitsLanded": 7,
+    "HitsMissed": 4,
+    "HitsTaken": 9,
+    "CellsMoved": 112
+  },
+  "GameLevel": 1
+}

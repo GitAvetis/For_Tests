@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "eDqeFeO6nFA=",
+  "dgSpecHash": "KiFXpHmdslU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pearlibl\\school21\\AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1\\src\\ProjectTeam01\\ProjectTeam01.csproj",
+  "projectFilePath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.analyzers\\1.18.0\\xunit.analyzers.1.18.0.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.assert\\2.9.3\\xunit.assert.2.9.3.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.core\\2.9.3\\xunit.core.2.9.3.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.extensibility.core\\2.9.3\\xunit.extensibility.core.2.9.3.nupkg.sha512",
-    "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512"
+    "/Users/artem/.nuget/packages/dotnet-curses/2.0.0/dotnet-curses.2.0.0.nupkg.sha512",
+    "/Users/artem/.nuget/packages/microsoft.extensions.dependencymodel/8.0.2/microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit/2.9.3/xunit.2.9.3.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.abstractions/2.0.3/xunit.abstractions.2.0.3.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.analyzers/1.18.0/xunit.analyzers.1.18.0.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.assert/2.9.3/xunit.assert.2.9.3.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.core/2.9.3/xunit.core.2.9.3.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.extensibility.core/2.9.3/xunit.extensibility.core.2.9.3.nupkg.sha512",
+    "/Users/artem/.nuget/packages/xunit.extensibility.execution/2.9.3/xunit.extensibility.execution.2.9.3.nupkg.sha512"
   ],
   "logs": []
 }

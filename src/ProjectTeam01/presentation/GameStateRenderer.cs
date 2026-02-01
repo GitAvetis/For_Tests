@@ -1,8 +1,10 @@
-using System;
+using Mindmagma.Curses;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.presentation.ViewModels;
+using ProjectTeam01.presentation.Frontend;
+using ProjectTeam01.datalayer.Mappers;
 
 namespace ProjectTeam01.presentation;
 ///СУЩЕСТВУЕТ СЕЙЧАС ДЛЯ СТАТИЧНОЙ ОТРИСОВКИ УРОВНЯ (УДАЛЯЕМ КОГДА ПОЯВИТСЯ РЕАЛЬНЫЙ ФРОНТ)
@@ -11,26 +13,31 @@ namespace ProjectTeam01.presentation;
 internal static class GameStateRenderer
 {
     /// Отрисовывает состояние игры в консоль
-    public static void Render(GameStateViewModel viewModel)
+    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map)
     {
-        // Создаем карту
-        char[,] map = new char[GenerationConstants.MapHeight, GenerationConstants.MapWidth];
-        
-        // Инициализируем карту пробелами
-        for (int y = 0; y < GenerationConstants.MapHeight; y++)
+        NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
+
+        switch (controller.CurrentInputMode)
         {
-            for (int x = 0; x < GenerationConstants.MapWidth; x++)
-            {
-                map[y, x] = ' ';
-            }
+            case InputMode.Normal:
+                NCurses.Clear();
+                RenderMap(viewModel, maxY, maxX, map);
+                break;
+            case InputMode.ElixirMenu:
+                RenderMenu("Elexirs",viewModel.Items,maxY,maxX);
+                NCurses.Clear();
+                break;
         }
-        
-        // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
+        NCurses.Refresh();
+
+    }
+    private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)
+    {
+         // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
         foreach (var corridor in viewModel.Level.Corridors)
         {
             RenderCorridor(map, corridor);
         }
-        
         // Отрисовываем комнаты
         foreach (var room in viewModel.Level.Rooms)
         {
@@ -59,7 +66,27 @@ internal static class GameStateRenderer
         RenderEntities(map, viewModel);
         
         // Выводим карту в консоль
-        PrintMap(map);
+        // PrintMap(map);
+        PrintMapNCurses(map, maxY, maxX, viewModel);
+    }
+    public static void ActivateColorSystem()
+    {
+        NCurses.StartColor();
+        NCurses.UseDefaultColors();
+        if (NCurses.CanChangeColor())
+        {
+            NCurses.InitColor(UiColors.White,  1000, 1000, 1000);
+            NCurses.InitColor(UiColors.Yellow, 1000, 1000, 0);
+            NCurses.InitColor(UiColors.Red,    1000, 0, 0);
+            NCurses.InitColor(UiColors.Green, 0, 1000, 0);
+            NCurses.InitColor(UiColors.Blue, 0, 0, 1000);
+
+            NCurses.InitPair(UiColors.White,  UiColors.White,  -1);
+            NCurses.InitPair(UiColors.Green,  UiColors.Green,  -1);
+            NCurses.InitPair(UiColors.Yellow, UiColors.Yellow, -1);
+            NCurses.InitPair(UiColors.Red,    UiColors.Red,    -1);
+            NCurses.InitPair(UiColors.Blue,   UiColors.Blue,   -1);
+        }
     }
     
     /// Отрисовывает сущности на карте
@@ -88,6 +115,7 @@ internal static class GameStateRenderer
             // Символ врага по типу
             char enemySymbol = GetEnemySymbol(enemy.EnemyType);
             map[pos.Y, pos.X] = enemySymbol;
+            
         }
         
         // Отрисовываем предметы
@@ -109,6 +137,7 @@ internal static class GameStateRenderer
                 map[pos.Y, pos.X] = itemSymbol;
             }
         }
+        NCurses.Refresh();
     }
     
     /// Получить символ врага по типу
@@ -237,44 +266,173 @@ internal static class GameStateRenderer
             }
         }
     }
-    
-    /// Выводит карту в консоль
-    private static void PrintMap(char[,] map)
+
+    private static void PrintMapNCurses(char[,] map,int maxY, int maxX, GameStateViewModel viewModel)
     {
-        Console.Clear();
-        Console.WriteLine("=== DUNGEON LEVEL ===");
-        Console.WriteLine();
-        
-        for (int y = 0; y < GenerationConstants.MapHeight; y++)
+        // Получаем размеры терминала
+
+        int mapHeight = map.GetLength(0);
+        int mapWidth = map.GetLength(1);
+
+        // Ограничиваем размеры карты размером окна (без выхода за границы)
+        int winHeight = Math.Min(mapHeight, maxY - 1);
+        int winWidth = Math.Min(mapWidth, maxX - 1);
+
+        // Создаем подокно строго для карты
+        nint win = NCurses.NewWindow(winHeight, winWidth, 0, 0);
+
+        // Отрисовка карты
+        for (int y = 0; y < winHeight; y++)
         {
-            for (int x = 0; x < GenerationConstants.MapWidth; x++)
+            for (int x = 0; x < winWidth; x++)
             {
-                Console.Write(map[y, x]);
+                char c = map[y, x];
+
+                // Заменяем null-символы на пробел
+                if (c == '\0') c = ' ';
+                uint color = GetColorForChar(c);
+                // Безопасно пишем символ
+                NCurses.WindowMove(win, y, x);
+                if (color != 0)
+                NCurses.WindowAttributeOn(win, color);
+                try
+                {
+                    NCurses.WindowAddChar(win, c);
+                }
+                catch (Mindmagma.Curses.DotnetCursesException)
+                {
+                    // Игнорируем ошибку, чтобы программа не падала
+                }
+                        if (color != 0)
+                NCurses.WindowAttributeOff(win, color);
             }
-            Console.WriteLine();
         }
-        
-        Console.WriteLine();
-        Console.WriteLine("Legend:");
-        Console.WriteLine("  # = Wall");
-        Console.WriteLine("  . = Floor");
-        Console.WriteLine("  + = Door");
-        Console.WriteLine("  S = Start");
-        Console.WriteLine("  E = Exit");
-        Console.WriteLine();
-        Console.WriteLine("Entities:");
-        Console.WriteLine("  @ = Player");
-        Console.WriteLine("  z = Zombie");
-        Console.WriteLine("  v = Vampire");
-        Console.WriteLine("  g = Ghost");
-        Console.WriteLine("  O = Ogre");
-        Console.WriteLine("  s = Snake");
-        Console.WriteLine("  m = Mimic");
-        Console.WriteLine("  $ = Treasure");
-        Console.WriteLine("  F = Food");
-        Console.WriteLine("  e = Elixir");
-        Console.WriteLine("  ? = Scroll");
-        Console.WriteLine("  W = Weapon");
+
+        // Обновляем окно
+        NCurses.WindowRefresh(win);
+
+            if(winHeight+1>maxY || winWidth + 1 > maxX)
+            {
+                NCurses.Move(winHeight, 0);
+                NCurses.AddString("Terminal is to small for stats");
+                return;
+            }
+            else
+                PrintStats(winHeight,winWidth,viewModel);
+            
+            int legendStartY = winHeight+2; 
+            PrintLegend(legendStartY,maxX,maxY);
     }
+    private static void PrintLegend(int legendStartY, int maxX, int maxY)
+    {
+        string[] legendLines =
+        {
+            "Legend:",
+            "  # = Wall",
+            "  . = Floor",
+            "  + = Door",
+            "  S = Start",
+            "  E = Exit",
+            "",
+            "Entities:",
+            "  @ = Player",
+            "  z = Zombie",
+            "  v = Vampire",
+            "  g = Ghost",
+            "  O = Ogre",
+            "  s = Snake",
+            "  m = Mimic",
+            "  $ = Treasure",
+            "  F = Food",
+            "  e = Elixir",
+            "  ? = Scroll",
+            "  W = Weapon"
+        };
+
+        for (int i = 0; i < legendLines.Length; i++)
+        {
+            int y = legendStartY + i;
+            if (y >= maxY) break; // не выходим за экран
+            string line = legendLines[i];
+            if (line.Length > maxX) line = line.Substring(0, maxX - 1); // обрезаем, если длиннее
+            NCurses.Move(y, 0);
+            NCurses.AddString(line);
+        }
+    }
+
+    private static void PrintStats(int winHeight, int winWidth , GameStateViewModel viewModel)
+    {
+        int  y = winHeight+1;
+        var player = viewModel.Player;
+
+        string[] statsInfo =
+        {
+            $"Agil: {player.Agility}",
+            $"Str: {player.Strength}",
+            $"HP: {player.Health}/{player.MaxHealth}",
+            $"Total gold: {viewModel.TotalGold}"
+        };
+
+        int partsWith = winWidth/statsInfo.Length;
+        for(int i = 0; i < statsInfo.Length; i++)
+        {
+            string stat = statsInfo[i];
+            int x = partsWith * i +(partsWith-stat.Length)/2;
+            if(x<0) x=0;
+            if(x+stat.Length >= winWidth) continue;
+            NCurses.Move(y, x);
+            NCurses.AddString(stat);
+        }
+    }
+    private static uint GetColorForChar(char c)
+    {
+        switch (c)
+        {
+            case '#':
+            case '.':
+            case '@':
+            case 'g':
+            case 's':
+            case '?':
+                return NCurses.ColorPair(UiColors.White);
+            case 'z':
+                return NCurses.ColorPair(UiColors.Green);
+            case 'O':
+            case '$':
+            case 'F':
+                return NCurses.ColorPair(UiColors.Yellow);
+            case 'v':
+            case 'E':
+                return NCurses.ColorPair(UiColors.Red);            
+            case 'S':
+            case 'e':
+            case 'W':
+                return NCurses.ColorPair(UiColors.Blue);
+            default:
+                return 0;
+        }
+
+    }
+
+    private static void RenderMenu(string title,List<ItemViewModel> items, int maxY,int maxX)
+    {
+        int y = maxY/2;
+        int x = maxX/2;
+        int titleX = (maxX - title.Length) / 2;
+        NCurses.Move(y, titleX);
+        NCurses.AddString($"{title}");
+        y++;
+        for (int i = 0; i < items.Count; i++)
+        {
+            y = maxY/2 + i;
+            if (y >= maxY) break; // не выходим за экран     
+            NCurses.Move(y,x);
+            NCurses.AddString($"  {i}. {(items[i].DisplayName)}");
+        }
+        y++;
+        if (y >= maxY)
+        NCurses.AddString("Выберите: ");
+    }
+
 }
 

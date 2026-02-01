@@ -46,8 +46,13 @@ public class Level
         // Проверка комнат
         foreach (var room in Rooms)
         {
-            if (pos.X >= room.TopLeft.X && pos.X <= room.BottomRight.X &&
-                pos.Y >= room.TopLeft.Y && pos.Y <= room.BottomRight.Y)
+            bool isInsideRoom = pos.X > room.TopLeft.X && pos.X < room.BottomRight.X &&
+                               pos.Y > room.TopLeft.Y && pos.Y < room.BottomRight.Y;
+            
+            bool isDoor = room.Doors != null && room.Doors.Any(door => 
+                (door.X != 0 || door.Y != 0) && door.X == pos.X && door.Y == pos.Y);
+            
+            if (isInsideRoom || isDoor)
                 return true;
         }
         
@@ -60,7 +65,6 @@ public class Level
         
         return false;
     }
-    
     /// Проверить, заблокирована ли клетка актором (игрок/враг).
     /// Предметы клетку не блокируют.
     public bool IsOccupied(int x, int y)

@@ -24,5 +24,6 @@ internal class GameState
     public IReadOnlyList<Food> PlayerFood { get; set; } = new List<Food>().AsReadOnly();
     public IReadOnlyList<Elixir> PlayerElixirs { get; set; } = new List<Elixir>().AsReadOnly();
     public IReadOnlyList<Scroll> PlayerScrolls { get; set; } = new List<Scroll>().AsReadOnly();
+    public int TotalGold { get; set; } = 0;
 }
 

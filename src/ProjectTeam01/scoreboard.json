@@ -1,0 +1,76 @@
+{
+  "SessionStats": [
+    {
+      "TreasuresCollected": 22,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 1,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 8,
+      "HitsMissed": 9,
+      "HitsTaken": 39,
+      "CellsMoved": 273
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 3,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 3,
+      "HitsMissed": 1,
+      "HitsTaken": 69,
+      "CellsMoved": 323
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 6,
+      "HitsMissed": 12,
+      "HitsTaken": 13,
+      "CellsMoved": 31
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 8,
+      "HitsMissed": 6,
+      "HitsTaken": 19,
+      "CellsMoved": 197
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 7,
+      "HitsMissed": 4,
+      "HitsTaken": 21,
+      "CellsMoved": 67
+    },
+    {
+      "TreasuresCollected": 16,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 1,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 21,
+      "HitsMissed": 14,
+      "HitsTaken": 29,
+      "CellsMoved": 93
+    }
+  ]
+}

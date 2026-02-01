@@ -16,5 +16,7 @@ public class GameStateViewModel
     public List<InventoryItemViewModel> InventoryFood { get; set; } = new();
     public List<InventoryItemViewModel> InventoryElixirs { get; set; } = new();
     public List<InventoryItemViewModel> InventoryScrolls { get; set; } = new();
+
+    public int TotalGold{get;set;} = 0;
 }
 

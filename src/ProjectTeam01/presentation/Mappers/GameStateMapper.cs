@@ -74,7 +74,8 @@ internal static class GameStateMapper
             InventoryWeapons = gameState.PlayerWeapons.Select(ToInventoryItemViewModel).ToList(),
             InventoryFood = gameState.PlayerFood.Select(ToInventoryItemViewModel).ToList(),
             InventoryElixirs = gameState.PlayerElixirs.Select(ToInventoryItemViewModel).ToList(),
-            InventoryScrolls = gameState.PlayerScrolls.Select(ToInventoryItemViewModel).ToList()
+            InventoryScrolls = gameState.PlayerScrolls.Select(ToInventoryItemViewModel).ToList(),
+            TotalGold = gameState.TotalGold
         };
     }
 
@@ -197,27 +198,33 @@ internal static class GameStateMapper
             case Weapon weapon:
                 viewModel.WeaponType = weapon.WeaponType;           // Тип оружия для отображения
                 viewModel.StrengthBonus = weapon.StrengthBonus;      // Бонус силы для UI
+                viewModel.DisplayName =
+                $"Оружие: {weapon.WeaponType} (+{weapon.StrengthBonus} силы)";
                 break;
 
             // ЕДА: показывает количество восстанавливаемого HP
             case Food food:
-                viewModel.HealthValue = food.HealthValue;            // HP для восстановления (5-20)
-                break;
-
+                viewModel.HealthValue = food.HealthValue;
+                viewModel.DisplayName = $"Еда: {food.HealthValue} хп)";
+                break;            // HP для восстановления (5-20)
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
-                viewModel.ElixirType = elixir.ElixirType;          // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
+                viewModel.ElixirType = elixir.ElixirType;
+                viewModel.DisplayName = $"Эликсир: {elixir.ElixirType})";         // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
                 break;
 
             // СВИТОК: показывает тип усиления
             case Scroll scroll:
-                viewModel.ScrollType = scroll.ScrollType;          // Тип усиления (Strength/Agility/MaxHp)
+                viewModel.ScrollType = scroll.ScrollType;
+                viewModel.DisplayName = $"Свиток: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
                 break;
 
-            // СОКРОВИЩЕ: показывает стоимость
-            case Treasure treasure:
-                viewModel.Price = treasure.Price;                   // Стоимость в золоте
-                break;
+            // // СОКРОВИЩЕ: показывает стоимость
+            // case Treasure treasure:
+            //     viewModel.Price = treasure.Price;
+            //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
+            //                        // Стоимость в золоте
+            //     break;
         }
 
         return viewModel;

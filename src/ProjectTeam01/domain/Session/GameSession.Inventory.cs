@@ -137,6 +137,11 @@ internal partial class GameSession
 
     /// Получить свитки игрока
     public IReadOnlyList<Scroll> GetPlayerScrolls() => Player.HeroBackpack.AllItems.OfType<Scroll>().ToList().AsReadOnly();
+    public int GetTotalGold()
+    {
+        var treasure = Player.HeroBackpack.AllItems.OfType<Treasure>().ToList();
+        return treasure.Count>0? treasure[0].Price:0;
+    } 
 }
 
 

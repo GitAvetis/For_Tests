@@ -2,6 +2,34 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "dotnet-curses/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyModel": "8.0.2"
+        },
+        "compile": {
+          "lib/net8.0/dotnet-curses.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/dotnet-curses.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/8.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "xunit/2.9.3": {
         "type": "package",
         "dependencies": {
@@ -89,6 +117,48 @@
     }
   },
   "libraries": {
+    "dotnet-curses/2.0.0": {
+      "sha512": "+6vrenMKzJhcgBTy0WI3TS4uHzAwh6EIwdRRtRS/TNYNAQ7uQqKGHh38fijVIT3+raSXZODSnwLHK5kiWAzHiw==",
+      "type": "package",
+      "path": "dotnet-curses/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnet-curses.2.0.0.nupkg.sha512",
+        "dotnet-curses.nuspec",
+        "lib/net8.0/dotnet-curses.dll"
+      ]
+    },
+    "Microsoft.Extensions.DependencyModel/8.0.2": {
+      "sha512": "mUBDZZRgZrSyFOsJ2qJJ9fXfqd/kXJwf3AiDoqLD9m6TjY5OO/vLNOb9fb4juC0487eq4hcGN/M2Rh/CKS7QYw==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencymodel/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyModel.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyModel.targets",
+        "lib/net462/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net462/Microsoft.Extensions.DependencyModel.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyModel.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyModel.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyModel.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyModel.xml",
+        "microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
+        "microsoft.extensions.dependencymodel.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "xunit/2.9.3": {
       "sha512": "TlXQBinK35LpOPKHAqbLY4xlEen9TBafjs0V5KnA4wZsoQLQJiirCR4CbIXvOH8NzkW4YeJKP5P/Bnrodm0h9Q==",
       "type": "package",
@@ -211,35 +281,29 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "dotnet-curses >= 2.0.0",
       "xunit >= 2.9.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pearlibl\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/artem/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pearlibl\\school21\\AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1\\src\\ProjectTeam01\\ProjectTeam01.csproj",
+      "projectUniqueName": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
       "projectName": "ProjectTeam01",
-      "projectPath": "C:\\Users\\pearlibl\\school21\\AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1\\src\\ProjectTeam01\\ProjectTeam01.csproj",
-      "packagesPath": "C:\\Users\\pearlibl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pearlibl\\school21\\AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1\\src\\ProjectTeam01\\obj\\",
+      "projectPath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
+      "packagesPath": "/Users/artem/.nuget/packages/",
+      "outputPath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pearlibl\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/artem/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -257,13 +321,16 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "dotnet-curses": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.9.3, )"
@@ -285,7 +352,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

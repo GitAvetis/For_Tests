@@ -25,7 +25,7 @@ public static class RenderExample
         var gameState = gameSession.GetGameState();
         var viewModel = GameStateMapper.ToViewModel(gameState);
         
-        GameStateRenderer.Render(viewModel);
+        // GameStateRenderer.Render(viewModel);
         
         Console.WriteLine();
         Console.WriteLine($"Level Number: {viewModel.CurrentLevelNumber}");
