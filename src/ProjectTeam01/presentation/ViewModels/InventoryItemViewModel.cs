@@ -8,6 +8,8 @@ namespace ProjectTeam01.presentation.ViewModels;
 public class InventoryItemViewModel
 {
     public ItemType Type { get; set; }
+
+    public string DisplayName { get; set; } = string.Empty;
     
     // Специфичные свойства для разных типов предметов
     public WeaponTypeEnum? WeaponType { get; set; }

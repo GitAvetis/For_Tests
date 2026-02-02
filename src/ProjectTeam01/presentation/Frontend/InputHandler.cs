@@ -2,6 +2,7 @@ namespace ProjectTeam01.presentation.Frontend
 {
     public enum InputMode
     {
+        MainMenu,
         Normal,
         WeaponMenu,
         FoodMenu,
@@ -31,7 +32,7 @@ namespace ProjectTeam01.presentation.Frontend
                 return new (InputCommandType.ScrollMenu);
 
             if (key == 'q' || key == 'Q' || key == '\x1b')
-                return new (InputCommandType.Quit);
+                return new (InputCommandType.Quit);            
 
             return null;
         }

@@ -26,9 +26,18 @@ namespace ProjectTeam01
             var gameSession = GameInitializer.CreateNewGame(levelNumber: 1);
             var controller = new GameController(gameSession);
             bool running = true;
+            NCursesMethods.ActivateColorSystem(stdscr);
+            MainMenu.RenderMainMenu(stdscr);
+            while (true)
+            {
+                int key = NCurses.GetChar();
+                if ((int)key == '\n'  || key == 'q') // Enter
+                {
+                    break;
+                }
+            }
             // Создаем карту
             char[,] map = new char[GenerationConstants.MapHeight, GenerationConstants.MapWidth];
-            GameStateRenderer.ActivateColorSystem();
             while (running)
             {
             // Инициализируем карту пробелами

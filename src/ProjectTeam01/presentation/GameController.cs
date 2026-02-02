@@ -4,7 +4,6 @@ using ProjectTeam01.domain.Session;
 using ProjectTeam01.presentation.Mappers;
 using ProjectTeam01.presentation.ViewModels;
 using ProjectTeam01.presentation.Frontend;
-using Mindmagma.Curses;
 
 namespace ProjectTeam01.presentation;
 
@@ -71,6 +70,7 @@ internal class GameController
     public bool HandleInput(char key)
     {
         PlayerAction? action = null;
+
         if (_inputMode == InputMode.Normal)
         {
             var command = InputHandler.Read(key);
@@ -166,7 +166,7 @@ internal class GameController
                 if (index < weapons.Count)
                 {
                     _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(weapons[index]);
+                 return PlayerAction.CreateEquipWeapon(weapons[index]);
                 }
             }
 

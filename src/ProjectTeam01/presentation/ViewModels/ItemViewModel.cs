@@ -8,10 +8,7 @@ namespace ProjectTeam01.presentation.ViewModels;
 public class ItemViewModel
 {
     public Position Position { get; set; }
-    public ItemType Type { get; set; }
-    
-    public string DisplayName { get; set; } = string.Empty;
-
+    public ItemType Type { get; set; }   
     // Специфичные свойства для разных типов предметов
     public WeaponTypeEnum? WeaponType { get; set; }
     public int? StrengthBonus { get; set; }

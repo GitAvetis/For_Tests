@@ -21,6 +21,7 @@ internal partial class GameSession
             PlayerWeapons = GetPlayerWeapons(),
             PlayerFood = GetPlayerFood(),
             PlayerElixirs = GetPlayerElixirs(),
+            PlayerScrolls = GetPlayerScrolls(),
             TotalGold = GetTotalGold()
         };
     }

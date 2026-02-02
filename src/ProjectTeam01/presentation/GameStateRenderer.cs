@@ -24,16 +24,16 @@ internal static class GameStateRenderer
                 RenderMap(viewModel, maxY, maxX, map);
                 break;
             case InputMode.ElixirMenu:
-               RenderMenu("Elexirs", viewModel.Items.Where(i => i.Type == ItemType.Elixir).ToList(), maxY, maxX);
+               RenderMenu("Elexirs", viewModel.InventoryElixirs, maxY, maxX);
                 break;
             case InputMode.ScrollMenu:
-               RenderMenu("Scrolls", viewModel.Items.Where(i => i.Type == ItemType.Scroll).ToList(), maxY, maxX);
+               RenderMenu("Scrolls", viewModel.InventoryScrolls, maxY, maxX);
                 break;
             case InputMode.WeaponMenu:
-               RenderMenu("Weapons", viewModel.Items.Where(i => i.Type == ItemType.Weapon).ToList(), maxY, maxX);
+               RenderMenu("Weapons", viewModel.InventoryWeapons, maxY, maxX);
                 break;
             case InputMode.FoodMenu:
-               RenderMenu("Food", viewModel.Items.Where(i => i.Type == ItemType.Food).ToList(), maxY, maxX);
+               RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
                 break;
         }
         NCurses.Refresh();
@@ -76,25 +76,7 @@ internal static class GameStateRenderer
         // PrintMap(map);
         PrintMapNCurses(map, maxY, maxX, viewModel);
     }
-    public static void ActivateColorSystem()
-    {
-        NCurses.StartColor();
-        NCurses.UseDefaultColors();
-        if (NCurses.CanChangeColor())
-        {
-            NCurses.InitColor(UiColors.White,  1000, 1000, 1000);
-            NCurses.InitColor(UiColors.Yellow, 1000, 1000, 0);
-            NCurses.InitColor(UiColors.Red,    1000, 0, 0);
-            NCurses.InitColor(UiColors.Green, 0, 1000, 0);
-            NCurses.InitColor(UiColors.Blue, 0, 0, 1000);
 
-            NCurses.InitPair(UiColors.White,  UiColors.White,  -1);
-            NCurses.InitPair(UiColors.Green,  UiColors.Green,  -1);
-            NCurses.InitPair(UiColors.Yellow, UiColors.Yellow, -1);
-            NCurses.InitPair(UiColors.Red,    UiColors.Red,    -1);
-            NCurses.InitPair(UiColors.Blue,   UiColors.Blue,   -1);
-        }
-    }
     
     /// Отрисовывает сущности на карте
     private static void RenderEntities(char[,] map, GameStateViewModel viewModel)
@@ -327,8 +309,8 @@ internal static class GameStateRenderer
             else
                 PrintStats(winHeight,winWidth,viewModel);
             
-            int legendStartY = winHeight+2; 
-            PrintLegend(legendStartY,maxX,maxY);
+            // int legendStartY = winHeight+2; 
+            //PrintLegend(legendStartY,maxX,maxY);
     }
     private static void PrintLegend(int legendStartY, int maxX, int maxY)
     {
@@ -371,13 +353,14 @@ internal static class GameStateRenderer
     {
         int  y = winHeight+1;
         var player = viewModel.Player;
-
+        // NCurses.AttributeOn(NCurses.ColorPair(1));
         string[] statsInfo =
         {
+            $"Lvl: {viewModel.CurrentLevelNumber}",
             $"Agil: {player.Agility}",
             $"Str: {player.Strength}",
             $"HP: {player.Health}/{player.MaxHealth}",
-            $"Total gold: {viewModel.TotalGold}"
+            $"Total gold: {viewModel.TotalGold}"  
         };
 
         int partsWith = winWidth/statsInfo.Length;
@@ -390,6 +373,7 @@ internal static class GameStateRenderer
             NCurses.Move(y, x);
             NCurses.AddString(stat);
         }
+        // NCurses.AttributeOff(NCurses.ColorPair(1));
     }
     private static uint GetColorForChar(char c)
     {
@@ -401,17 +385,19 @@ internal static class GameStateRenderer
             case 'g':
             case 's':
             case '?':
+            case ' ':
+            case '+':
                 return NCurses.ColorPair(UiColors.White);
-            case 'z':
+            case 'z':            
+            case 'S':
                 return NCurses.ColorPair(UiColors.Green);
             case 'O':
-            case '$':
             case 'F':
                 return NCurses.ColorPair(UiColors.Yellow);
-            case 'v':
+            case 'v':            
+            case '$':
             case 'E':
                 return NCurses.ColorPair(UiColors.Red);            
-            case 'S':
             case 'e':
             case 'W':
                 return NCurses.ColorPair(UiColors.Blue);
@@ -421,23 +407,24 @@ internal static class GameStateRenderer
 
     }
 
-    private static void RenderMenu(string title, List<ItemViewModel> items, int maxY, int maxX)
+    private static void RenderMenu(string title, List<InventoryItemViewModel> items, int maxY, int maxX)
     {
         int y = maxY / 2;
         int titleX = Math.Max(0, (maxX - title.Length) / 2);
-
-        NCurses.Move(y, titleX);
-        NCurses.AddString(title);
-        if (items.Count < 0)
+        NCursesMethods.Print(title,y,titleX);
+        if (items.Count <= 0)
+        {
+            string message = $"There is no items of {title} type in your invetory ";
+            int messageX = Math.Max(0, (maxX - message.Length) / 2);
+            NCursesMethods.Print(message,y+1,messageX);
             return;
+        }
 
         for (int i = 0; i < items.Count; i++)
         {
             int itemY = y + 1 + i;
             if (itemY >= maxY) break;
-
-            NCurses.Move(itemY, titleX);
-            NCurses.AddString($"{i + 1}. {items[i].DisplayName}");
+            NCursesMethods.Print($"{i + 1}. {items[i].DisplayName}", itemY, titleX);
         }
     }
 
