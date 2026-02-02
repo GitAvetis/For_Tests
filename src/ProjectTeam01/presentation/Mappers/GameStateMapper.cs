@@ -199,24 +199,24 @@ internal static class GameStateMapper
                 viewModel.WeaponType = weapon.WeaponType;           // Тип оружия для отображения
                 viewModel.StrengthBonus = weapon.StrengthBonus;      // Бонус силы для UI
                 viewModel.DisplayName =
-                $"Оружие: {weapon.WeaponType} (+{weapon.StrengthBonus} силы)";
+                $"Weapon: {weapon.WeaponType} (+{weapon.StrengthBonus} Str)";
                 break;
 
             // ЕДА: показывает количество восстанавливаемого HP
             case Food food:
                 viewModel.HealthValue = food.HealthValue;
-                viewModel.DisplayName = $"Еда: {food.HealthValue} хп)";
+                viewModel.DisplayName = $"Food: + {food.HealthValue} HP)";
                 break;            // HP для восстановления (5-20)
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
                 viewModel.ElixirType = elixir.ElixirType;
-                viewModel.DisplayName = $"Эликсир: {elixir.ElixirType})";         // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
+                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";         // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
                 break;
 
             // СВИТОК: показывает тип усиления
             case Scroll scroll:
                 viewModel.ScrollType = scroll.ScrollType;
-                viewModel.DisplayName = $"Свиток: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
+                viewModel.DisplayName = $"Scroll: {scroll.ScrollType}";      // Тип усиления (Strength/Agility/MaxHp)
                 break;
 
             // // СОКРОВИЩЕ: показывает стоимость

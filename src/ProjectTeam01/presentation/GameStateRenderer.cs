@@ -4,7 +4,7 @@ using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.presentation.ViewModels;
 using ProjectTeam01.presentation.Frontend;
-using ProjectTeam01.datalayer.Mappers;
+
 
 namespace ProjectTeam01.presentation;
 ///СУЩЕСТВУЕТ СЕЙЧАС ДЛЯ СТАТИЧНОЙ ОТРИСОВКИ УРОВНЯ (УДАЛЯЕМ КОГДА ПОЯВИТСЯ РЕАЛЬНЫЙ ФРОНТ)
@@ -16,20 +16,27 @@ internal static class GameStateRenderer
     public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map)
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
+        NCurses.Clear();
 
         switch (controller.CurrentInputMode)
         {
             case InputMode.Normal:
-                NCurses.Clear();
                 RenderMap(viewModel, maxY, maxX, map);
                 break;
             case InputMode.ElixirMenu:
-                RenderMenu("Elexirs",viewModel.Items,maxY,maxX);
-                NCurses.Clear();
+               RenderMenu("Elexirs", viewModel.Items.Where(i => i.Type == ItemType.Elixir).ToList(), maxY, maxX);
+                break;
+            case InputMode.ScrollMenu:
+               RenderMenu("Scrolls", viewModel.Items.Where(i => i.Type == ItemType.Scroll).ToList(), maxY, maxX);
+                break;
+            case InputMode.WeaponMenu:
+               RenderMenu("Weapons", viewModel.Items.Where(i => i.Type == ItemType.Weapon).ToList(), maxY, maxX);
+                break;
+            case InputMode.FoodMenu:
+               RenderMenu("Food", viewModel.Items.Where(i => i.Type == ItemType.Food).ToList(), maxY, maxX);
                 break;
         }
         NCurses.Refresh();
-
     }
     private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)
     {
@@ -414,25 +421,26 @@ internal static class GameStateRenderer
 
     }
 
-    private static void RenderMenu(string title,List<ItemViewModel> items, int maxY,int maxX)
+    private static void RenderMenu(string title, List<ItemViewModel> items, int maxY, int maxX)
     {
-        int y = maxY/2;
-        int x = maxX/2;
-        int titleX = (maxX - title.Length) / 2;
+        int y = maxY / 2;
+        int titleX = Math.Max(0, (maxX - title.Length) / 2);
+
         NCurses.Move(y, titleX);
-        NCurses.AddString($"{title}");
-        y++;
+        NCurses.AddString(title);
+        if (items.Count < 0)
+            return;
+
         for (int i = 0; i < items.Count; i++)
         {
-            y = maxY/2 + i;
-            if (y >= maxY) break; // не выходим за экран     
-            NCurses.Move(y,x);
-            NCurses.AddString($"  {i}. {(items[i].DisplayName)}");
+            int itemY = y + 1 + i;
+            if (itemY >= maxY) break;
+
+            NCurses.Move(itemY, titleX);
+            NCurses.AddString($"{i + 1}. {items[i].DisplayName}");
         }
-        y++;
-        if (y >= maxY)
-        NCurses.AddString("Выберите: ");
     }
+
 
 }
 
