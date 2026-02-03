@@ -1,6 +1,5 @@
 ﻿using ProjectTeam01.datalayer.Mappers;
 using ProjectTeam01.datalayer.Models;
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;

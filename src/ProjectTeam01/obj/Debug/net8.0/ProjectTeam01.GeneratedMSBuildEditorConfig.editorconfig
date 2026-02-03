@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ProjectTeam01
-build_property.ProjectDir = /Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/
+build_property.ProjectDir = /Users/artem/GitHub/Test/src/ProjectTeam01/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

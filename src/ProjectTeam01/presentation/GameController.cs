@@ -28,6 +28,9 @@ internal class GameController
     }
     public PlayerAction? Translate(InputCommand command)
     {
+        if (_inputMode == InputMode.MainMenu)
+            return null;
+            
         var pos = _session.Player.Position;
 
         switch (command.Type)
@@ -66,22 +69,51 @@ internal class GameController
                 return null;
         }
     }
-
+ 
+// // Обработка выбора в главном меню
+//     private PlayerAction? HandleMainMenuInput(char key)
+//     {
+//         switch (key)
+//         {
+//             case '1': // Начать новую игровую сессию
+//                 _inputMode = InputMode.Normal; // Переходим в игровой режим
+//                 return null; // Или можно вернуть специальное действие для новой игры
+            
+//             case '2': // Продолжить последний сеанс
+//                 // Здесь загрузка сохранения
+//                 _inputMode = InputMode.Normal;
+//                 return null;
+                
+//             case '3': // Таблица лидеров
+//                 // Здесь показ таблицы лидеров
+//                 // После показа можно вернуться в меню
+//                 return null;
+                
+//             case '4': // Выход из игры
+//                 return PlayerAction.CreateQuit();
+                
+//             default:
+//                 return null;
+//         }
+//     }
     public bool HandleInput(char key)
     {
         PlayerAction? action = null;
-
-        if (_inputMode == InputMode.Normal)
+        switch (_inputMode)
         {
+            // case InputMode.MainMenu:
+            //     action =  HandleMainMenuInput(key);
+            //     break;
+            case InputMode.Normal:
             var command = InputHandler.Read(key);
             if (command != null)
                 action = Translate(command);
+                break;
+            default:
+                action = HandleMenuInput(key);
+                break;
         }
-        else
-        {
-            action = HandleMenuInput(key);
-        }
-
+        
         if (action != null)
             ApplyAction(action);
 
@@ -223,7 +255,7 @@ internal class GameController
             }
         return null;
     }
-
+    
     /// Сохранить полную игру (герой, враги, предметы, уровень, статистика)
     private void SaveFullGame()
     {

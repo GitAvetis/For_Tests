@@ -13,13 +13,16 @@ namespace ProjectTeam01.presentation;
 internal static class GameStateRenderer
 {
     /// Отрисовывает состояние игры в консоль
-    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map)
+    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map, MainMenu mainMenu)
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
         NCurses.Clear();
 
         switch (controller.CurrentInputMode)
         {
+            // case InputMode.MainMenu:
+            //     mainMenu.RenderMenu();
+                // break;
             case InputMode.Normal:
                 RenderMap(viewModel, maxY, maxX, map);
                 break;
