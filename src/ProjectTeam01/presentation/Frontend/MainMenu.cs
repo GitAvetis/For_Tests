@@ -1,5 +1,4 @@
 using Mindmagma.Curses;
-using ProjectTeam01.domain;
 using ProjectTeam01.presentation.Controllers;
 
 namespace ProjectTeam01.presentation.Frontend
@@ -7,64 +6,57 @@ namespace ProjectTeam01.presentation.Frontend
     public class MainMenu
     {
         private List<string> _menu{get;set;} = new();
-        private readonly int _selectedIndex = 0;
         private readonly nint _stdscr;
+        private MenuAction _menuAction;
+        IGameSession? game = null;
         public MainMenu (nint stdscr, List<string> menu)
         {
             _menu = menu;
             _stdscr = stdscr;
         }
           
-        // Основной метод для показа меню и получения выбора
-        public MenuResult ShowMenuAndGetChoice(nint stdscr)
+        public void ShowMenuAndGetChoice()
         {
             bool choiceMade = false;
-            MenuResult result = new MenuResult { Choice = -1, Action = MenuAction.None };
+            _menuAction = MenuAction.None;
             
             while (!choiceMade)
             {
                 RenderMenu();
                 int key = NCurses.GetChar();
-                
-                // Обработка выбора
-                if (key == '\n') // Enter
-                {
-                    result = ProcessChoice(_selectedIndex);
-                    choiceMade = true;
-                }
-                else if (key >= '1' && key <= '4') // Выбор цифрой
+
+                if (key >= '1' && key <= '4') // Выбор цифрой
                 {
                     int index = key - '1';
                     if (index < _menu.Count)
                     {
-                        result = ProcessChoice(index);
+                        _menuAction = ProcessChoice(index);
                         choiceMade = true;
                     }
                 }
                 else if (key == 'q' || key == '\x1b') // Выход
                 {
-                    result = new MenuResult { Choice = 3, Action = MenuAction.Exit };
+                    _menuAction = MenuAction.Exit;
                     choiceMade = true;
                 }
             }
             
-            return result;
         }
         
-        private MenuResult ProcessChoice(int choiceIndex)
+        private MenuAction ProcessChoice(int choiceIndex)
         {
             switch (choiceIndex)
             {
                 case 0:
-                    return new MenuResult { Choice = 0, Action = MenuAction.NewGame };
+                    return MenuAction.NewGame;
                 case 1:
-                    return new MenuResult { Choice = 1, Action = MenuAction.LoadGame };
+                    return MenuAction.LoadGame;
                 case 2: 
-                    return new MenuResult { Choice = 2, Action = MenuAction.Scoreboard };
+                    return MenuAction.Scoreboard;
                 case 3:
-                    return new MenuResult { Choice = 3, Action = MenuAction.Exit };
+                    return MenuAction.Exit;
                 default:
-                    return new MenuResult { Choice = -1, Action = MenuAction.None };
+                    return MenuAction.None;
             }
         }
         
@@ -86,8 +78,6 @@ namespace ProjectTeam01.presentation.Frontend
                     NCurses.Move(y, x);
                     NCurses.AddString(menuItem);
                 }
-                
-
             }
             string instructions = "Press 1-4 to select, ESC to exit";
             
@@ -102,28 +92,47 @@ namespace ProjectTeam01.presentation.Frontend
             
             NCurses.Refresh();
         }
-        
-        public IGameSession? CreateGameSession (MenuResult result, string savePath = "game_save.json")
+
+
+        private IGameSession? Mode()
         {
-            switch (result.Action)
+            switch (_menuAction)
             {
-                case MenuAction.NewGame: 
+                case MenuAction.NewGame:
                     return new StartNewGame();
-                    
                 case MenuAction.LoadGame:
-                    return new StartFromSave(savePath);
-                    
+                    return new StartFromSave("game_save.json");
+                case MenuAction.Scoreboard:
+                    return null;
                 default:
                     return null;
             }
         }
-    }
-    
-    // Результат выбора в меню
-    public struct MenuResult
-    {
-        public int Choice { get; set; }
-        public MenuAction Action { get; set; }
+        public bool GameCyqle()
+        {
+            ShowMenuAndGetChoice();
+            game = Mode();
+            bool isRunning = true;
+            if(game == null)
+            {
+                if(_menuAction == MenuAction.Scoreboard)
+                {
+                    PrintScoreboard.ShowScoreboard(_stdscr);
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            while (isRunning)
+            {
+                int input = NCurses.GetChar();
+                isRunning = game.IsGameRunning(input);
+                game.RenderGameScreen(_stdscr);
+            }
+            return true;
+        }
+
     }
     
     // Действия меню

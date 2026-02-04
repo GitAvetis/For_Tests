@@ -1,5 +1,4 @@
 using ProjectTeam01.datalayer.Models;
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Session;
 
 namespace ProjectTeam01.datalayer.Mappers;

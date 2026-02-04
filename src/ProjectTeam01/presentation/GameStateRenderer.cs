@@ -13,7 +13,7 @@ namespace ProjectTeam01.presentation;
 internal static class GameStateRenderer
 {
     /// Отрисовывает состояние игры в консоль
-    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map, MainMenu mainMenu)
+    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map)
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
         NCurses.Clear();
@@ -39,6 +39,8 @@ internal static class GameStateRenderer
                RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
                 break;
         }
+        if(controller.Session.IsGameOver()||controller.Session.IsGameCompleted)
+            HelloScreen.RenderHelloScreen(stdscr);
         NCurses.Refresh();
     }
     private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)

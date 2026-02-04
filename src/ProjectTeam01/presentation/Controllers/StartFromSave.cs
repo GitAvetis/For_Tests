@@ -1,7 +1,6 @@
 using ProjectTeam01.datalayer;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Session;
-using ProjectTeam01.presentation.Frontend;
 
 namespace ProjectTeam01.presentation.Controllers
 {
@@ -22,7 +21,7 @@ namespace ProjectTeam01.presentation.Controllers
             return  _controller.HandleInput((char)key);
         }
 
-        public void RenderGameScreen(nint stdscr, MainMenu mainMenu)
+        public void RenderGameScreen(nint stdscr)
         {
 
             // Инициализируем карту пробелами
@@ -34,7 +33,7 @@ namespace ProjectTeam01.presentation.Controllers
                 }
             } 
 
-            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map, mainMenu);
+            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map);
         }
             
     }
