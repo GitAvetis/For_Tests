@@ -17,6 +17,11 @@ internal static class GameStateRenderer
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
         NCurses.Clear();
+        if (controller.Session.IsGameOver() || controller.Session.IsGameCompleted)
+        {
+            GameOverScreen.RenderGameOverScreen(stdscr,controller);
+            return;
+        }
 
         switch (controller.CurrentInputMode)
         {
@@ -39,8 +44,6 @@ internal static class GameStateRenderer
                RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
                 break;
         }
-        if(controller.Session.IsGameOver()||controller.Session.IsGameCompleted)
-            HelloScreen.RenderHelloScreen(stdscr);
         NCurses.Refresh();
     }
     private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)

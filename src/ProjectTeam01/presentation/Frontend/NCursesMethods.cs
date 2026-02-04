@@ -9,6 +9,7 @@ namespace ProjectTeam01.presentation.Frontend
             NCurses.NoEcho();
             NCurses.CBreak();
             NCurses.Keypad(stdscr, true);            
+            NCurses.SetCursor(0);
 
             NCurses.TimeOut(50);
         }

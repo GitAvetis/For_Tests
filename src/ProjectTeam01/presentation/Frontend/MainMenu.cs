@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Mindmagma.Curses;
 using ProjectTeam01.presentation.Controllers;
 
@@ -8,6 +9,7 @@ namespace ProjectTeam01.presentation.Frontend
         private List<string> _menu{get;set;} = new();
         private readonly nint _stdscr;
         private MenuAction _menuAction;
+        public bool GameOver{get;set;} = false;
         IGameSession? game = null;
         public MainMenu (nint stdscr, List<string> menu)
         {
@@ -128,7 +130,7 @@ namespace ProjectTeam01.presentation.Frontend
             {
                 int input = NCurses.GetChar();
                 isRunning = game.IsGameRunning(input);
-                game.RenderGameScreen(_stdscr);
+                game.RenderGameScreen(_stdscr);                    
             }
             return true;
         }

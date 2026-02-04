@@ -70,32 +70,6 @@ internal class GameController
         }
     }
  
-// // Обработка выбора в главном меню
-//     private PlayerAction? HandleMainMenuInput(char key)
-//     {
-//         switch (key)
-//         {
-//             case '1': // Начать новую игровую сессию
-//                 _inputMode = InputMode.Normal; // Переходим в игровой режим
-//                 return null; // Или можно вернуть специальное действие для новой игры
-            
-//             case '2': // Продолжить последний сеанс
-//                 // Здесь загрузка сохранения
-//                 _inputMode = InputMode.Normal;
-//                 return null;
-                
-//             case '3': // Таблица лидеров
-//                 // Здесь показ таблицы лидеров
-//                 // После показа можно вернуться в меню
-//                 return null;
-                
-//             case '4': // Выход из игры
-//                 return PlayerAction.CreateQuit();
-                
-//             default:
-//                 return null;
-//         }
-//     }
     public bool HandleInput(char key)
     {
         PlayerAction? action = null;
@@ -145,6 +119,7 @@ internal class GameController
             {
                 // Добавляем попытку в таблицу лидеров при завершении игры
                 GameDataService.AddAttemptToScoreboard(_session.Statistics, ScoreboardFilePath);
+                
                 _running = false;
             }
         }

@@ -36,6 +36,7 @@ namespace ProjectTeam01
             {   
                 isRunning = mainMenu.GameCyqle();
             }
+
         }
         
         private static void WaitForAnyKey()
