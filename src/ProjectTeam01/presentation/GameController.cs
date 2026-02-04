@@ -1,9 +1,9 @@
 using ProjectTeam01.datalayer;
 using ProjectTeam01.domain;
 using ProjectTeam01.domain.Session;
+using ProjectTeam01.presentation.Frontend;
 using ProjectTeam01.presentation.Mappers;
 using ProjectTeam01.presentation.ViewModels;
-using ProjectTeam01.presentation.Frontend;
 
 namespace ProjectTeam01.presentation;
 
@@ -30,7 +30,7 @@ internal class GameController
     {
         if (_inputMode == InputMode.MainMenu)
             return null;
-            
+
         var pos = _session.Player.Position;
 
         switch (command.Type)
@@ -54,7 +54,7 @@ internal class GameController
             case InputCommandType.FoodMenu:
                 _inputMode = InputMode.FoodMenu;
                 return null;
-                
+
             case InputCommandType.ElixirMenu:
                 _inputMode = InputMode.ElixirMenu;
                 return null;
@@ -69,7 +69,7 @@ internal class GameController
                 return null;
         }
     }
- 
+
     public bool HandleInput(char key)
     {
         PlayerAction? action = null;
@@ -79,50 +79,50 @@ internal class GameController
             //     action =  HandleMainMenuInput(key);
             //     break;
             case InputMode.Normal:
-            var command = InputHandler.Read(key);
-            if (command != null)
-                action = Translate(command);
+                var command = InputHandler.Read(key);
+                if (command != null)
+                    action = Translate(command);
                 break;
             default:
                 action = HandleMenuInput(key);
                 break;
         }
-        
+
         if (action != null)
             ApplyAction(action);
 
         return _running;
     }
-   
+
     private void ApplyAction(PlayerAction action)
+    {
+        // Сохраняем номер уровня до хода для проверки перехода на новый уровень
+        int levelBeforeTurn = _session.CurrentLevelNumber;
+        _session.ProcessTurn(action);
+
+        // Сохраняем полную игру при переходе на новый уровень (по ТЗ: "После прохождения каждого уровня")
+        if (_session.CurrentLevelNumber > levelBeforeTurn)
         {
-            // Сохраняем номер уровня до хода для проверки перехода на новый уровень
-            int levelBeforeTurn = _session.CurrentLevelNumber;
-            _session.ProcessTurn(action);
-
-            // Сохраняем полную игру при переходе на новый уровень (по ТЗ: "После прохождения каждого уровня")
-            if (_session.CurrentLevelNumber > levelBeforeTurn)
-            {
-                SaveFullGame();
-            }
-
-            // Проверка выхода из игры (Quit) - сохраняем полную игру перед выходом (по ТЗ: "После перезапуска игры")
-            if (action.Type == PlayerActionType.Quit)
-            {
-                SaveFullGame();
-                _running = false;
-                return;
-            }
-
-            // Проверка окончания игры
-            if (_session.IsGameOver() || _session.IsGameCompleted)
-            {
-                // Добавляем попытку в таблицу лидеров при завершении игры
-                GameDataService.AddAttemptToScoreboard(_session.Statistics, ScoreboardFilePath);
-                
-                _running = false;
-            }
+            SaveFullGame();
         }
+
+        // Проверка выхода из игры (Quit) - сохраняем полную игру перед выходом (по ТЗ: "После перезапуска игры")
+        if (action.Type == PlayerActionType.Quit)
+        {
+            SaveFullGame();
+            _running = false;
+            return;
+        }
+
+        // Проверка окончания игры
+        if (_session.IsGameOver() || _session.IsGameCompleted)
+        {
+            // Добавляем попытку в таблицу лидеров при завершении игры
+            GameDataService.AddAttemptToScoreboard(_session.Statistics, ScoreboardFilePath);
+
+            _running = false;
+        }
+    }
     /// Получить представление состояния игры для фронтенда
     private PlayerAction? HandleMenuInput(char key)
     {
@@ -158,7 +158,7 @@ internal class GameController
     }
 
     // === Обработка выбора предметов из инвентаря ===
-        private PlayerAction? HandleWeaponSelection(char key)
+    private PlayerAction? HandleWeaponSelection(char key)
     {
         var weapons = _session.GetPlayerWeapons();
         if (weapons.Count == 0)
@@ -167,15 +167,15 @@ internal class GameController
         if (key == '0')
             return PlayerAction.CreateUnequipWeapon();
 
-          else  if (key >= '1' && key <= '9')
+        else if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < weapons.Count)
             {
-                int index = key - '1';
-                if (index < weapons.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                 return PlayerAction.CreateEquipWeapon(weapons[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateEquipWeapon(weapons[index]);
             }
+        }
 
         return null;
     }
@@ -185,15 +185,15 @@ internal class GameController
         var food = _session.GetPlayerFood();
         if (food.Count == 0)
             return null;
-         if (key >= '1' && key <= '9')
+        if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < food.Count)
             {
-                int index = key - '1';
-                if (index < food.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(food[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(food[index]);
             }
+        }
         return null;
     }
 
@@ -202,15 +202,15 @@ internal class GameController
         var elixirs = _session.GetPlayerElixirs();
         if (elixirs.Count == 0)
             return null;
-            if (key >= '1' && key <= '9')
+        if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < elixirs.Count)
             {
-                int index = key - '1';
-                if (index < elixirs.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(elixirs[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(elixirs[index]);
             }
+        }
         return null;
     }
 
@@ -220,17 +220,17 @@ internal class GameController
         if (scrolls.Count == 0)
             return null;
         if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < scrolls.Count)
             {
-                int index = key - '1';
-                if (index < scrolls.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(scrolls[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(scrolls[index]);
             }
+        }
         return null;
     }
-    
+
     /// Сохранить полную игру (герой, враги, предметы, уровень, статистика)
     private void SaveFullGame()
     {

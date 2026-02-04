@@ -18,7 +18,7 @@ namespace ProjectTeam01.presentation.Controllers
 
         public bool IsGameRunning(int key)
         {
-            return  _controller.HandleInput((char)key);
+            return _controller.HandleInput((char)key);
         }
 
         public void RenderGameScreen(nint stdscr)
@@ -31,12 +31,12 @@ namespace ProjectTeam01.presentation.Controllers
                 {
                     _map[y, x] = ' ';
                 }
-            } 
+            }
 
             GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map);
         }
-            
+
     }
-    
+
 }
 

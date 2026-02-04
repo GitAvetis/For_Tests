@@ -36,14 +36,14 @@ namespace ProjectTeam01.presentation.Frontend
             int y = 0;
             for (int i = 0; i < helloScreen.Length; i++)
             {
-                 y = _windowHeight / 2 + i - helloScreen.Length;
-                 x = _windowWidth / 2 - helloScreen[i].Length / 2;
-                    NCursesMethods.Print(helloScreen[i],y, x);
+                y = _windowHeight / 2 + i - helloScreen.Length;
+                x = _windowWidth / 2 - helloScreen[i].Length / 2;
+                NCursesMethods.Print(helloScreen[i], y, x);
             }
 
             string instruction = "Press ENTER or Q to return to main menu";
 
-            NCursesMethods.Print(instruction,y+3, x+1);
+            NCursesMethods.Print(instruction, y + 3, x + 1);
 
             NCurses.AttributeOff(NCurses.ColorPair(1));
 
@@ -51,6 +51,6 @@ namespace ProjectTeam01.presentation.Frontend
         }
 
     }
-    
+
 }
 

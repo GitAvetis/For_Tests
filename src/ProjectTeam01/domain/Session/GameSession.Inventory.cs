@@ -1,5 +1,5 @@
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.domain.Session;
 // отвечает за логику инвентаря
@@ -138,8 +138,8 @@ internal partial class GameSession
     public int GetTotalGold()
     {
         var treasure = Player.HeroBackpack.AllItems.OfType<Treasure>().ToList();
-        return treasure.Count>0? treasure[0].Price:0;
-    } 
+        return treasure.Count > 0 ? treasure[0].Price : 0;
+    }
 }
 
 

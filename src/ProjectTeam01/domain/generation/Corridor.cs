@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace ProjectTeam01.domain.generation;
 
 /// Типы коридоров
@@ -16,10 +14,10 @@ public class Corridor
 {
     /// Тип коридора
     public CorridorType Type { get; set; }
-    
+
     /// Ключевые точки коридора (для логики генерации)
     public List<Position> Points { get; set; }
-    
+
     /// Все клетки коридора (для отрисовки и движения)
     public List<Position> Cells { get; set; }
 

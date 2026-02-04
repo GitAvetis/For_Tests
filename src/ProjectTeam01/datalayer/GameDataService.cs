@@ -1,8 +1,8 @@
 ﻿using ProjectTeam01.datalayer.Mappers;
 using ProjectTeam01.datalayer.Models;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.Session;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -132,7 +132,7 @@ namespace ProjectTeam01.datalayer
         public static List<GameStatisticsSave> GetTopAttempts(string scoreboardPath, int count = 0)
         {
             var scoreboard = LoadScoreboard(scoreboardPath);
-            
+
             // Сортируем по количеству сокровищ (по убыванию)
             var sorted = scoreboard.SessionStats
                 .OrderByDescending(s => s.TreasuresCollected)

@@ -1,7 +1,6 @@
-﻿using static ProjectTeam01.domain.Effects.ActiveEffect;
-using ProjectTeam01.domain.Items.Interfaces;
-using ProjectTeam01.domain.Characters;
+﻿using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.Items.Interfaces;
 
 namespace ProjectTeam01.domain.Items
 {

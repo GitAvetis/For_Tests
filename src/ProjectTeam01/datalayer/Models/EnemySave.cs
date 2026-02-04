@@ -1,4 +1,5 @@
 ﻿using ProjectTeam01.domain.Characters;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.datalayer.Models
 {
@@ -17,6 +18,6 @@ namespace ProjectTeam01.datalayer.Models
         //vampire
         public bool? EvadedFirstAttack { get; set; }
         //mimic
-        public MimicsRepresentation? Representation { get; set; }
+        public ItemType? Representation { get; set; }
     }
 }

@@ -71,7 +71,7 @@ internal partial class GameSession
         else
         {
             int totalStrength = Player.BaseStrength + Player.ActiveEffectManager.GetTotalStatBonus(EffectTypeEnum.BuffStrength);
-            return (int)Math.Round(BattleConstants.InitialDamage 
+            return (int)Math.Round(BattleConstants.InitialDamage
                 + (totalStrength - BattleConstants.StandardStrength) * BattleConstants.StrengthFactor);
         }
     }
@@ -83,14 +83,14 @@ internal partial class GameSession
         {
             Vampire => CalculateVampireDamage(),
             Ogre => CalculateOgreDamage(enemy),
-            _ => CalculateStandardEnemyDamage(enemy) 
+            _ => CalculateStandardEnemyDamage(enemy)
         };
     }
 
     /// Урон стандартных врагов 30 + (strength - 50) * 0.3
     private int CalculateStandardEnemyDamage(Enemy enemy)
     {
-        return (int)Math.Round(BattleConstants.InitialDamage 
+        return (int)Math.Round(BattleConstants.InitialDamage
             + (enemy.BaseStrength - BattleConstants.StandardStrength) * BattleConstants.StrengthFactor);
     }
 
@@ -130,7 +130,7 @@ internal partial class GameSession
             + enemy.BaseStrength * BattleConstants.LootStrengthFactor
             + _random.Next(0, BattleConstants.LootRandomMax + 1)
         );
-        
+
         int levelBonus = (int)Math.Round(baseLoot * _currentLevel.LevelNumber * 0.05);
         return baseLoot + levelBonus;
     }

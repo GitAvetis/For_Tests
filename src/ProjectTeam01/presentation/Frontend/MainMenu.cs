@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using Mindmagma.Curses;
 using ProjectTeam01.presentation.Controllers;
 
@@ -6,22 +5,22 @@ namespace ProjectTeam01.presentation.Frontend
 {
     public class MainMenu
     {
-        private List<string> _menu{get;set;} = new();
+        private List<string> _menu { get; set; } = new();
         private readonly nint _stdscr;
         private MenuAction _menuAction;
-        public bool GameOver{get;set;} = false;
+        public bool GameOver { get; set; } = false;
         IGameSession? game = null;
-        public MainMenu (nint stdscr, List<string> menu)
+        public MainMenu(nint stdscr, List<string> menu)
         {
             _menu = menu;
             _stdscr = stdscr;
         }
-          
+
         public void ShowMenuAndGetChoice()
         {
             bool choiceMade = false;
             _menuAction = MenuAction.None;
-            
+
             while (!choiceMade)
             {
                 RenderMenu();
@@ -42,9 +41,9 @@ namespace ProjectTeam01.presentation.Frontend
                     choiceMade = true;
                 }
             }
-            
+
         }
-        
+
         private MenuAction ProcessChoice(int choiceIndex)
         {
             switch (choiceIndex)
@@ -53,7 +52,7 @@ namespace ProjectTeam01.presentation.Frontend
                     return MenuAction.NewGame;
                 case 1:
                     return MenuAction.LoadGame;
-                case 2: 
+                case 2:
                     return MenuAction.Scoreboard;
                 case 3:
                     return MenuAction.Exit;
@@ -61,20 +60,20 @@ namespace ProjectTeam01.presentation.Frontend
                     return MenuAction.None;
             }
         }
-        
+
         public void RenderMenu()
         {
             NCurses.GetMaxYX(_stdscr, out int maxY, out int maxX);
             NCurses.Clear();
-            
+
             int startY = maxY / 2 - _menu.Count / 2;
-            
+
             for (int i = 0; i < _menu.Count; i++)
             {
                 string menuItem = _menu[i];
                 int x = maxX / 2 - menuItem.Length / 2;
                 int y = startY + i;
-                
+
                 if (x >= 0 && x < maxX && y >= 0 && y < maxY)
                 {
                     NCurses.Move(y, x);
@@ -82,16 +81,16 @@ namespace ProjectTeam01.presentation.Frontend
                 }
             }
             string instructions = "Press 1-4 to select, ESC to exit";
-            
+
             int instX = maxX / 2 - instructions.Length / 2;
             int instY = startY + _menu.Count + 2;
-            
+
             if (instX >= 0 && instX < maxX && instY >= 0 && instY < maxY)
             {
                 NCurses.Move(instY, instX);
                 NCurses.AddString(instructions);
             }
-            
+
             NCurses.Refresh();
         }
 
@@ -115,9 +114,9 @@ namespace ProjectTeam01.presentation.Frontend
             ShowMenuAndGetChoice();
             game = Mode();
             bool isRunning = true;
-            if(game == null)
+            if (game == null)
             {
-                if(_menuAction == MenuAction.Scoreboard)
+                if (_menuAction == MenuAction.Scoreboard)
                 {
                     PrintScoreboard.ShowScoreboard(_stdscr);
                     return true;
@@ -130,13 +129,13 @@ namespace ProjectTeam01.presentation.Frontend
             {
                 int input = NCurses.GetChar();
                 isRunning = game.IsGameRunning(input);
-                game.RenderGameScreen(_stdscr);                    
+                game.RenderGameScreen(_stdscr);
             }
             return true;
         }
 
     }
-    
+
     // Действия меню
     public enum MenuAction
     {
@@ -146,6 +145,6 @@ namespace ProjectTeam01.presentation.Frontend
         Scoreboard,
         Exit
     }
-    
+
 }
 

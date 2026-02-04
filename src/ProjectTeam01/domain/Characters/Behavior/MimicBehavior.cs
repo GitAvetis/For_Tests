@@ -10,8 +10,8 @@ namespace ProjectTeam01.domain.Characters.Behavior
             if (distanceToHero <= Enemy.HostilityLevel)
             {
                 Enemy.IsTriggered = true;
-                mimic.Representation = MimicsRepresentation.Mimic;
-                
+                mimic.Representation = Items.ItemType.Mimic;
+
                 if (!MoveTowards(hero))
                     MoveRandom();
             }

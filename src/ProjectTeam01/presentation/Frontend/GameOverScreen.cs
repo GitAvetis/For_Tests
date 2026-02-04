@@ -32,22 +32,22 @@ namespace ProjectTeam01.presentation.Frontend
             {
                 y = _windowHeight / 2 + i - helloScreen.Length;
                 x = _windowWidth / 2 - helloScreen[i].Length / 2;
-                NCursesMethods.Print(helloScreen[i],y, x);
+                NCursesMethods.Print(helloScreen[i], y, x);
             }
 
-            string resultMessage = controller.Session.IsGameOver() 
-            ? "GAME OVER - You died!" 
+            string resultMessage = controller.Session.IsGameOver()
+            ? "GAME OVER - You died!"
             : "VICTORY - You completed the game!";
-        
+
             string instruction = "Press any key to return to main menu";
-            
+
             int msgY = y / 2 + helloScreen.Length + 4;
             int msgX = _windowWidth / 2 - resultMessage.Length / 2;
             int instrY = msgY + 2;
             int instrX = _windowWidth / 2 - instruction.Length / 2;
-            
-            NCursesMethods.Print(resultMessage,msgY,Math.Max(0, msgX));
-            NCursesMethods.Print(instruction,instrY,Math.Max(0, instrX));
+
+            NCursesMethods.Print(resultMessage, msgY, Math.Max(0, msgX));
+            NCursesMethods.Print(instruction, instrY, Math.Max(0, instrX));
 
             NCurses.AttributeOff(NCurses.ColorPair(1));
             NCurses.GetChar();
@@ -57,6 +57,6 @@ namespace ProjectTeam01.presentation.Frontend
         }
 
     }
-    
+
 }
 

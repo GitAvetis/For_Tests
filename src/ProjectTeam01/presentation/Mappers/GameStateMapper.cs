@@ -34,7 +34,7 @@ internal static class GameStateMapper
         {
             // Игрок - основная информация о персонаже
             Player = ToPlayerViewModel(gameState),
-            
+
             // Список всех врагов на уровне (включая мертвых)
             // ВАЖНО: проверяйте IsDead перед отрисовкой
             // IsDead - флаг смерти врага
@@ -43,7 +43,7 @@ internal static class GameStateMapper
             // Position - координаты врага на карте
             // EnemyType - тип врага
             Enemies = gameState.Enemies.Select(ToEnemyViewModel).ToList(),
-            
+
             // Список всех предметов на уровне (оружие, еда, эликсиры, свитки, сокровища)
             // Type - тип предмета
             // Position - координаты предмета на карте
@@ -53,19 +53,19 @@ internal static class GameStateMapper
             // ElixirType - тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
             // ScrollType - тип усиления (Strength/Agility/MaxHp)
             // Price - стоимость в золоте
-            Items = gameState.Items.Select(ToItemViewModel).ToList(),   
-            
+            Items = gameState.Items.Select(ToItemViewModel).ToList(),
+
             // Геометрия уровня - комнаты, коридоры, позиции выхода и старта
             // Rooms - список всех комнат на уровне
             // Corridors - список всех коридоров на уровне
             // ExitPosition - координаты выхода (отрисовывайте символ 'E')
             // LevelNumber - номер уровня (для отображения в UI)
             Level = ToLevelViewModel(gameState.LevelGeometry),
-            
+
             // Номер текущего уровня
             // CurrentLevelNumber - номер текущего уровня
             CurrentLevelNumber = gameState.CurrentLevelNumber,
-            
+
             // Инвентарь игрока (предметы без Position)
             // Используется для отображения списка предметов в UI при выборе (клавиши h, j, k, e)
             InventoryWeapons = gameState.PlayerWeapons.Select(ToInventoryItemViewModel).ToList(),
@@ -211,12 +211,12 @@ internal static class GameStateMapper
                 viewModel.ScrollType = scroll.ScrollType;
                 break;
 
-            // // СОКРОВИЩЕ: показывает стоимость
-            // case Treasure treasure:
-            //     viewModel.Price = treasure.Price;
-            //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
-            //                        // Стоимость в золоте
-            //     break;
+                // // СОКРОВИЩЕ: показывает стоимость
+                // case Treasure treasure:
+                //     viewModel.Price = treasure.Price;
+                //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
+                //                        // Стоимость в золоте
+                //     break;
         }
 
         return viewModel;
@@ -247,12 +247,12 @@ internal static class GameStateMapper
             case Food food:
                 viewModel.HealthValue = food.HealthValue;            // HP для восстановления (5-20)
                 viewModel.DisplayName = $"Food: + {food.HealthValue} HP)";
-            break;
+                break;
 
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
                 viewModel.ElixirType = elixir.ElixirType;          // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
-                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";   
+                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";
                 break;
 
             // СВИТОК: показывает тип усиления
@@ -287,7 +287,7 @@ internal static class GameStateMapper
     /// 2. Отрисуйте все коридоры (пол)
     /// 3. Отрисуйте двери в комнатах
     /// 4. Отрисуйте StartPosition и ExitPosition
-  
+
     private static LevelViewModel ToLevelViewModel(Level level)
     {
         return new LevelViewModel
@@ -311,7 +311,7 @@ internal static class GameStateMapper
     /// - Doors: массив позиций дверей (отрисовывайте символ '+' на каждой позиции)
     /// - IsStartRoom: true если это стартовая комната (можно выделить визуально)
     /// - IsEndRoom: true если это конечная комната (можно выделить визуально)
- 
+
     private static RoomViewModel ToRoomViewModel(Room room)
     {
         return new RoomViewModel

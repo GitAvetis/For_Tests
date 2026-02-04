@@ -11,7 +11,7 @@ public class Level
     public int LevelNumber { get; set; }
     public Position ExitPosition { get; set; }
     public Position StartPosition { get; set; }
-    
+
     /// Сущности уровня 
     private readonly List<IGameObject> _entities;
 
@@ -29,35 +29,35 @@ public class Level
         ExitPosition = new Position();
         StartPosition = new Position();
     }
-    
+
     /// Получить все сущности уровня
     public IReadOnlyList<IGameObject> Entities => _entities.AsReadOnly();
-    
+
     /// Проверить, можно ли пройти по позиции (геометрия)
     public bool IsWalkable(int x, int y)
     {
         var pos = new Position(x, y);
-        
+
         // Проверка комнат
         foreach (var room in Rooms)
         {
             bool isInsideRoom = pos.X > room.TopLeft.X && pos.X < room.BottomRight.X &&
                                pos.Y > room.TopLeft.Y && pos.Y < room.BottomRight.Y;
-            
-            bool isDoor = room.Doors != null && room.Doors.Any(door => 
+
+            bool isDoor = room.Doors != null && room.Doors.Any(door =>
                 (door.X != 0 || door.Y != 0) && door.X == pos.X && door.Y == pos.Y);
-            
+
             if (isInsideRoom || isDoor)
                 return true;
         }
-        
+
         // Проверка коридоров
         foreach (var corridor in Corridors)
         {
             if (corridor.Cells != null && corridor.Cells.Contains(pos))
                 return true;
         }
-        
+
         return false;
     }
     /// Проверить, заблокирована ли клетка актором (игрок/враг).
@@ -75,7 +75,7 @@ public class Level
         EnsureIndex();
         return _positionIndex.ContainsKey(new Position(x, y));
     }
-    
+
     /// Получить сущность по позиции
     public IGameObject? GetEntityAt(int x, int y)
     {
@@ -85,7 +85,7 @@ public class Level
 
         return null;
     }
-    
+
     /// Получить все сущности на позиции
     public IReadOnlyList<IGameObject> GetEntitiesAt(int x, int y)
     {
@@ -95,19 +95,19 @@ public class Level
             ? list.AsReadOnly()
             : Array.Empty<IGameObject>();
     }
-    
+
     /// Получить всех врагов на уровне
     internal IReadOnlyList<Characters.Enemy> GetEnemies()
     {
         return _entities.OfType<Characters.Enemy>().ToList().AsReadOnly();
     }
-    
+
     /// Получить все предметы на уровне
     internal IReadOnlyList<Items.Item> GetItems()
     {
         return _entities.OfType<Items.Item>().ToList().AsReadOnly();
     }
-    
+
     /// Найти комнату, в которой находится указанная позиция
     internal Room? FindRoomAt(int x, int y)
     {
@@ -120,7 +120,7 @@ public class Level
         }
         return null;
     }
-    
+
     /// Найти коридор, в котором находится указанная позиция
     internal Corridor? FindCorridorAt(int x, int y)
     {
@@ -132,25 +132,25 @@ public class Level
         }
         return null;
     }
-    
+
     /// Добавить сущность на уровень
     public void AddEntity(IGameObject entity)
     {
         if (entity == null) return;
-        
+
         _entities.Add(entity);
         _indexDirty = true;
     }
-    
+
     /// Удалить сущность с уровня
     public void RemoveEntity(IGameObject entity)
     {
         if (entity == null) return;
-        
+
         _entities.Remove(entity);
         _indexDirty = true;
     }
-    
+
     /// Обновить позицию сущности в индексе (при движении)
     public void UpdateEntityPosition(IGameObject entity, Position oldPosition)
     {
@@ -170,7 +170,7 @@ public class Level
         }
         newList.Add(entity);
     }
-    
+
     /// Обновить индекс позиций (ленивая инициализация)
     private void EnsureIndex()
     {
@@ -187,7 +187,7 @@ public class Level
                 }
                 list.Add(entity);
             }
-            
+
             _indexDirty = false;
         }
     }

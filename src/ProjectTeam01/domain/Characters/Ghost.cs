@@ -1,6 +1,6 @@
 ﻿namespace ProjectTeam01.domain.Characters
 {
-    internal class Ghost: Enemy
+    internal class Ghost : Enemy
     {
         public Ghost(int posX, int posY) : base(EnemyTypeEnum.Ghost, posX, posY)
         {

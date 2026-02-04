@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace ProjectTeam01.domain.generation;
 
 /// Адаптер для использования Level через интерфейс IMapQuery для работы с картой без прямой зависимости от Level.
@@ -8,7 +5,7 @@ namespace ProjectTeam01.domain.generation;
 internal sealed class LevelMapQuery : IMapQuery
 {
     private readonly Level _level;
-  
+
     public LevelMapQuery(Level level)
     {
         _level = level ?? throw new ArgumentNullException(nameof(level));

@@ -10,8 +10,8 @@ internal class BattleService
         if (alwaysHit)
             return true;
 
-        double hitChance = BattleConstants.InitialHitChance 
-            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility) 
+        double hitChance = BattleConstants.InitialHitChance
+            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility)
             * BattleConstants.AgilityFactor;
 
         // Ограничиваем шанс пределами (0-100%)

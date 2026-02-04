@@ -4,6 +4,6 @@ namespace ProjectTeam01.domain.Items.Interfaces
 {
     internal interface IUsableItem
     {
-         void Use(Hero hero);
+        void Use(Hero hero);
     }
 }

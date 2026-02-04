@@ -1,4 +1,3 @@
-using System;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
 
@@ -29,7 +28,7 @@ internal partial class GameSession
     {
         _currentLevel = level ?? throw new ArgumentNullException(nameof(level));
         _player = player ?? throw new ArgumentNullException(nameof(player));
-        _currentLevel.LevelNumber = levelNumber; 
+        _currentLevel.LevelNumber = levelNumber;
         _random = new Random();
         _levelGenerator = new LevelGenerator();
         _entityGenerator = new EntityGenerator();
@@ -50,7 +49,7 @@ internal partial class GameSession
         _currentLevel = level ?? throw new ArgumentNullException(nameof(level));
         _player = player ?? throw new ArgumentNullException(nameof(player));
         _statistics = statistics ?? throw new ArgumentNullException(nameof(statistics));
-        _currentLevel.LevelNumber = levelNumber; 
+        _currentLevel.LevelNumber = levelNumber;
         _random = new Random();
         _levelGenerator = new LevelGenerator();
         _entityGenerator = new EntityGenerator();

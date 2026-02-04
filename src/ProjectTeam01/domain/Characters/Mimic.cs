@@ -1,21 +1,23 @@
-﻿namespace ProjectTeam01.domain.Characters
+﻿using ProjectTeam01.domain.Items;
+
+namespace ProjectTeam01.domain.Characters
 {
     /// <summary>
     /// Представление Mimic для использования в ViewModels
     /// </summary>
-    public enum MimicsRepresentation
-    {
-        Food,
-        Elixir,
-        Scroll,
-        Weapon,
-        Mimic
-    }
+    // public enum MimicsRepresentation
+    // {
+    //     Food,
+    //     Elixir,
+    //     Scroll,
+    //     Weapon,
+    //     Mimic
+    // }
 
     internal class Mimic : Enemy
     {
         protected static readonly Random random = new();
-        public MimicsRepresentation Representation { get; set; }
+        public ItemType Representation { get; set; }
 
         public Mimic(int posX, int posY) : base(EnemyTypeEnum.Mimic, posX, posY)
         {
@@ -35,10 +37,10 @@
             Representation = RandomRepresentation();
         }
 
-        private MimicsRepresentation RandomRepresentation()
+        private ItemType RandomRepresentation()
         {
-            MimicsRepresentation mimics = (MimicsRepresentation)random.Next(0, 4);
-            return  mimics;
+            ItemType mimics = (ItemType)random.Next(0, 4);
+            return mimics;
         }
     }
 }

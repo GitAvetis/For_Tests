@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.domain.generation;
 
@@ -43,7 +40,7 @@ internal class EntityGenerator
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
-        int baseEnemyCount = 3 + levelNumber / 2; 
+        int baseEnemyCount = 3 + levelNumber / 2;
         int enemyCount = _random.Next(baseEnemyCount, baseEnemyCount + 5);
 
         var nonStartRooms = level.Rooms.Where(r => !r.IsStartRoom).ToList();
@@ -58,7 +55,7 @@ internal class EntityGenerator
             if (level.HasAnyEntityAt(position.X, position.Y))
             {
                 position = FindFreePositionInRoom(room, level);
-                if (position.X == -1) continue; 
+                if (position.X == -1) continue;
             }
 
             var enemy = CreateRandomEnemy(position.X, position.Y);
@@ -71,7 +68,7 @@ internal class EntityGenerator
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
-        int baseItemCount = 10 - levelNumber / 3; 
+        int baseItemCount = 10 - levelNumber / 3;
         int itemCount = Math.Max(3, _random.Next(baseItemCount, baseItemCount + 5));
 
         var nonStartRooms = level.Rooms.Where(r => !r.IsStartRoom).ToList();
@@ -160,7 +157,7 @@ internal class EntityGenerator
 
         if (roll < 35)
         {
-            int healthValue = _random.Next(5, 21); 
+            int healthValue = _random.Next(5, 21);
             return new Food(healthValue, x, y);
         }
         else if (roll < 60)

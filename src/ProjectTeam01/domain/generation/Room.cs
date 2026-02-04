@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace ProjectTeam01.domain.generation;
+﻿namespace ProjectTeam01.domain.generation;
 
 /// Направления для соединений комнат
 public enum Direction

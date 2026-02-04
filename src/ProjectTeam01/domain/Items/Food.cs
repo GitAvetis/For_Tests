@@ -20,7 +20,7 @@ namespace ProjectTeam01.domain.Items
             int missingHp = hero.MaxHp - hero.ActualHp;
             if (healAmount > missingHp)
                 healAmount = missingHp;
-            
+
             hero.Heal(healAmount);
         }
     }

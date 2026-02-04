@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "atkmtcPJ+EQ=",
+  "dgSpecHash": "KiFXpHmdslU=",
   "success": true,
-  "projectFilePath": "/Users/artem/GitHub/Test/src/ProjectTeam01/ProjectTeam01.csproj",
+  "projectFilePath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
   "expectedPackageFiles": [
     "/Users/artem/.nuget/packages/dotnet-curses/2.0.0/dotnet-curses.2.0.0.nupkg.sha512",
     "/Users/artem/.nuget/packages/microsoft.extensions.dependencymodel/8.0.2/microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",

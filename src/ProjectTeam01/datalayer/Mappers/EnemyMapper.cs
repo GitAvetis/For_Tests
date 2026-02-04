@@ -86,7 +86,7 @@ namespace ProjectTeam01.datalayer.Mappers
                         Mimic mimic = new Mimic(enemySave.PosX, enemySave.PosY, enemySave.ActualHp)
                         {
                             IsTriggered = enemySave.IsTriggered,
-                            Representation = enemySave.Representation ?? MimicsRepresentation.Mimic
+                            Representation = enemySave.Representation  ?? domain.Items.ItemType.Mimic
                         };
                         return mimic;
                     }

@@ -1,4 +1,3 @@
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Combat;
 using ProjectTeam01.domain.Items;

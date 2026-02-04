@@ -1,5 +1,4 @@
-﻿using ProjectTeam01.domain;
-using ProjectTeam01.domain.Effects;
+﻿using ProjectTeam01.domain.Effects;
 
 namespace ProjectTeam01.domain.Characters
 {

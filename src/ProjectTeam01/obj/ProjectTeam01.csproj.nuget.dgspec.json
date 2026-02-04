@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/artem/GitHub/Test/src/ProjectTeam01/ProjectTeam01.csproj": {}
+    "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj": {}
   },
   "projects": {
-    "/Users/artem/GitHub/Test/src/ProjectTeam01/ProjectTeam01.csproj": {
+    "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/artem/GitHub/Test/src/ProjectTeam01/ProjectTeam01.csproj",
+        "projectUniqueName": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
         "projectName": "ProjectTeam01",
-        "projectPath": "/Users/artem/GitHub/Test/src/ProjectTeam01/ProjectTeam01.csproj",
+        "projectPath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/ProjectTeam01.csproj",
         "packagesPath": "/Users/artem/.nuget/packages/",
-        "outputPath": "/Users/artem/GitHub/Test/src/ProjectTeam01/obj/",
+        "outputPath": "/Users/artem/21-school/AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1/src/ProjectTeam01/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/artem/.nuget/NuGet/NuGet.Config"

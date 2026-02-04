@@ -11,7 +11,7 @@ namespace ProjectTeam01.datalayer.Models
         public int GameLevel { get; set; }
 
         public int? HealthValue { get; set; }
-        public EffectTypeEnum? ElixirType { get; set;}
+        public EffectTypeEnum? ElixirType { get; set; }
         public ScrollTypeEnum? ScrollType { get; set; }
         public int? Price { get; set; }
         public WeaponTypeEnum? WeaponType { get; set; }

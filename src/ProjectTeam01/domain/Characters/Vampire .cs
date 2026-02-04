@@ -17,7 +17,7 @@
             BaseStrength = 2;
             HostilityLevel = 3;
         }
-        
+
         public bool EvadedFirstAttack { get; set; } = false;
     }
 }

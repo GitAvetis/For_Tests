@@ -1,25 +1,22 @@
 using Mindmagma.Curses;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
-using ProjectTeam01.presentation.ViewModels;
+using ProjectTeam01.domain.Items;
 using ProjectTeam01.presentation.Frontend;
+using ProjectTeam01.presentation.ViewModels;
 
 
 namespace ProjectTeam01.presentation;
-///СУЩЕСТВУЕТ СЕЙЧАС ДЛЯ СТАТИЧНОЙ ОТРИСОВКИ УРОВНЯ (УДАЛЯЕМ КОГДА ПОЯВИТСЯ РЕАЛЬНЫЙ ФРОНТ)
-/// Рендерер для отрисовки состояния игры в консоль
-/// Работает с ViewModels (новый подход)
 internal static class GameStateRenderer
 {
     /// Отрисовывает состояние игры в консоль
-    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map)
+    public static void RenderHandler(GameStateViewModel viewModel, nint stdscr, GameController controller, char[,] map)
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
         NCurses.Clear();
         if (controller.Session.IsGameOver() || controller.Session.IsGameCompleted)
         {
-            GameOverScreen.RenderGameOverScreen(stdscr,controller);
+            GameOverScreen.RenderGameOverScreen(stdscr, controller);
             return;
         }
 
@@ -27,28 +24,28 @@ internal static class GameStateRenderer
         {
             // case InputMode.MainMenu:
             //     mainMenu.RenderMenu();
-                // break;
+            // break;
             case InputMode.Normal:
                 RenderMap(viewModel, maxY, maxX, map);
                 break;
             case InputMode.ElixirMenu:
-               RenderMenu("Elexirs", viewModel.InventoryElixirs, maxY, maxX);
+                RenderMenu("Elexirs", viewModel.InventoryElixirs, maxY, maxX);
                 break;
             case InputMode.ScrollMenu:
-               RenderMenu("Scrolls", viewModel.InventoryScrolls, maxY, maxX);
+                RenderMenu("Scrolls", viewModel.InventoryScrolls, maxY, maxX);
                 break;
             case InputMode.WeaponMenu:
-               RenderMenu("Weapons", viewModel.InventoryWeapons, maxY, maxX);
+                RenderMenu("Weapons", viewModel.InventoryWeapons, maxY, maxX);
                 break;
             case InputMode.FoodMenu:
-               RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
+                RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
                 break;
         }
         NCurses.Refresh();
     }
-    private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)
+    private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX, char[,] map)
     {
-         // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
+        // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
         foreach (var corridor in viewModel.Level.Corridors)
         {
             RenderCorridor(map, corridor);
@@ -58,34 +55,34 @@ internal static class GameStateRenderer
         {
             RenderRoom(map, room);
         }
-        
+
         // Отрисовываем двери
         foreach (var room in viewModel.Level.Rooms)
         {
             RenderDoors(map, room);
         }
-        
+
         // Отрисовываем стартовую позицию
         if (viewModel.Level.StartPosition.X > 0 && viewModel.Level.StartPosition.Y > 0)
         {
             map[viewModel.Level.StartPosition.Y, viewModel.Level.StartPosition.X] = 'S';
         }
-        
+
         // Отрисовываем конечную позицию
         if (viewModel.Level.ExitPosition.X > 0 && viewModel.Level.ExitPosition.Y > 0)
         {
             map[viewModel.Level.ExitPosition.Y, viewModel.Level.ExitPosition.X] = 'E';
         }
-        
+
         // Отрисовываем сущности (игрок, враги, предметы)
         RenderEntities(map, viewModel);
-        
+
         // Выводим карту в консоль
         // PrintMap(map);
         PrintMapNCurses(map, maxY, maxX, viewModel);
     }
 
-    
+
     /// Отрисовывает сущности на карте
     private static void RenderEntities(char[,] map, GameStateViewModel viewModel)
     {
@@ -95,37 +92,42 @@ internal static class GameStateRenderer
         {
             map[playerPos.Y, playerPos.X] = '@'; // Игрок
         }
-        
+
         // Отрисовываем врагов
         foreach (var enemy in viewModel.Enemies)
         {
             if (enemy.IsDead) continue; // Пропускаем мертвых врагов
             if (enemy.IsInvisible == true) continue; // Пропускаем невидимых призраков
-            
+
             var pos = enemy.Position;
             if (!IsValidPosition(pos, map)) continue;
-            
+
             // Если на этой позиции уже есть игрок или выход, не перезаписываем
             if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E')
                 continue;
-            
+
             // Символ врага по типу
-            char enemySymbol = GetEnemySymbol(enemy.EnemyType);
+            char enemySymbol;
+            if(enemy.EnemyType == EnemyTypeEnum.Mimic && enemy.IsTriggered)
+            {
+                enemySymbol = GetItemSymbol (enemy.MimicRepresentation);
+            }
+            else enemySymbol = GetEnemySymbol(enemy.EnemyType);
             map[pos.Y, pos.X] = enemySymbol;
-            
+
         }
-        
+
         // Отрисовываем предметы
         foreach (var item in viewModel.Items)
         {
             var pos = item.Position;
             if (!IsValidPosition(pos, map)) continue;
-            
+
             // Если на этой позиции уже есть игрок, враг или выход, не перезаписываем
-            if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E' || 
+            if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E' ||
                 IsEnemySymbol(map[pos.Y, pos.X]))
                 continue;
-            
+
             // Символ предмета по типу
             char itemSymbol = GetItemSymbol(item.Type);
             // Не перезаписываем пол, если это не пустое место
@@ -136,7 +138,7 @@ internal static class GameStateRenderer
         }
         NCurses.Refresh();
     }
-    
+
     /// Получить символ врага по типу
     private static char GetEnemySymbol(EnemyTypeEnum enemyType)
     {
@@ -151,7 +153,7 @@ internal static class GameStateRenderer
             _ => '?'
         };
     }
-    
+
     /// Получить символ предмета
     private static char GetItemSymbol(ItemType itemType)
     {
@@ -165,21 +167,21 @@ internal static class GameStateRenderer
             _ => '?'
         };
     }
-    
+
     /// Проверить, является ли символ символом врага
     private static bool IsEnemySymbol(char symbol)
     {
-        return symbol == 'z' || symbol == 'v' || symbol == 'g' || 
+        return symbol == 'z' || symbol == 'v' || symbol == 'g' ||
                symbol == 'O' || symbol == 's' || symbol == 'm';
     }
-    
+
     /// Проверить валидность позиции для отрисовки
     private static bool IsValidPosition(Position pos, char[,] map)
     {
         return pos.Y >= 0 && pos.Y < map.GetLength(0) &&
                pos.X >= 0 && pos.X < map.GetLength(1);
     }
-    
+
     /// Отрисовывает комнату на карте
     private static void RenderRoom(char[,] map, RoomViewModel room)
     {
@@ -187,17 +189,17 @@ internal static class GameStateRenderer
         int left = room.TopLeft.X;
         int bottom = room.BottomRight.Y;
         int right = room.BottomRight.X;
-        
+
         // Отрисовываем стены и пол
         for (int y = top; y <= bottom; y++)
         {
             for (int x = left; x <= right; x++)
             {
                 // Проверяем границы
-                if (y < 0 || y >= GenerationConstants.MapHeight || 
+                if (y < 0 || y >= GenerationConstants.MapHeight ||
                     x < 0 || x >= GenerationConstants.MapWidth)
                     continue;
-                
+
                 // Стены
                 if (y == top || y == bottom || x == left || x == right)
                 {
@@ -215,18 +217,18 @@ internal static class GameStateRenderer
             }
         }
     }
-    
+
     /// Отрисовывает коридор на карте
     private static void RenderCorridor(char[,] map, CorridorViewModel corridor)
     {
         if (corridor.Cells == null || corridor.Cells.Count == 0)
             return;
-        
+
         // Отрисовываем все клетки коридора
         foreach (var cell in corridor.Cells)
         {
             // Проверяем границы
-            if (cell.Y >= 0 && cell.Y < GenerationConstants.MapHeight && 
+            if (cell.Y >= 0 && cell.Y < GenerationConstants.MapHeight &&
                 cell.X >= 0 && cell.X < GenerationConstants.MapWidth)
             {
                 // Рисуем коридор ('.' для пола коридора)
@@ -237,20 +239,20 @@ internal static class GameStateRenderer
             }
         }
     }
-    
+
     /// Отрисовывает двери комнаты
     private static void RenderDoors(char[,] map, RoomViewModel room)
     {
         if (room.Doors == null)
             return;
-        
+
         foreach (var door in room.Doors)
         {
             // Проверяем, что дверь инициализирована
             if (door.X > 0 && door.Y > 0)
             {
                 // Проверяем границы
-                if (door.Y >= 0 && door.Y < GenerationConstants.MapHeight && 
+                if (door.Y >= 0 && door.Y < GenerationConstants.MapHeight &&
                     door.X >= 0 && door.X < GenerationConstants.MapWidth)
                 {
                     // Дверь обозначаем символом '+'
@@ -264,7 +266,7 @@ internal static class GameStateRenderer
         }
     }
 
-    private static void PrintMapNCurses(char[,] map,int maxY, int maxX, GameStateViewModel viewModel)
+    private static void PrintMapNCurses(char[,] map, int maxY, int maxX, GameStateViewModel viewModel)
     {
         // Получаем размеры терминала
 
@@ -274,9 +276,10 @@ internal static class GameStateRenderer
         // Ограничиваем размеры карты размером окна (без выхода за границы)
         int winHeight = Math.Min(mapHeight, maxY - 1);
         int winWidth = Math.Min(mapWidth, maxX - 1);
-
+        int startY = Math.Max(0, (maxY - winHeight) / 2);  // Центрируем по вертикали
+        int startX = Math.Max(0, (maxX - winWidth) / 2);
         // Создаем подокно строго для карты
-        nint win = NCurses.NewWindow(winHeight, winWidth, 0, 0);
+        nint win = NCurses.NewWindow(winHeight, winWidth, startY, startX);
 
         // Отрисовка карты
         for (int y = 0; y < winHeight; y++)
@@ -291,34 +294,34 @@ internal static class GameStateRenderer
                 // Безопасно пишем символ
                 NCurses.WindowMove(win, y, x);
                 if (color != 0)
-                NCurses.WindowAttributeOn(win, color);
+                    NCurses.WindowAttributeOn(win, color);
                 try
                 {
                     NCurses.WindowAddChar(win, c);
                 }
-                catch (Mindmagma.Curses.DotnetCursesException)
+                catch (DotnetCursesException)
                 {
                     // Игнорируем ошибку, чтобы программа не падала
                 }
-                        if (color != 0)
-                NCurses.WindowAttributeOff(win, color);
+                if (color != 0)
+                    NCurses.WindowAttributeOff(win, color);
             }
         }
 
         // Обновляем окно
         NCurses.WindowRefresh(win);
 
-            if(winHeight+1>maxY || winWidth + 1 > maxX)
-            {
-                NCurses.Move(winHeight, 0);
-                NCurses.AddString("Terminal is to small for stats");
-                return;
-            }
-            else
-                PrintStats(winHeight,winWidth,viewModel);
-            
-            // int legendStartY = winHeight+2; 
-            //PrintLegend(legendStartY,maxX,maxY);
+        if (winHeight + 1 > maxY || winWidth + 1 > maxX)
+        {
+            NCurses.Move(winHeight, 0);
+            NCurses.AddString("Terminal is to small for stats");
+            return;
+        }
+        else
+            PrintStats(startY + winHeight, startX, winWidth, viewModel);
+
+        // int legendStartY = winHeight+2; 
+        //PrintLegend(legendStartY,maxX,maxY);
     }
     private static void PrintLegend(int legendStartY, int maxX, int maxY)
     {
@@ -357,31 +360,29 @@ internal static class GameStateRenderer
         }
     }
 
-    private static void PrintStats(int winHeight, int winWidth , GameStateViewModel viewModel)
+    private static void PrintStats(int winHeight, int startX, int winWidth, GameStateViewModel viewModel)
     {
-        int  y = winHeight+1;
+        int y = winHeight + 1;
         var player = viewModel.Player;
-        // NCurses.AttributeOn(NCurses.ColorPair(1));
+
         string[] statsInfo =
         {
             $"Lvl: {viewModel.CurrentLevelNumber}",
             $"Agil: {player.Agility}",
             $"Str: {player.Strength}",
             $"HP: {player.Health}/{player.MaxHealth}",
-            $"Total gold: {viewModel.TotalGold}"  
+            $"Total gold: {viewModel.TotalGold}"
         };
 
-        int partsWith = winWidth/statsInfo.Length;
-        for(int i = 0; i < statsInfo.Length; i++)
+        int partsWith = winWidth / statsInfo.Length;
+        for (int i = 0; i < statsInfo.Length; i++)
         {
             string stat = statsInfo[i];
-            int x = partsWith * i +(partsWith-stat.Length)/2;
-            if(x<0) x=0;
-            if(x+stat.Length >= winWidth) continue;
-            NCurses.Move(y, x);
-            NCurses.AddString(stat);
+            int x = partsWith * i + (partsWith - stat.Length) / 2 + startX;
+            if (x < startX) x = startX;
+            if (x + stat.Length >= startX + winWidth) continue;
+            NCursesMethods.Print(stat, y, x);
         }
-        // NCurses.AttributeOff(NCurses.ColorPair(1));
     }
     private static uint GetColorForChar(char c)
     {
@@ -396,16 +397,16 @@ internal static class GameStateRenderer
             case ' ':
             case '+':
                 return NCurses.ColorPair(UiColors.White);
-            case 'z':            
+            case 'z':
             case 'S':
                 return NCurses.ColorPair(UiColors.Green);
             case 'O':
             case 'F':
                 return NCurses.ColorPair(UiColors.Yellow);
-            case 'v':            
+            case 'v':
             case '$':
             case 'E':
-                return NCurses.ColorPair(UiColors.Red);            
+                return NCurses.ColorPair(UiColors.Red);
             case 'e':
             case 'W':
                 return NCurses.ColorPair(UiColors.Blue);
@@ -419,12 +420,12 @@ internal static class GameStateRenderer
     {
         int y = maxY / 2;
         int titleX = Math.Max(0, (maxX - title.Length) / 2);
-        NCursesMethods.Print(title,y,titleX);
+        NCursesMethods.Print(title, y, titleX);
         if (items.Count <= 0)
         {
             string message = $"There is no items of {title} type in your invetory ";
             int messageX = Math.Max(0, (maxX - message.Length) / 2);
-            NCursesMethods.Print(message,y+1,messageX);
+            NCursesMethods.Print(message, y + 1, messageX);
             return;
         }
 

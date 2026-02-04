@@ -1,4 +1,3 @@
-using System.Linq;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Session;

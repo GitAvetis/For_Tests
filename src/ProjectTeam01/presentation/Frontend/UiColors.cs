@@ -9,7 +9,6 @@ namespace ProjectTeam01.presentation.Frontend
         public const short Blue = 5;
         public const short Black = 6;
 
-
     }
-    
+
 }
