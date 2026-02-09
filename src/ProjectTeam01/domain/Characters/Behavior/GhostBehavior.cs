@@ -1,18 +1,36 @@
-﻿using ProjectTeam01.domain.generation;
+﻿using ProjectTeam01.domain.Combat;
+using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Characters.Behavior
 {
     internal class GhostBehavior(Enemy enemy, IMapQuery map) : EnemyBehavior(enemy, map)
     {
+        private const int InvisibilityChancePercent = 40; // 40% шанс стать невидимым каждый тик
+        
         public override void Tick(Hero hero)
         {
             int distanceToHero = DistanceToHero(hero);
-            if (distanceToHero <= Enemy.HostilityLevel)
+            
+            if (distanceToHero == 1)
             {
                 Enemy.IsTriggered = true;
                 if (Enemy is Ghost ghost)
                 {
                     ghost.IsInvisible = false;
+                }
+                Attack(hero);
+                return;
+            }
+            
+            if (distanceToHero <= Enemy.HostilityLevel)
+            {
+                Enemy.IsTriggered = true;
+                if (Enemy is Ghost ghost)
+                {
+                    if (Chance(InvisibilityChancePercent))
+                    {
+                        ghost.IsInvisible = !ghost.IsInvisible;
+                    }
                 }
 
                 if (!MoveTowards(hero))
@@ -20,30 +38,31 @@ namespace ProjectTeam01.domain.Characters.Behavior
             }
             else
             {
+                if (Enemy is Ghost ghost)
+                {
+                    if (Chance(InvisibilityChancePercent))
+                    {
+                        ghost.IsInvisible = !ghost.IsInvisible;
+                    }
+                }
                 Teleport();
             }
-
-            if (DistanceToHero(hero) == 1)
-                Attack(hero);
         }
 
         private bool Teleport()
         {
-            // Сначала проверяем, в комнате ли призрак
             var room = Map.FindRoomAt(Enemy.Position.X, Enemy.Position.Y);
             if (room != null)
             {
                 return TeleportInRoom(room);
             }
 
-            // Если не в комнате, проверяем, в коридоре ли
             var corridor = Map.FindCorridorAt(Enemy.Position.X, Enemy.Position.Y);
             if (corridor != null)
             {
                 return TeleportInCorridor(corridor);
             }
 
-            // Если ни в комнате, ни в коридоре - не телепортируемся
             return false;
         }
 
@@ -78,7 +97,6 @@ namespace ProjectTeam01.domain.Characters.Behavior
             const int MAX_TRIES = 10;
             for (int attempt = 0; attempt < MAX_TRIES; attempt++)
             {
-                // Выбираем случайную клетку из коридора
                 int randomIndex = random.Next(0, corridor.Cells.Count);
                 var targetPos = corridor.Cells[randomIndex];
 
@@ -86,6 +104,20 @@ namespace ProjectTeam01.domain.Characters.Behavior
                     return true;
             }
 
+            return false;
+        }
+
+        public override bool Attack(Character target)
+        {
+            if (target is not Hero hero)
+                return false;
+                
+            if (BattleService.HitSuccess(Enemy.BaseAgility, target.BaseAgility))
+            {
+                int damage = EnemyDamageCalculator.CalculateDamage(Enemy, hero);
+                target.TakeDamage(damage);
+                return true;
+            }
             return false;
         }
     }

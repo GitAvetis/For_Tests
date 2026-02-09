@@ -24,5 +24,8 @@ internal class GameState
     public IReadOnlyList<Elixir> PlayerElixirs { get; set; } = new List<Elixir>().AsReadOnly();
     public IReadOnlyList<Scroll> PlayerScrolls { get; set; } = new List<Scroll>().AsReadOnly();
     public int TotalGold { get; set; } = 0;
+    
+    // Туман войны
+    public FogOfWar FogOfWar { get; set; } = null!;
 }
 

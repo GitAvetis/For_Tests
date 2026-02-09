@@ -1,4 +1,6 @@
-﻿using ProjectTeam01.domain.Effects;
+﻿using System;
+using ProjectTeam01.domain.Combat;
+using ProjectTeam01.domain.Effects;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Characters.Behavior
@@ -12,9 +14,17 @@ namespace ProjectTeam01.domain.Characters.Behavior
         {
             int distanceToHero = DistanceToHero(hero);
 
+            if (distanceToHero == 1)
+            {
+                Enemy.IsTriggered = true;
+                if (Attack(hero)) SpecialEffectOnAttack(hero);
+                return;
+            }
+
             if (distanceToHero <= Enemy.HostilityLevel)
             {
                 Enemy.IsTriggered = true;
+                // Всегда пытаемся двигаться к игроку кратчайшим путем
                 if (!MoveTowards(hero))
                     ChangeDirection();
             }
@@ -22,20 +32,51 @@ namespace ProjectTeam01.domain.Characters.Behavior
             {
                 ChangeDirection();
             }
+        }
 
-            if (DistanceToHero(hero) == 1)
+        public override bool Attack(Character target)
+        {
+            if (target is not Hero hero)
+                return false;
+                
+            if (BattleService.HitSuccess(Enemy.BaseAgility, target.BaseAgility))
             {
-                if (Attack(hero)) SpecialEffectOnAttack(hero);
+                int damage = EnemyDamageCalculator.CalculateDamage(Enemy, hero);
+                target.TakeDamage(damage);
+                return true;
             }
+            return false;
         }
 
         private void ChangeDirection()
         {
+            bool inCorridor = IsInCorridor();
             int attempts = 8;
+            
             while (attempts-- > 0)
             {
-                if (Chance(50)) dx *= -1;
-                if (Chance(50)) dy *= -1;
+                if (inCorridor)
+                {
+                    // В корридоре двигаемся только по прямой
+                    if (Chance(50))
+                    {
+                        dx = random.Next(-1, 2);
+                        dy = 0;
+                    }
+                    else
+                    {
+                        dx = 0;
+                        dy = random.Next(-1, 2);
+                    }
+                }
+                else
+                {
+                    // В комнате можно менять направление свободно
+                    if (Chance(50)) dx *= -1;
+                    if (Chance(50)) dy *= -1;
+                }
+                
+                if (dx == 0 && dy == 0) continue;
 
                 if (TryMoveTo(Enemy.Position.X + dx, Enemy.Position.Y + dy))
                     break;
@@ -49,7 +90,7 @@ namespace ProjectTeam01.domain.Characters.Behavior
             hero.ActiveEffectManager.AddActiveEffect(sleep);
         }
 
-        protected override void SpecialEffectOnAttack(Hero hero)
+        public override void SpecialEffectOnAttack(Hero hero)
         {
             if (Chance(Snake.SleepChancePercent))
                 FallHeroToSleep(hero);

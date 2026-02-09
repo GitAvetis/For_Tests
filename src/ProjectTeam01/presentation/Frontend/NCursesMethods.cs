@@ -16,8 +16,11 @@ namespace ProjectTeam01.presentation.Frontend
 
         public static void Shutdown()
         {
+            NCurses.Echo();
+            NCurses.TimeOut(-1);
             NCurses.EndWin();
         }
+
 
         public static void Print(string text, int y, int x)
         {

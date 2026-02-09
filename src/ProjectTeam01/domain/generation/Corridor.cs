@@ -20,11 +20,15 @@ public class Corridor
 
     /// Все клетки коридора (для отрисовки и движения)
     public List<Position> Cells { get; set; }
+    
+    /// Маппинг клеток к сегментам (кешируется при генерации)
+    public Dictionary<Position, HashSet<int>> CellToSegments { get; set; }
 
     public Corridor()
     {
         Points = new List<Position>();
         Cells = new List<Position>();
+        CellToSegments = new Dictionary<Position, HashSet<int>>();
     }
 }
 

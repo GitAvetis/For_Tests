@@ -17,12 +17,19 @@ internal static class CorridorMapper
 
     public static Corridor FromSave(CorridorSave save)
     {
-        return new Corridor
+        var corridor = new Corridor
         {
             Type = save.Type,
             Points = save.Points.Select(PositionMapper.FromSave).ToList(),
             Cells = save.Cells.Select(PositionMapper.FromSave).ToList()
         };
+        
+        if (corridor.Points != null && corridor.Points.Count >= 2 && corridor.Cells != null)
+        {
+            corridor.CellToSegments = BresenhamUtils.GetCellToSegmentsMapping(corridor.Points, corridor.Cells);
+        }
+        
+        return corridor;
     }
 }
 

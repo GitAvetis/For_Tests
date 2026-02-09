@@ -36,7 +36,7 @@ internal class EntityGenerator
     }
 
     /// Разместить врагов на уровне
-    public void PlaceEnemies(Level level, int levelNumber)
+    public void PlaceEnemies(Level level, int levelNumber, float difficulty = 1.0f)
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
@@ -52,24 +52,28 @@ internal class EntityGenerator
 
             var position = GetRandomPositionInRoom(room);
 
-            if (level.HasAnyEntityAt(position.X, position.Y))
+            if (level.HasAnyEntityAt(position.X, position.Y) || 
+                (position.X == level.ExitPosition.X && position.Y == level.ExitPosition.Y) ||
+                (position.X == level.StartPosition.X && position.Y == level.StartPosition.Y))
             {
                 position = FindFreePositionInRoom(room, level);
                 if (position.X == -1) continue;
             }
 
             var enemy = CreateRandomEnemy(position.X, position.Y);
+            enemy.ApplyDifficulty(difficulty);//корректируем сложность
             level.AddEntity(enemy);
         }
     }
 
     /// Разместить предметы на уровне
-    public void PlaceItems(Level level, int levelNumber)
+    public void PlaceItems(Level level, int levelNumber, float difficulty = 1.0f)
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
         int baseItemCount = 10 - levelNumber / 3;
         int itemCount = Math.Max(3, _random.Next(baseItemCount, baseItemCount + 5));
+        itemCount =(int)(itemCount * difficulty);
 
         var nonStartRooms = level.Rooms.Where(r => !r.IsStartRoom).ToList();
         if (nonStartRooms.Count == 0) return;
@@ -80,7 +84,9 @@ internal class EntityGenerator
 
             var position = GetRandomPositionInRoom(room);
 
-            if (level.HasAnyEntityAt(position.X, position.Y))
+            if (level.HasAnyEntityAt(position.X, position.Y) || 
+                (position.X == level.ExitPosition.X && position.Y == level.ExitPosition.Y) ||
+                (position.X == level.StartPosition.X && position.Y == level.StartPosition.Y))
             {
                 position = FindFreePositionInRoom(room, level);
                 if (position.X == -1) continue;
@@ -124,7 +130,8 @@ internal class EntityGenerator
             int x = _random.Next(minX, maxX + 1);
             int y = _random.Next(minY, maxY + 1);
 
-            if (!level.HasAnyEntityAt(x, y))
+            if (!level.HasAnyEntityAt(x, y) && 
+                !(x == level.ExitPosition.X && y == level.ExitPosition.Y))
             {
                 return new Position(x, y);
             }
@@ -138,7 +145,7 @@ internal class EntityGenerator
     {
         var enemyType = (EnemyTypeEnum)_random.Next(0, 6);
 
-        return enemyType switch
+        Enemy enemy = enemyType switch
         {
             EnemyTypeEnum.Zombie => new Zombie(x, y),
             EnemyTypeEnum.Vampire => new Vampire(x, y),
@@ -148,6 +155,7 @@ internal class EntityGenerator
             EnemyTypeEnum.Mimic => new Mimic(x, y),
             _ => new Zombie(x, y)
         };
+        return enemy;
     }
 
     /// Создать случайный предмет

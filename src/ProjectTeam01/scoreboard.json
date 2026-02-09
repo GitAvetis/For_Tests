@@ -373,28 +373,40 @@
       "CellsMoved": 315
     },
     {
-      "TreasuresCollected": 19,
-      "MaxLevelReached": 3,
-      "EnemiesDefeated": 2,
-      "FoodConsumed": 4,
-      "ElixirsConsumed": 4,
-      "ScrollsConsumed": 6,
-      "HitsLanded": 19,
-      "HitsMissed": 16,
-      "HitsTaken": 41,
-      "CellsMoved": 448
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 2,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 3,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 0,
+      "HitsLanded": 10,
+      "HitsMissed": 13,
+      "HitsTaken": 59,
+      "CellsMoved": 298
     },
     {
-      "TreasuresCollected": 23,
-      "MaxLevelReached": 2,
-      "EnemiesDefeated": 2,
-      "FoodConsumed": 5,
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
       "ElixirsConsumed": 0,
-      "ScrollsConsumed": 3,
-      "HitsLanded": 19,
+      "ScrollsConsumed": 2,
+      "HitsLanded": 5,
       "HitsMissed": 8,
-      "HitsTaken": 20,
-      "CellsMoved": 330
+      "HitsTaken": 12,
+      "CellsMoved": 103
+    },
+    {
+      "TreasuresCollected": 212,
+      "MaxLevelReached": 5,
+      "EnemiesDefeated": 17,
+      "FoodConsumed": 7,
+      "ElixirsConsumed": 1,
+      "ScrollsConsumed": 6,
+      "HitsLanded": 17,
+      "HitsMissed": 23,
+      "HitsTaken": 40,
+      "CellsMoved": 923
     }
   ]
 }

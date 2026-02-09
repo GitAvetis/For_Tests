@@ -8,7 +8,7 @@ namespace ProjectTeam01.domain.Items
     {
         private const int MaxPercentAgilityIncrease = 10;
         private const int MaxPercentStrengthIncrease = 10;
-        private const int MaxPercentMaxHpIncrease = 20;
+        private const int MaxPercentMaxHpIncrease = 40; // Увеличено с 20% до 40% для более заметного эффекта
         private const int MinElixirDurationSeconds = 30;
         private const int MaxElixirDurationSeconds = 60;
 
@@ -42,6 +42,11 @@ namespace ProjectTeam01.domain.Items
                 _ => 1
             };
 
+            if (ElixirType == EffectTypeEnum.BuffMaxHp)
+            {
+                int minIncrease = Math.Max(10, maxIncrease / 3); 
+                return random.Next(minIncrease, maxIncrease + 1);
+            }
             return random.Next(1, Math.Max(2, maxIncrease + 1));
         }
 

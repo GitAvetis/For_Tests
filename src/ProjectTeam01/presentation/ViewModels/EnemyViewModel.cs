@@ -1,6 +1,5 @@
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
-using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.presentation.ViewModels;
 
@@ -13,9 +12,16 @@ public class EnemyViewModel
     public bool IsTriggered { get; set; }
 
     // Специфичные свойства для Mimic
-    public ItemType MimicRepresentation { get; set; }
+    public MimicsRepresentation? MimicRepresentation { get; set; }
 
     // Специфичные свойства для Ghost
     public bool? IsInvisible { get; set; }
+
+    public float Difficulty{get;set;}
+
+    public int Agil{get;set;}
+    public int Str{get;set;}
+    public int HP{get;set;}
+    public int ActHP{get;set;}
 }
 

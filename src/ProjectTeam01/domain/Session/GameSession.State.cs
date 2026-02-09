@@ -22,7 +22,8 @@ internal partial class GameSession
             PlayerFood = GetPlayerFood(),
             PlayerElixirs = GetPlayerElixirs(),
             PlayerScrolls = GetPlayerScrolls(),
-            TotalGold = GetTotalGold()
+            TotalGold = GetTotalGold(),
+            FogOfWar = _fogOfWar
         };
     }
 }

@@ -7,8 +7,7 @@
         Food,
         Elixir,
         Scroll,
-        Weapon,
-        Mimic
+        Weapon
     }
 
     internal abstract class Item : GameObject

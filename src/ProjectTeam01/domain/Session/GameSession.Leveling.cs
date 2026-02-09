@@ -20,14 +20,23 @@ internal partial class GameSession
         int nextLevelNumber = _currentLevel.LevelNumber + 1;
         var next = _levelGenerator.GenerateLevel();
         next.LevelNumber = nextLevelNumber;
+        _statistics.RecordLevelReached(nextLevelNumber);
 
+        RecalculateDifficulty();
         _entityGenerator.PlaceExistingHero(next, Player);
-        _entityGenerator.PlaceEnemies(next, nextLevelNumber);
-        _entityGenerator.PlaceItems(next, nextLevelNumber);
+        _entityGenerator.PlaceEnemies(next, nextLevelNumber, DifficultyFactor);
+        _entityGenerator.PlaceItems(next, nextLevelNumber, DifficultyFactor);
 
         _currentLevel = next;
         _mapQuery = new LevelMapQuery(_currentLevel);
         _statistics.RecordLevelReached(nextLevelNumber);
+        
+        // Очищаем туман войны для нового уровня
+        _fogOfWar.Clear();
+        
+        // Инициализируем туман войны для нового уровня - помечаем стартовую комнату как посещенную
+        InitializeFogOfWar();
+        // _statistics.RecordLevelReached(nextLevelNumber);
     }
 
     /// Перейти на следующий уровень (внешний вызов)
@@ -38,12 +47,16 @@ internal partial class GameSession
         int nextLevelNumber = _currentLevel.LevelNumber + 1;
         nextLevel.LevelNumber = nextLevelNumber;
         _entityGenerator.PlaceExistingHero(nextLevel, Player);
-        _entityGenerator.PlaceEnemies(nextLevel, nextLevelNumber);
-        _entityGenerator.PlaceItems(nextLevel, nextLevelNumber);
+        _entityGenerator.PlaceEnemies(nextLevel, nextLevelNumber, DifficultyFactor);
+        _entityGenerator.PlaceItems(nextLevel, nextLevelNumber, DifficultyFactor);
 
         _currentLevel = nextLevel;
         _mapQuery = new LevelMapQuery(_currentLevel);
         _statistics.RecordLevelReached(nextLevelNumber);
+        
+        _fogOfWar.Clear();
+        
+        InitializeFogOfWar();
     }
 }
 

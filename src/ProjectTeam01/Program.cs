@@ -1,12 +1,13 @@
 ﻿using Mindmagma.Curses;
 using ProjectTeam01.presentation.Frontend;
+
 namespace ProjectTeam01
 {
     internal class Program
     {
-        static readonly nint stdscr = NCurses.InitScreen();
+        static nint stdscr;
         static readonly List<string> menu = new() {
-            "1. Sart new game",
+            "1. Start new game",
             "2. Load game",
             "3. Score board",
             "4. Exit"
@@ -14,6 +15,7 @@ namespace ProjectTeam01
 
         static void Main(string[] args)
         {
+            stdscr = NCurses.InitScreen();
             try
             {
                 NCursesMethods.Init(stdscr);

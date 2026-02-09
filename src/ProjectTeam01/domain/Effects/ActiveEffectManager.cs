@@ -36,13 +36,16 @@ namespace ProjectTeam01.domain.Effects
                 .Where(e => e.Type == statType)
                 .Sum(e => ApplyStatEffect(e));
         }
-        // для эффектов сна
+        // для эффектов сна и других состояний
         private void ApplyStateEffect(ActiveEffect effect)
         {
             switch (effect.Type)
             {
                 case EffectTypeEnum.Sleep:
                     Hero.ApplySleep();
+                    break;
+                case EffectTypeEnum.BuffMaxHp:
+                    Hero.Heal(effect.Value);
                     break;
                 default:
                     break;

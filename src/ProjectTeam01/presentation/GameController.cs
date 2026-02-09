@@ -239,8 +239,9 @@ internal class GameController
         var items = _session.CurrentLevel.GetItems().ToList();
         var level = _session.CurrentLevel;
         var statistics = _session.Statistics;
+        var fogOfWar = _session.FogOfWar;
 
-        var save = GameDataService.CreateSave(hero, enemies, items, level, statistics);
+        var save = GameDataService.CreateSave(hero, enemies, items, level, statistics, fogOfWar);
         GameDataService.SaveToFile(save, GameSaveFilePath);
     }
 }

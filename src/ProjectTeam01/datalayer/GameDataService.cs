@@ -13,7 +13,7 @@ namespace ProjectTeam01.datalayer
     /// Отвечает за сериализацию/десериализацию игрового состояния в JSON.
     internal class GameDataService
     {
-        public static GameSave CreateSave(Hero hero, List<Enemy> enemies, List<Item> items, Level level, GameStatistics statistics)
+        public static GameSave CreateSave(Hero hero, List<Enemy> enemies, List<Item> items, Level level, GameStatistics statistics, FogOfWar fogOfWar)
         {
             var save = new GameSave
             {
@@ -22,7 +22,9 @@ namespace ProjectTeam01.datalayer
                 Items = items.Select(i => ItemMapper.ToSave(i)).ToList(),
                 Level = LevelMapper.ToSave(level),
                 Statistics = GameStatisticsMapper.ToSave(statistics),
-                GameLevel = level.LevelNumber
+                GameLevel = level.LevelNumber,
+                VisitedRooms = fogOfWar.GetVisitedRooms().ToList(),
+                VisitedCorridorSegments = fogOfWar.GetVisitedCorridorSegments().ToList()
             };
             return save;
         }
@@ -81,8 +83,26 @@ namespace ProjectTeam01.datalayer
                 level.AddEntity(item);
             }
 
-            // Создаем и возвращаем GameSession с загруженной статистикой
-            return new GameSession(level, hero, level.LevelNumber, statistics);
+            // Создаем GameSession с загруженной статистикой
+            var session = new GameSession(level, hero, level.LevelNumber, statistics);
+            
+            // Восстанавливаем туман войны из сохранения
+            LoadFromFile(filePath, out GameSave gameSave);
+            var visitedRooms = new System.Collections.Generic.HashSet<int>();
+            if (gameSave.VisitedRooms != null && gameSave.VisitedRooms.Count > 0)
+            {
+                visitedRooms = new System.Collections.Generic.HashSet<int>(gameSave.VisitedRooms);
+            }
+            
+            var visitedCorridorSegments = new System.Collections.Generic.HashSet<string>();
+            if (gameSave.VisitedCorridorSegments != null && gameSave.VisitedCorridorSegments.Count > 0)
+            {
+                visitedCorridorSegments = new System.Collections.Generic.HashSet<string>(gameSave.VisitedCorridorSegments);
+            }
+            
+            session.RestoreFogOfWar(visitedRooms, visitedCorridorSegments);
+            
+            return session;
         }
 
         // ========== РАБОТА СО СТАТИСТИКОЙ И ТАБЛИЦЕЙ ЛИДЕРОВ ==========

@@ -4,14 +4,10 @@ namespace ProjectTeam01.domain.Combat;
 internal class BattleService
 {
     /// Проверить, попал ли атакующий по цели
-    public static bool HitSuccess(int attackerBaseAgility, int targetBaseAgility, bool alwaysHit = false)
+    public static bool HitSuccess(int attackerBaseAgility, int targetBaseAgility)
     {
-        // Огр всегда попадает
-        if (alwaysHit)
-            return true;
-
-        double hitChance = BattleConstants.InitialHitChance
-            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility)
+        double hitChance = BattleConstants.InitialHitChance 
+            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility) 
             * BattleConstants.AgilityFactor;
 
         // Ограничиваем шанс пределами (0-100%)

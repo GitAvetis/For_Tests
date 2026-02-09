@@ -60,8 +60,8 @@ internal static class GameStateMapper
             // Corridors - список всех коридоров на уровне
             // ExitPosition - координаты выхода (отрисовывайте символ 'E')
             // LevelNumber - номер уровня (для отображения в UI)
-            Level = ToLevelViewModel(gameState.LevelGeometry),
-
+            Level = ToLevelViewModel(gameState.LevelGeometry, gameState.FogOfWar),
+            
             // Номер текущего уровня
             // CurrentLevelNumber - номер текущего уровня
             CurrentLevelNumber = gameState.CurrentLevelNumber,
@@ -128,7 +128,8 @@ internal static class GameStateMapper
             Position = enemy.Position,          // Координаты для отрисовки
             EnemyType = enemy.EnemyType,        // Тип для выбора символа/спрайта
             IsDead = enemy.IsDead,              // Флаг смерти (не отрисовывать)
-            IsTriggered = enemy.IsTriggered      // Флаг активации (враг движется к игроку)
+            IsTriggered = enemy.IsTriggered,      // Флаг активации (враг движется к игроку)
+            Difficulty = enemy.DifficultyFactor
         };
 
         // ОСОБЕННОСТИ MIMIC:
@@ -240,7 +241,7 @@ internal static class GameStateMapper
                 viewModel.WeaponType = weapon.WeaponType;           // Тип оружия для отображения
                 viewModel.StrengthBonus = weapon.StrengthBonus;
                 viewModel.DisplayName =
-                $"Weapon: {weapon.WeaponType} (+{weapon.StrengthBonus} Str)";      // Бонус силы для UI
+                $"Weapon: {weapon.WeaponType} (+{weapon.StrengthBonus} Str";      // Бонус силы для UI
                 break;
 
             // ЕДА: показывает количество восстанавливаемого HP
@@ -287,13 +288,13 @@ internal static class GameStateMapper
     /// 2. Отрисуйте все коридоры (пол)
     /// 3. Отрисуйте двери в комнатах
     /// 4. Отрисуйте StartPosition и ExitPosition
-
-    private static LevelViewModel ToLevelViewModel(Level level)
+  
+    private static LevelViewModel ToLevelViewModel(Level level, FogOfWar fogOfWar)
     {
         return new LevelViewModel
         {
-            Rooms = level.Rooms.Select(ToRoomViewModel).ToList(),           // Комнаты для отрисовки
-            Corridors = level.Corridors.Select(ToCorridorViewModel).ToList(), // Коридоры для отрисовки
+            Rooms = level.Rooms.Select(room => ToRoomViewModel(room, fogOfWar)).ToList(), // Комнаты для отрисовки
+            Corridors = level.Corridors.Select((corridor, index) => ToCorridorViewModel(corridor, fogOfWar, index)).ToList(), // Коридоры для отрисовки
             ExitPosition = level.ExitPosition,                               // Позиция выхода (символ 'E')
             StartPosition = level.StartPosition,                             // Стартовая позиция (символ 'S')
             LevelNumber = level.LevelNumber                                   // Номер уровня (для UI)
@@ -311,9 +312,28 @@ internal static class GameStateMapper
     /// - Doors: массив позиций дверей (отрисовывайте символ '+' на каждой позиции)
     /// - IsStartRoom: true если это стартовая комната (можно выделить визуально)
     /// - IsEndRoom: true если это конечная комната (можно выделить визуально)
-
-    private static RoomViewModel ToRoomViewModel(Room room)
+ 
+    private static RoomViewModel ToRoomViewModel(Room room, FogOfWar fogOfWar)
     {
+        int sector = room.Sector;
+        bool isVisited = fogOfWar.IsRoomVisited(sector);
+        bool isCurrentlyInRoom = fogOfWar.IsPlayerInRoom(sector);
+        
+        // Получаем карту видимости для текущей комнаты
+        Dictionary<Position, bool> visibilityMap = new();
+        if (isCurrentlyInRoom)
+        {
+            // Заполняем карту видимости для всех позиций в комнате
+            for (int y = room.TopLeft.Y; y <= room.BottomRight.Y; y++)
+            {
+                for (int x = room.TopLeft.X; x <= room.BottomRight.X; x++)
+                {
+                    var pos = new Position(x, y);
+                    visibilityMap[pos] = fogOfWar.IsPositionVisible(x, y);
+                }
+            }
+        }
+        
         return new RoomViewModel
         {
             TopLeft = room.TopLeft,              // Левый верхний угол для отрисовки
@@ -321,7 +341,11 @@ internal static class GameStateMapper
             // Фильтруем пустые двери (где X=0 и Y=0) - они не используются
             Doors = room.Doors.Where(d => d.X != 0 || d.Y != 0).ToArray(),
             IsStartRoom = room.IsStartRoom,      // Флаг стартовой комнаты (для выделения)
-            IsEndRoom = room.IsEndRoom           // Флаг конечной комнаты (для выделения)
+            IsEndRoom = room.IsEndRoom,          // Флаг конечной комнаты (для выделения)
+            Sector = sector,                      // Сектор комнаты (уникальный идентификатор)
+            IsVisited = isVisited,                // Была ли комната посещена
+            IsCurrentlyInRoom = isCurrentlyInRoom, // Находится ли игрок в комнате
+            VisibilityMap = visibilityMap        // Карта видимости позиций
         };
     }
 
@@ -333,12 +357,27 @@ internal static class GameStateMapper
     /// - Type: тип коридора (Horizontal, Vertical, LShape, TShape, Cross)
     /// - Cells: список всех клеток коридора (отрисовывайте символ '.' на каждой)
 
-    private static CorridorViewModel ToCorridorViewModel(Corridor corridor)
+    private static CorridorViewModel ToCorridorViewModel(Corridor corridor, FogOfWar fogOfWar, int corridorIndex)
     {
+        Dictionary<int, bool> segmentVisibility = new();
+        
+        if (corridor.Points != null && corridor.Points.Count >= 2)
+        {
+            for (int i = 0; i < corridor.Points.Count - 1; i++)
+            {
+                bool isVisible = fogOfWar.IsCorridorSegmentVisible(corridorIndex, i);
+                segmentVisibility[i] = isVisible;
+            }
+        }
+        
+        // Используем маппинг клеток к сегментам, вычисленный при генерации коридора
         return new CorridorViewModel
         {
-            Type = corridor.Type,                    // Тип коридора (для стилизации)
-            Cells = corridor.Cells.ToList()          // Все клетки коридора для отрисовки
+            Type = corridor.Type,                    // Тип коридора
+            Cells = corridor.Cells?.ToList() ?? new List<Position>(), // Все клетки коридора для отрисовки
+            Points = corridor.Points?.ToList() ?? new List<Position>(), // Ключевые точки коридора
+            SegmentVisibility = segmentVisibility,    // Видимость сегментов
+            CellToSegments = corridor.CellToSegments ?? new Dictionary<Position, HashSet<int>>() // Маппинг клеток к сегментам 
         };
     }
 }

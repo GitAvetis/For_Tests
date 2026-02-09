@@ -16,7 +16,7 @@ namespace ProjectTeam01.domain.Characters.Behavior
             Character.TakeDamage(damageValue);
         }
 
-        public bool Attack(Character target)
+        public virtual bool Attack(Character target)
         {
             if (BattleService.HitSuccess(Character.BaseAgility, target.BaseAgility))
             {

@@ -25,8 +25,8 @@ namespace ProjectTeam01.domain.Items
                     hero.ChangeBaseStrength(5);
                     break;
                 case ScrollTypeEnum.MaxHp:
-                    hero.ChangeBaseMaxHp(10);
-                    hero.Heal(10);
+                    hero.ChangeBaseMaxHp(25);
+                    hero.Heal(25);
                     break;
                 default:
                     break;

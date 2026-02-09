@@ -285,7 +285,13 @@ public class LevelGenerator
         }
 
         GenerateCorridorCells(corridor);
-
+        
+        // Вычисляем маппинг клеток к сегментам один раз при генерации
+        if (corridor.Points != null && corridor.Points.Count >= 2 && corridor.Cells != null)
+        {
+            corridor.CellToSegments = BresenhamUtils.GetCellToSegmentsMapping(corridor.Points, corridor.Cells);
+        }
+        
         return corridor;
     }
 
@@ -316,7 +322,12 @@ public class LevelGenerator
         }
 
         GenerateCorridorCells(corridor);
-
+        
+        if (corridor.Points != null && corridor.Points.Count >= 2 && corridor.Cells != null)
+        {
+            corridor.CellToSegments = BresenhamUtils.GetCellToSegmentsMapping(corridor.Points, corridor.Cells);
+        }
+        
         return corridor;
     }
 
@@ -332,9 +343,8 @@ public class LevelGenerator
         {
             var start = corridor.Points[i];
             var end = corridor.Points[i + 1];
-
-            bool includeEnd = (i == corridor.Points.Count - 2);
-            AddCellsBetweenPoints(corridor.Cells, start, end, includeEnd);
+            
+            AddCellsBetweenPoints(corridor.Cells, start, end, includeEnd: true);
         }
     }
 
@@ -357,13 +367,20 @@ public class LevelGenerator
 
         while (true)
         {
-            cells.Add(new Position(x, y));
-
+            var pos = new Position(x, y);
+            
+            if (x == x1 && y == y1 && !includeEnd)
+            {
+                break;
+            }
+            
+            if (!cells.Contains(pos))
+            {
+                cells.Add(pos);
+            }
+            
             if (x == x1 && y == y1)
             {
-                {
-                    cells.RemoveAt(cells.Count - 1);
-                }
                 break;
             }
 

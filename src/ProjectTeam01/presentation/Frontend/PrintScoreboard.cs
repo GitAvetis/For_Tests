@@ -14,15 +14,16 @@ namespace ProjectTeam01.presentation.Frontend
 
             var scoreboard = GameDataService.LoadScoreboard("scoreboard.json").SessionStats;
             var sortedScoreboard = scoreboard
-            .OrderByDescending(s => s.TreasuresCollected).ToList();
+            .OrderByDescending(s => s.TreasuresCollected).Take(5).ToList();
             int y = maxY / 2;
 
             for (int i = 0; i < sortedScoreboard.Count; i++)
             {
-                string message = sortedScoreboard[i].TreasuresCollected.ToString();
+                string gold = sortedScoreboard[i].TreasuresCollected.ToString();
+                string lvl = sortedScoreboard[i].MaxLevelReached.ToString();
+                string message = $"{i + 1}. Gold collected {gold}.....Lvl {lvl}.";
                 int x = maxX / 2 - message.Length / 2;
-                NCurses.Move(y + i, x);
-                NCurses.AddString($"{i + 1}. {message}");
+                NCursesMethods.Print(message,y + i, x);
             }
 
             NCurses.GetChar();

@@ -9,186 +9,193 @@ FILE: src/ProjectTeam01/game_save.json
 ================================================
 {
   "Hero": {
-    "PosX": 39,
-    "PosY": 25,
-    "CurrentHp": 150,
-    "BaseMaxHp": 150,
+    "PosX": 62,
+    "PosY": 23,
+    "CurrentHp": 57,
+    "BaseMaxHp": 170,
     "BaseStrength": 5,
     "BaseAgility": 5,
     "ActiveEffects": [],
+    "EquippedWeapon": {
+      "Type": 4,
+      "PosX": 68,
+      "PosY": 5,
+      "GameLevel": 0,
+      "WeaponType": 0
+    },
     "HeroBackpack": [
       {
+        "Type": 0,
+        "PosX": 21,
+        "PosY": 18,
+        "GameLevel": 0,
+        "Price": 7
+      },
+      {
         "Type": 1,
-        "PosX": 53,
-        "PosY": 17,
+        "PosX": 79,
+        "PosY": 26,
         "GameLevel": 0,
-        "HealthValue": 9
+        "HealthValue": 6
       },
       {
         "Type": 2,
-        "PosX": 64,
-        "PosY": 13,
+        "PosX": 16,
+        "PosY": 6,
         "GameLevel": 0,
-        "ElixirType": 0
+        "ElixirType": 1
       },
       {
-        "Type": 2,
-        "PosX": 54,
-        "PosY": 17,
+        "Type": 4,
+        "PosX": 68,
+        "PosY": 5,
         "GameLevel": 0,
-        "ElixirType": 2
+        "WeaponType": 0
+      },
+      {
+        "Type": 4,
+        "PosX": 66,
+        "PosY": 6,
+        "GameLevel": 0,
+        "WeaponType": 1
       }
     ],
     "IsHeroSleep": false
   },
   "Enemies": [
     {
-      "EnemyType": 4,
-      "PosX": 56,
-      "PosY": 14,
-      "ActualHp": 100,
-      "IsTriggered": false
-    },
-    {
-      "EnemyType": 3,
-      "PosX": 6,
-      "PosY": 5,
+      "EnemyType": 5,
+      "PosX": 39,
+      "PosY": 20,
       "ActualHp": 175,
       "IsTriggered": false,
-      "OgreCooldown": false
+      "Representation": 3
     },
     {
-      "EnemyType": 1,
+      "EnemyType": 2,
       "PosX": 36,
-      "PosY": 12,
-      "ActualHp": 150,
+      "PosY": 25,
+      "ActualHp": 100,
       "IsTriggered": false,
-      "EvadedFirstAttack": false
+      "IsInvisible": true
     },
     {
-      "EnemyType": 1,
-      "PosX": 68,
-      "PosY": 26,
-      "ActualHp": 150,
+      "EnemyType": 5,
+      "PosX": 40,
+      "PosY": 16,
+      "ActualHp": 175,
       "IsTriggered": false,
-      "EvadedFirstAttack": false
-    },
-    {
-      "EnemyType": 1,
-      "PosX": 63,
-      "PosY": 3,
-      "ActualHp": 150,
-      "IsTriggered": false,
-      "EvadedFirstAttack": false
+      "Representation": 1
     },
     {
       "EnemyType": 5,
       "PosX": 43,
-      "PosY": 3,
+      "PosY": 6,
       "ActualHp": 175,
       "IsTriggered": false,
       "Representation": 2
+    },
+    {
+      "EnemyType": 1,
+      "PosX": 19,
+      "PosY": 13,
+      "ActualHp": 150,
+      "IsTriggered": false,
+      "EvadedFirstAttack": false
     }
   ],
   "Items": [
     {
       "Type": 1,
-      "PosX": 69,
-      "PosY": 27,
+      "PosX": 18,
+      "PosY": 26,
       "GameLevel": 0,
-      "HealthValue": 7
-    },
-    {
-      "Type": 4,
-      "PosX": 77,
-      "PosY": 14,
-      "GameLevel": 0,
-      "WeaponType": 2
-    },
-    {
-      "Type": 4,
-      "PosX": 57,
-      "PosY": 14,
-      "GameLevel": 0,
-      "WeaponType": 1
+      "HealthValue": 13
     },
     {
       "Type": 3,
-      "PosX": 68,
-      "PosY": 27,
+      "PosX": 40,
+      "PosY": 17,
       "GameLevel": 0,
-      "ScrollType": 0
-    },
-    {
-      "Type": 1,
-      "PosX": 75,
-      "PosY": 13,
-      "GameLevel": 0,
-      "HealthValue": 7
+      "ScrollType": 1
     },
     {
       "Type": 3,
-      "PosX": 10,
+      "PosX": 81,
+      "PosY": 4,
+      "GameLevel": 0,
+      "ScrollType": 1
+    },
+    {
+      "Type": 3,
+      "PosX": 43,
       "PosY": 16,
       "GameLevel": 0,
-      "ScrollType": 0
-    },
-    {
-      "Type": 1,
-      "PosX": 67,
-      "PosY": 15,
-      "GameLevel": 0,
-      "HealthValue": 9
+      "ScrollType": 2
     },
     {
       "Type": 2,
-      "PosX": 41,
+      "PosX": 43,
+      "PosY": 12,
+      "GameLevel": 0,
+      "ElixirType": 0
+    },
+    {
+      "Type": 4,
+      "PosX": 36,
+      "PosY": 26,
+      "GameLevel": 0,
+      "WeaponType": 0
+    },
+    {
+      "Type": 3,
+      "PosX": 40,
+      "PosY": 15,
+      "GameLevel": 0,
+      "ScrollType": 2
+    },
+    {
+      "Type": 2,
+      "PosX": 75,
       "PosY": 4,
+      "GameLevel": 0,
+      "ElixirType": 2
+    },
+    {
+      "Type": 2,
+      "PosX": 38,
+      "PosY": 23,
       "GameLevel": 0,
       "ElixirType": 0
     },
     {
       "Type": 1,
-      "PosX": 75,
-      "PosY": 14,
+      "PosX": 13,
+      "PosY": 22,
       "GameLevel": 0,
-      "HealthValue": 12
-    },
-    {
-      "Type": 1,
-      "PosX": 41,
-      "PosY": 3,
-      "GameLevel": 0,
-      "HealthValue": 15
-    },
-    {
-      "Type": 1,
-      "PosX": 45,
-      "PosY": 2,
-      "GameLevel": 0,
-      "HealthValue": 18
+      "HealthValue": 9
     }
   ],
   "Level": {
-    "LevelNumber": 2,
+    "LevelNumber": 3,
     "Rooms": [
       {
         "Sector": 0,
         "TopLeft": {
-          "X": 1,
-          "Y": 1
+          "X": 12,
+          "Y": 3
         },
         "BottomRight": {
-          "X": 22,
+          "X": 19,
           "Y": 8
         },
         "Doors": [
           {
-            "X": 22,
-            "Y": 2
+            "X": 19,
+            "Y": 7
           },
           {
-            "X": 20,
+            "X": 15,
             "Y": 8
           }
         ],
@@ -198,16 +205,24 @@ FILE: src/ProjectTeam01/game_save.json
       {
         "Sector": 1,
         "TopLeft": {
-          "X": 40,
-          "Y": 1
+          "X": 42,
+          "Y": 2
         },
         "BottomRight": {
-          "X": 46,
-          "Y": 5
+          "X": 57,
+          "Y": 7
         },
         "Doors": [
           {
-            "X": 40,
+            "X": 57,
+            "Y": 6
+          },
+          {
+            "X": 56,
+            "Y": 7
+          },
+          {
+            "X": 42,
             "Y": 3
           }
         ],
@@ -217,17 +232,17 @@ FILE: src/ProjectTeam01/game_save.json
       {
         "Sector": 2,
         "TopLeft": {
-          "X": 61,
+          "X": 63,
           "Y": 1
         },
         "BottomRight": {
-          "X": 76,
-          "Y": 7
+          "X": 88,
+          "Y": 6
         },
         "Doors": [
           {
-            "X": 69,
-            "Y": 7
+            "X": 63,
+            "Y": 2
           }
         ],
         "IsStartRoom": false,
@@ -237,24 +252,16 @@ FILE: src/ProjectTeam01/game_save.json
         "Sector": 3,
         "TopLeft": {
           "X": 1,
-          "Y": 14
+          "Y": 11
         },
         "BottomRight": {
-          "X": 17,
-          "Y": 18
+          "X": 24,
+          "Y": 16
         },
         "Doors": [
           {
-            "X": 16,
-            "Y": 14
-          },
-          {
-            "X": 17,
-            "Y": 15
-          },
-          {
-            "X": 4,
-            "Y": 18
+            "X": 10,
+            "Y": 11
           }
         ],
         "IsStartRoom": false,
@@ -263,90 +270,86 @@ FILE: src/ProjectTeam01/game_save.json
       {
         "Sector": 4,
         "TopLeft": {
-          "X": 35,
+          "X": 38,
           "Y": 11
         },
         "BottomRight": {
-          "X": 58,
-          "Y": 15
+          "X": 44,
+          "Y": 18
         },
         "Doors": [
           {
-            "X": 58,
-            "Y": 14
+            "X": 42,
+            "Y": 11
           },
           {
-            "X": 35,
-            "Y": 12
+            "X": 42,
+            "Y": 18
           }
         ],
         "IsStartRoom": false,
-        "IsEndRoom": false
+        "IsEndRoom": true
       },
       {
         "Sector": 5,
         "TopLeft": {
-          "X": 66,
-          "Y": 11
+          "X": 61,
+          "Y": 14
         },
         "BottomRight": {
-          "X": 86,
-          "Y": 17
+          "X": 88,
+          "Y": 18
         },
         "Doors": [
           {
-            "X": 82,
-            "Y": 11
-          },
-          {
-            "X": 66,
-            "Y": 16
-          }
-        ],
-        "IsStartRoom": false,
-        "IsEndRoom": false
-      },
-      {
-        "Sector": 6,
-        "TopLeft": {
-          "X": 12,
-          "Y": 22
-        },
-        "BottomRight": {
-          "X": 25,
-          "Y": 28
-        },
-        "Doors": [
-          {
-            "X": 14,
-            "Y": 22
-          },
-          {
-            "X": 25,
-            "Y": 23
+            "X": 80,
+            "Y": 18
           }
         ],
         "IsStartRoom": true,
         "IsEndRoom": false
       },
       {
-        "Sector": 7,
+        "Sector": 6,
         "TopLeft": {
-          "X": 32,
-          "Y": 23
+          "X": 12,
+          "Y": 21
         },
         "BottomRight": {
-          "X": 58,
+          "X": 19,
+          "Y": 27
+        },
+        "Doors": [
+          {
+            "X": 19,
+            "Y": 25
+          }
+        ],
+        "IsStartRoom": false,
+        "IsEndRoom": false
+      },
+      {
+        "Sector": 7,
+        "TopLeft": {
+          "X": 35,
+          "Y": 22
+        },
+        "BottomRight": {
+          "X": 40,
           "Y": 28
         },
         "Doors": [
           {
-            "X": 58,
-            "Y": 26
+            "X": 38,
+            "Y": 22
           },
           {
-            "X": 32,
+            "X": 40,
             "Y": 25
+          },
+          {
+            "X": 35,
+            "Y": 27
           }
         ],
         "IsStartRoom": false,
@@ -355,21 +358,25 @@ FILE: src/ProjectTeam01/game_save.json
       {
         "Sector": 8,
         "TopLeft": {
-          "X": 65,
-          "Y": 24
+          "X": 78,
+          "Y": 22
         },
         "BottomRight": {
-          "X": 70,
+          "X": 83,
           "Y": 28
         },
         "Doors": [
           {
-            "X": 65,
-            "Y": 25
+            "X": 79,
+            "Y": 22
+          },
+          {
+            "X": 78,
+            "Y": 23
           }
         ],
         "IsStartRoom": false,
-        "IsEndRoom": true
+        "IsEndRoom": false
       }
     ],
     "Corridors": [
@@ -377,74 +384,98 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 0,
         "Points": [
           {
-            "X": 22,
-            "Y": 2
+            "X": 19,
+            "Y": 7
           },
           {
-            "X": 31,
-            "Y": 2
+            "X": 34,
+            "Y": 7
           },
           {
-            "X": 31,
+            "X": 34,
             "Y": 3
           },
           {
-            "X": 40,
+            "X": 42,
             "Y": 3
           }
         ],
         "Cells": [
           {
+            "X": 19,
+            "Y": 7
+          },
+          {
+            "X": 20,
+            "Y": 7
+          },
+          {
+            "X": 21,
+            "Y": 7
+          },
+          {
             "X": 22,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 23,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 24,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 25,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 26,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 27,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 28,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 29,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 30,
-            "Y": 2
+            "Y": 7
           },
           {
             "X": 31,
-            "Y": 2
-          },
-          {
-            "X": 31,
-            "Y": 3
+            "Y": 7
           },
           {
             "X": 32,
-            "Y": 3
+            "Y": 7
           },
           {
             "X": 33,
-            "Y": 3
+            "Y": 7
+          },
+          {
+            "X": 34,
+            "Y": 7
+          },
+          {
+            "X": 34,
+            "Y": 6
+          },
+          {
+            "X": 34,
+            "Y": 5
+          },
+          {
+            "X": 34,
+            "Y": 4
           },
           {
             "X": 34,
@@ -469,6 +500,14 @@ FILE: src/ProjectTeam01/game_save.json
           {
             "X": 39,
             "Y": 3
+          },
+          {
+            "X": 40,
+            "Y": 3
+          },
+          {
+            "X": 41,
+            "Y": 3
           }
         ]
       },
@@ -476,152 +515,53 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 3,
         "Points": [
           {
-            "X": 20,
+            "X": 15,
             "Y": 8
           },
           {
-            "X": 20,
-            "Y": 12
-          },
-          {
-            "X": 16,
-            "Y": 12
-          },
-          {
-            "X": 16,
-            "Y": 14
-          }
-        ],
-        "Cells": [
-          {
-            "X": 20,
-            "Y": 8
-          },
-          {
-            "X": 20,
-            "Y": 9
-          },
-          {
-            "X": 20,
+            "X": 15,
             "Y": 10
           },
           {
-            "X": 20,
-            "Y": 11
+            "X": 10,
+            "Y": 10
           },
           {
-            "X": 20,
-            "Y": 12
-          },
-          {
-            "X": 19,
-            "Y": 12
-          },
-          {
-            "X": 18,
-            "Y": 12
-          },
-          {
-            "X": 17,
-            "Y": 12
-          },
-          {
-            "X": 16,
-            "Y": 12
-          },
-          {
-            "X": 16,
-            "Y": 13
-          }
-        ]
-      },
-      {
-        "Type": 3,
-        "Points": [
-          {
-            "X": 69,
-            "Y": 7
-          },
-          {
-            "X": 69,
-            "Y": 9
-          },
-          {
-            "X": 82,
-            "Y": 9
-          },
-          {
-            "X": 82,
+            "X": 10,
             "Y": 11
           }
         ],
         "Cells": [
           {
-            "X": 69,
-            "Y": 7
-          },
-          {
-            "X": 69,
+            "X": 15,
             "Y": 8
           },
           {
-            "X": 69,
+            "X": 15,
             "Y": 9
           },
           {
-            "X": 70,
-            "Y": 9
+            "X": 15,
+            "Y": 10
           },
           {
-            "X": 71,
-            "Y": 9
+            "X": 14,
+            "Y": 10
           },
           {
-            "X": 72,
-            "Y": 9
+            "X": 13,
+            "Y": 10
           },
           {
-            "X": 73,
-            "Y": 9
+            "X": 12,
+            "Y": 10
           },
           {
-            "X": 74,
-            "Y": 9
+            "X": 11,
+            "Y": 10
           },
           {
-            "X": 75,
-            "Y": 9
-          },
-          {
-            "X": 76,
-            "Y": 9
-          },
-          {
-            "X": 77,
-            "Y": 9
-          },
-          {
-            "X": 78,
-            "Y": 9
-          },
-          {
-            "X": 79,
-            "Y": 9
-          },
-          {
-            "X": 80,
-            "Y": 9
-          },
-          {
-            "X": 81,
-            "Y": 9
-          },
-          {
-            "X": 82,
-            "Y": 9
-          },
-          {
-            "X": 82,
+            "X": 10,
             "Y": 10
           }
         ]
@@ -630,106 +570,62 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 0,
         "Points": [
           {
-            "X": 17,
-            "Y": 15
+            "X": 57,
+            "Y": 6
           },
           {
-            "X": 24,
-            "Y": 15
+            "X": 62,
+            "Y": 6
           },
           {
-            "X": 24,
-            "Y": 12
+            "X": 62,
+            "Y": 2
           },
           {
-            "X": 35,
-            "Y": 12
+            "X": 63,
+            "Y": 2
           }
         ],
         "Cells": [
           {
-            "X": 17,
-            "Y": 15
+            "X": 57,
+            "Y": 6
           },
           {
-            "X": 18,
-            "Y": 15
+            "X": 58,
+            "Y": 6
           },
           {
-            "X": 19,
-            "Y": 15
+            "X": 59,
+            "Y": 6
           },
           {
-            "X": 20,
-            "Y": 15
+            "X": 60,
+            "Y": 6
           },
           {
-            "X": 21,
-            "Y": 15
+            "X": 61,
+            "Y": 6
           },
           {
-            "X": 22,
-            "Y": 15
+            "X": 62,
+            "Y": 6
           },
           {
-            "X": 23,
-            "Y": 15
+            "X": 62,
+            "Y": 5
           },
           {
-            "X": 24,
-            "Y": 15
+            "X": 62,
+            "Y": 4
           },
           {
-            "X": 24,
-            "Y": 14
+            "X": 62,
+            "Y": 3
           },
           {
-            "X": 24,
-            "Y": 13
-          },
-          {
-            "X": 24,
-            "Y": 12
-          },
-          {
-            "X": 25,
-            "Y": 12
-          },
-          {
-            "X": 26,
-            "Y": 12
-          },
-          {
-            "X": 27,
-            "Y": 12
-          },
-          {
-            "X": 28,
-            "Y": 12
-          },
-          {
-            "X": 29,
-            "Y": 12
-          },
-          {
-            "X": 30,
-            "Y": 12
-          },
-          {
-            "X": 31,
-            "Y": 12
-          },
-          {
-            "X": 32,
-            "Y": 12
-          },
-          {
-            "X": 33,
-            "Y": 12
-          },
-          {
-            "X": 34,
-            "Y": 12
+            "X": 62,
+            "Y": 2
           }
         ]
       },
@@ -737,77 +633,191 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 3,
         "Points": [
           {
-            "X": 4,
+            "X": 56,
+            "Y": 7
+          },
+          {
+            "X": 56,
+            "Y": 10
+          },
+          {
+            "X": 42,
+            "Y": 10
+          },
+          {
+            "X": 42,
+            "Y": 11
+          }
+        ],
+        "Cells": [
+          {
+            "X": 56,
+            "Y": 7
+          },
+          {
+            "X": 56,
+            "Y": 8
+          },
+          {
+            "X": 56,
+            "Y": 9
+          },
+          {
+            "X": 56,
+            "Y": 10
+          },
+          {
+            "X": 55,
+            "Y": 10
+          },
+          {
+            "X": 54,
+            "Y": 10
+          },
+          {
+            "X": 53,
+            "Y": 10
+          },
+          {
+            "X": 52,
+            "Y": 10
+          },
+          {
+            "X": 51,
+            "Y": 10
+          },
+          {
+            "X": 50,
+            "Y": 10
+          },
+          {
+            "X": 49,
+            "Y": 10
+          },
+          {
+            "X": 48,
+            "Y": 10
+          },
+          {
+            "X": 47,
+            "Y": 10
+          },
+          {
+            "X": 46,
+            "Y": 10
+          },
+          {
+            "X": 45,
+            "Y": 10
+          },
+          {
+            "X": 44,
+            "Y": 10
+          },
+          {
+            "X": 43,
+            "Y": 10
+          },
+          {
+            "X": 42,
+            "Y": 10
+          }
+        ]
+      },
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 42,
             "Y": 18
           },
           {
-            "X": 4,
-            "Y": 19
+            "X": 42,
+            "Y": 20
           },
           {
-            "X": 14,
-            "Y": 19
+            "X": 38,
+            "Y": 20
           },
           {
-            "X": 14,
+            "X": 38,
             "Y": 22
           }
         ],
         "Cells": [
           {
-            "X": 4,
+            "X": 42,
             "Y": 18
           },
           {
-            "X": 4,
+            "X": 42,
             "Y": 19
           },
           {
-            "X": 5,
-            "Y": 19
-          },
-          {
-            "X": 6,
-            "Y": 19
-          },
-          {
-            "X": 7,
-            "Y": 19
-          },
-          {
-            "X": 8,
-            "Y": 19
-          },
-          {
-            "X": 9,
-            "Y": 19
-          },
-          {
-            "X": 10,
-            "Y": 19
-          },
-          {
-            "X": 11,
-            "Y": 19
-          },
-          {
-            "X": 12,
-            "Y": 19
-          },
-          {
-            "X": 13,
-            "Y": 19
-          },
-          {
-            "X": 14,
-            "Y": 19
-          },
-          {
-            "X": 14,
+            "X": 42,
             "Y": 20
           },
           {
-            "X": 14,
+            "X": 41,
+            "Y": 20
+          },
+          {
+            "X": 40,
+            "Y": 20
+          },
+          {
+            "X": 39,
+            "Y": 20
+          },
+          {
+            "X": 38,
+            "Y": 20
+          },
+          {
+            "X": 38,
+            "Y": 21
+          }
+        ]
+      },
+      {
+        "Type": 3,
+        "Points": [
+          {
+            "X": 80,
+            "Y": 18
+          },
+          {
+            "X": 80,
+            "Y": 20
+          },
+          {
+            "X": 79,
+            "Y": 20
+          },
+          {
+            "X": 79,
+            "Y": 22
+          }
+        ],
+        "Cells": [
+          {
+            "X": 80,
+            "Y": 18
+          },
+          {
+            "X": 80,
+            "Y": 19
+          },
+          {
+            "X": 80,
+            "Y": 20
+          },
+          {
+            "X": 79,
+            "Y": 20
+          },
+          {
+            "X": 79,
             "Y": 21
           }
         ]
@@ -816,121 +826,94 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 0,
         "Points": [
           {
-            "X": 58,
-            "Y": 14
+            "X": 19,
+            "Y": 25
           },
           {
-            "X": 63,
-            "Y": 14
+            "X": 22,
+            "Y": 25
           },
           {
-            "X": 63,
-            "Y": 16
+            "X": 22,
+            "Y": 27
           },
           {
-            "X": 66,
-            "Y": 16
+            "X": 35,
+            "Y": 27
           }
         ],
         "Cells": [
           {
-            "X": 58,
-            "Y": 14
+            "X": 19,
+            "Y": 25
           },
           {
-            "X": 59,
-            "Y": 14
+            "X": 20,
+            "Y": 25
           },
           {
-            "X": 60,
-            "Y": 14
+            "X": 21,
+            "Y": 25
           },
           {
-            "X": 61,
-            "Y": 14
+            "X": 22,
+            "Y": 25
           },
           {
-            "X": 62,
-            "Y": 14
+            "X": 22,
+            "Y": 26
           },
           {
-            "X": 63,
-            "Y": 14
+            "X": 22,
+            "Y": 27
           },
           {
-            "X": 63,
-            "Y": 15
+            "X": 23,
+            "Y": 27
           },
           {
-            "X": 63,
-            "Y": 16
+            "X": 24,
+            "Y": 27
           },
-          {
-            "X": 64,
-            "Y": 16
-          },
-          {
-            "X": 65,
-            "Y": 16
-          }
-        ]
-      },
-      {
-        "Type": 0,
-        "Points": [
           {
             "X": 25,
-            "Y": 23
+            "Y": 27
           },
           {
             "X": 26,
-            "Y": 23
-          },
-          {
-            "X": 26,
-            "Y": 25
-          },
-          {
-            "X": 32,
-            "Y": 25
-          }
-        ],
-        "Cells": [
-          {
-            "X": 25,
-            "Y": 23
-          },
-          {
-            "X": 26,
-            "Y": 23
-          },
-          {
-            "X": 26,
-            "Y": 24
-          },
-          {
-            "X": 26,
-            "Y": 25
+            "Y": 27
           },
           {
             "X": 27,
-            "Y": 25
+            "Y": 27
           },
           {
             "X": 28,
-            "Y": 25
+            "Y": 27
           },
           {
             "X": 29,
-            "Y": 25
+            "Y": 27
           },
           {
             "X": 30,
-            "Y": 25
+            "Y": 27
           },
           {
             "X": 31,
-            "Y": 25
+            "Y": 27
+          },
+          {
+            "X": 32,
+            "Y": 27
+          },
+          {
+            "X": 33,
+            "Y": 27
+          },
+          {
+            "X": 34,
+            "Y": 27
           }
         ]
       },
@@ -938,80 +921,208 @@ FILE: src/ProjectTeam01/game_save.json
         "Type": 0,
         "Points": [
           {
-            "X": 58,
-            "Y": 26
-          },
-          {
-            "X": 62,
-            "Y": 26
-          },
-          {
-            "X": 62,
+            "X": 40,
             "Y": 25
           },
           {
-            "X": 65,
+            "X": 51,
             "Y": 25
+          },
+          {
+            "X": 51,
+            "Y": 23
+          },
+          {
+            "X": 78,
+            "Y": 23
           }
         ],
         "Cells": [
           {
+            "X": 40,
+            "Y": 25
+          },
+          {
+            "X": 41,
+            "Y": 25
+          },
+          {
+            "X": 42,
+            "Y": 25
+          },
+          {
+            "X": 43,
+            "Y": 25
+          },
+          {
+            "X": 44,
+            "Y": 25
+          },
+          {
+            "X": 45,
+            "Y": 25
+          },
+          {
+            "X": 46,
+            "Y": 25
+          },
+          {
+            "X": 47,
+            "Y": 25
+          },
+          {
+            "X": 48,
+            "Y": 25
+          },
+          {
+            "X": 49,
+            "Y": 25
+          },
+          {
+            "X": 50,
+            "Y": 25
+          },
+          {
+            "X": 51,
+            "Y": 25
+          },
+          {
+            "X": 51,
+            "Y": 24
+          },
+          {
+            "X": 51,
+            "Y": 23
+          },
+          {
+            "X": 52,
+            "Y": 23
+          },
+          {
+            "X": 53,
+            "Y": 23
+          },
+          {
+            "X": 54,
+            "Y": 23
+          },
+          {
+            "X": 55,
+            "Y": 23
+          },
+          {
+            "X": 56,
+            "Y": 23
+          },
+          {
+            "X": 57,
+            "Y": 23
+          },
+          {
             "X": 58,
-            "Y": 26
+            "Y": 23
           },
           {
             "X": 59,
-            "Y": 26
+            "Y": 23
           },
           {
             "X": 60,
-            "Y": 26
+            "Y": 23
           },
           {
             "X": 61,
-            "Y": 26
+            "Y": 23
           },
           {
             "X": 62,
-            "Y": 26
-          },
-          {
-            "X": 62,
-            "Y": 25
+            "Y": 23
           },
           {
             "X": 63,
-            "Y": 25
+            "Y": 23
           },
           {
             "X": 64,
-            "Y": 25
+            "Y": 23
+          },
+          {
+            "X": 65,
+            "Y": 23
+          },
+          {
+            "X": 66,
+            "Y": 23
+          },
+          {
+            "X": 67,
+            "Y": 23
+          },
+          {
+            "X": 68,
+            "Y": 23
+          },
+          {
+            "X": 69,
+            "Y": 23
+          },
+          {
+            "X": 70,
+            "Y": 23
+          },
+          {
+            "X": 71,
+            "Y": 23
+          },
+          {
+            "X": 72,
+            "Y": 23
+          },
+          {
+            "X": 73,
+            "Y": 23
+          },
+          {
+            "X": 74,
+            "Y": 23
+          },
+          {
+            "X": 75,
+            "Y": 23
+          },
+          {
+            "X": 76,
+            "Y": 23
+          },
+          {
+            "X": 77,
+            "Y": 23
           }
         ]
       }
     ],
     "StartPosition": {
-      "X": 13,
-      "Y": 24
+      "X": 77,
+      "Y": 16
     },
     "ExitPosition": {
-      "X": 67,
-      "Y": 26
+      "X": 40,
+      "Y": 13
     }
   },
   "Statistics": {
-    "TreasuresCollected": 0,
-    "MaxLevelReached": 2,
-    "EnemiesDefeated": 0,
-    "FoodConsumed": 0,
-    "ElixirsConsumed": 0,
-    "ScrollsConsumed": 0,
-    "HitsLanded": 0,
-    "HitsMissed": 0,
-    "HitsTaken": 0,
-    "CellsMoved": 121
+    "TreasuresCollected": 7,
+    "MaxLevelReached": 3,
+    "EnemiesDefeated": 1,
+    "FoodConsumed": 3,
+    "ElixirsConsumed": 1,
+    "ScrollsConsumed": 2,
+    "HitsLanded": 11,
+    "HitsMissed": 5,
+    "HitsTaken": 17,
+    "CellsMoved": 270
   },
-  "GameLevel": 2
+  "GameLevel": 3
 }
 
 
@@ -1019,23 +1130,19 @@ FILE: src/ProjectTeam01/game_save.json
 FILE: src/ProjectTeam01/Program.cs
 ================================================
 ﻿using Mindmagma.Curses;
-using ProjectTeam01.domain.generation;
-using ProjectTeam01.domain.Session;
 using ProjectTeam01.presentation.Frontend;
-using ProjectTeam01.presentation;
-using ProjectTeam01.presentation.Controllers;
 namespace ProjectTeam01
 {
     internal class Program
     {
         static readonly nint stdscr = NCurses.InitScreen();
-        static readonly List<string> menu = new () {
-            "1. Sart new game", 
-            "2. Load game", 
+        static readonly List<string> menu = new() {
+            "1. Sart new game",
+            "2. Load game",
             "3. Score board",
             "4. Exit"
             };
-        
+
         static void Main(string[] args)
         {
             try
@@ -1054,83 +1161,26 @@ namespace ProjectTeam01
             HelloScreen.RenderHelloScreen(stdscr);
             WaitForAnyKey();
 
-            MainMenu mainMenu = new(stdscr,menu);
-            StartFromSave game = new("game_save.json");
+            MainMenu mainMenu = new(stdscr, menu);
             bool isRunning = true;
             while (isRunning)
-            {   
-                int input = NCurses.GetChar();
-                if(input == 3)
-                    break;
-                else
-                    mainMenu.ShowMenuAndGetChoice(input);
-                // isRunning = game.IsGameRunning(input);
-                // game.RenderGameScreen(stdscr,mainMenu);
+            {
+                isRunning = mainMenu.GameCyqle();
             }
-            // StartNewGame game = new();
-            // bool isRunning = true;
-            // while (isRunning)
-            // {   
-            //     int input = NCurses.GetChar();
-            //     isRunning = game.IsGameRunning(input);
-            //     game.RenderGameScreen(stdscr,mainMenu);
-            // }
+
         }
-        // static void InitializeGame()
-        // {
-        //     // Создаем новую игру через GameInitializer (domain слой)
-        //     var gameSession = GameInitializer.CreateNewGame(levelNumber: 1);
-        //     var controller = new GameController(gameSession);
-        //     bool running = true;
-        //     MainMenu mainMenu = new(menu);
-        //     NCursesMethods.ActivateColorSystem(stdscr);
-        //     HelloScreen.RenderHelloScreen(stdscr);
-        //     while (true)
-        //     {
-        //         int key = NCurses.GetChar();
-        //         if (key == '\n'  || key == 'q') // Enter
-        //         {
-        //             break;
-        //         }
-        //     }
-        //     NCurses.FlushInputBuffer();// сбросил энтер из инпута
-
-        //     // Создаем карту
-        //     char[,] map = new char[GenerationConstants.MapHeight, GenerationConstants.MapWidth];
-        //     while (running)
-        //     {
-        //     // Инициализируем карту пробелами
-        //     for (int y = 0; y < GenerationConstants.MapHeight; y++)
-        //     {
-        //         for (int x = 0; x < GenerationConstants.MapWidth; x++)
-        //         {
-        //             map[y, x] = ' ';
-        //         }
-        //     }  
-        //         var viewModel = controller.GetGameStateViewModel();
-
-        //         // Отрисовка
-        //         GameStateRenderer.RenderHandler(viewModel, stdscr, controller,map,mainMenu);
-
-        //         // Получаем ввод
-        //         int key = NCurses.GetChar(); // ждет нажатия клавиши
-
-        //         // Обработка ввода
-        //         running = controller.HandleInput((char)key);
-        //     }
-
-        // }
 
         private static void WaitForAnyKey()
         {
             while (true)
             {
                 int key = NCurses.GetChar();
-                if (key == '\n'  || key == 'q') // Enter
+                if (key == '\n' || key == 'q') // Enter
                 {
                     break;
                 }
             }
+            NCurses.FlushInputBuffer();// сбросил энтер из инпута
         }
 
     }
@@ -1345,6 +1395,270 @@ FILE: src/ProjectTeam01/scoreboard.json
       "HitsMissed": 6,
       "HitsTaken": 22,
       "CellsMoved": 34
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 2,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 6,
+      "ElixirsConsumed": 3,
+      "ScrollsConsumed": 4,
+      "HitsLanded": 15,
+      "HitsMissed": 12,
+      "HitsTaken": 27,
+      "CellsMoved": 396
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 9,
+      "HitsTaken": 11,
+      "CellsMoved": 143
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 13,
+      "HitsMissed": 9,
+      "HitsTaken": 10,
+      "CellsMoved": 146
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 2,
+      "HitsLanded": 8,
+      "HitsMissed": 8,
+      "HitsTaken": 11,
+      "CellsMoved": 207
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 6,
+      "HitsTaken": 10,
+      "CellsMoved": 176
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 8,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 11,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 8,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 11,
+      "HitsMissed": 11,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 10,
+      "HitsMissed": 9,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 9,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 10,
+      "HitsMissed": 9,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 11,
+      "HitsMissed": 11,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 8,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 9,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 10,
+      "HitsMissed": 10,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 1,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 9,
+      "HitsMissed": 12,
+      "HitsTaken": 11,
+      "CellsMoved": 147
+    },
+    {
+      "TreasuresCollected": 0,
+      "MaxLevelReached": 2,
+      "EnemiesDefeated": 0,
+      "FoodConsumed": 0,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 1,
+      "HitsLanded": 17,
+      "HitsMissed": 7,
+      "HitsTaken": 11,
+      "CellsMoved": 315
+    },
+    {
+      "TreasuresCollected": 19,
+      "MaxLevelReached": 3,
+      "EnemiesDefeated": 2,
+      "FoodConsumed": 4,
+      "ElixirsConsumed": 4,
+      "ScrollsConsumed": 6,
+      "HitsLanded": 19,
+      "HitsMissed": 16,
+      "HitsTaken": 41,
+      "CellsMoved": 448
+    },
+    {
+      "TreasuresCollected": 23,
+      "MaxLevelReached": 2,
+      "EnemiesDefeated": 2,
+      "FoodConsumed": 5,
+      "ElixirsConsumed": 0,
+      "ScrollsConsumed": 3,
+      "HitsLanded": 19,
+      "HitsMissed": 8,
+      "HitsTaken": 20,
+      "CellsMoved": 330
     }
   ]
 }
@@ -1368,8 +1682,8 @@ FILE: src/ProjectTeam01/datalayer/GameDataService.cs
 ﻿using ProjectTeam01.datalayer.Mappers;
 using ProjectTeam01.datalayer.Models;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.Session;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -1499,7 +1813,7 @@ namespace ProjectTeam01.datalayer
         public static List<GameStatisticsSave> GetTopAttempts(string scoreboardPath, int count = 0)
         {
             var scoreboard = LoadScoreboard(scoreboardPath);
-            
+
             // Сортируем по количеству сокровищ (по убыванию)
             var sorted = scoreboard.SessionStats
                 .OrderByDescending(s => s.TreasuresCollected)
@@ -1557,7 +1871,6 @@ namespace ProjectTeam01.datalayer.Mappers
 ================================================
 FILE: src/ProjectTeam01/datalayer/Mappers/CorridorMapper.cs
 ================================================
-using System.Linq;
 using ProjectTeam01.datalayer.Models;
 using ProjectTeam01.domain.generation;
 
@@ -1680,7 +1993,7 @@ namespace ProjectTeam01.datalayer.Mappers
                         Mimic mimic = new Mimic(enemySave.PosX, enemySave.PosY, enemySave.ActualHp)
                         {
                             IsTriggered = enemySave.IsTriggered,
-                            Representation = enemySave.Representation ?? MimicsRepresentation.Mimic
+                            Representation = enemySave.Representation  ?? domain.Items.ItemType.Mimic
                         };
                         return mimic;
                     }
@@ -1700,7 +2013,6 @@ namespace ProjectTeam01.datalayer.Mappers
 FILE: src/ProjectTeam01/datalayer/Mappers/GameStatisticsMapper.cs
 ================================================
 using ProjectTeam01.datalayer.Models;
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Session;
 
 namespace ProjectTeam01.datalayer.Mappers;
@@ -1872,7 +2184,7 @@ namespace ProjectTeam01.datalayer.Mappers
             switch (save.Type)
             {
                 case ItemType.Treasure:
-                    return new Treasure(save.PosX, save.PosY, save.GameLevel) { Price = save.Price!.Value};
+                    return new Treasure(save.PosX, save.PosY, save.GameLevel) { Price = save.Price!.Value };
                 case ItemType.Food:
                     return new Food(save.HealthValue ?? 10, save.PosX, save.PosY);
                 case ItemType.Elixir:
@@ -1893,7 +2205,6 @@ namespace ProjectTeam01.datalayer.Mappers
 ================================================
 FILE: src/ProjectTeam01/datalayer/Mappers/LevelMapper.cs
 ================================================
-using System.Linq;
 using ProjectTeam01.datalayer.Models;
 using ProjectTeam01.domain.generation;
 
@@ -1966,7 +2277,6 @@ internal static class PositionMapper
 ================================================
 FILE: src/ProjectTeam01/datalayer/Mappers/RoomMapper.cs
 ================================================
-using System.Linq;
 using ProjectTeam01.datalayer.Models;
 using ProjectTeam01.domain.generation;
 
@@ -2056,6 +2366,7 @@ internal class CorridorSave
 FILE: src/ProjectTeam01/datalayer/Models/EnemySave.cs
 ================================================
 ﻿using ProjectTeam01.domain.Characters;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.datalayer.Models
 {
@@ -2074,7 +2385,7 @@ namespace ProjectTeam01.datalayer.Models
         //vampire
         public bool? EvadedFirstAttack { get; set; }
         //mimic
-        public MimicsRepresentation? Representation { get; set; }
+        public ItemType? Representation { get; set; }
     }
 }
 
@@ -2159,7 +2470,7 @@ namespace ProjectTeam01.datalayer.Models
         public int GameLevel { get; set; }
 
         public int? HealthValue { get; set; }
-        public EffectTypeEnum? ElixirType { get; set;}
+        public EffectTypeEnum? ElixirType { get; set; }
         public ScrollTypeEnum? ScrollType { get; set; }
         public int? Price { get; set; }
         public WeaponTypeEnum? WeaponType { get; set; }
@@ -2173,8 +2484,6 @@ namespace ProjectTeam01.datalayer.Models
 ================================================
 FILE: src/ProjectTeam01/datalayer/Models/LevelSave.cs
 ================================================
-using ProjectTeam01.domain.generation;
-
 namespace ProjectTeam01.datalayer.Models;
 
 /// Модель сохранения для Level (геометрия уровня)
@@ -2208,8 +2517,6 @@ internal class PositionSave
 ================================================
 FILE: src/ProjectTeam01/datalayer/Models/RoomSave.cs
 ================================================
-using ProjectTeam01.domain.generation;
-
 namespace ProjectTeam01.datalayer.Models;
 
 /// Модель сохранения для Room
@@ -2549,7 +2856,7 @@ FILE: src/ProjectTeam01/domain/Characters/Ghost.cs
 ================================================
 ﻿namespace ProjectTeam01.domain.Characters
 {
-    internal class Ghost: Enemy
+    internal class Ghost : Enemy
     {
         public Ghost(int posX, int posY) : base(EnemyTypeEnum.Ghost, posX, posY)
         {
@@ -2577,8 +2884,7 @@ FILE: src/ProjectTeam01/domain/Characters/Ghost.cs
 ================================================
 FILE: src/ProjectTeam01/domain/Characters/Hero.cs
 ================================================
-﻿using ProjectTeam01.domain;
-using ProjectTeam01.domain.Effects;
+﻿using ProjectTeam01.domain.Effects;
 
 namespace ProjectTeam01.domain.Characters
 {
@@ -2711,24 +3017,26 @@ namespace ProjectTeam01.domain.Characters
 ================================================
 FILE: src/ProjectTeam01/domain/Characters/Mimic.cs
 ================================================
-﻿namespace ProjectTeam01.domain.Characters
+﻿using ProjectTeam01.domain.Items;
+
+namespace ProjectTeam01.domain.Characters
 {
     /// <summary>
     /// Представление Mimic для использования в ViewModels
     /// </summary>
-    public enum MimicsRepresentation
-    {
-        Food,
-        Elixir,
-        Scroll,
-        Weapon,
-        Mimic
-    }
+    // public enum MimicsRepresentation
+    // {
+    //     Food,
+    //     Elixir,
+    //     Scroll,
+    //     Weapon,
+    //     Mimic
+    // }
 
     internal class Mimic : Enemy
     {
         protected static readonly Random random = new();
-        public MimicsRepresentation Representation { get; set; }
+        public ItemType Representation { get; set; }
 
         public Mimic(int posX, int posY) : base(EnemyTypeEnum.Mimic, posX, posY)
         {
@@ -2748,10 +3056,10 @@ FILE: src/ProjectTeam01/domain/Characters/Mimic.cs
             Representation = RandomRepresentation();
         }
 
-        private MimicsRepresentation RandomRepresentation()
+        private ItemType RandomRepresentation()
         {
-            MimicsRepresentation mimics = (MimicsRepresentation)random.Next(0, 4);
-            return  mimics;
+            ItemType mimics = (ItemType)random.Next(0, 4);
+            return mimics;
         }
     }
 }
@@ -2839,7 +3147,7 @@ FILE: src/ProjectTeam01/domain/Characters/Vampire .cs
             BaseStrength = 2;
             HostilityLevel = 3;
         }
-        
+
         public bool EvadedFirstAttack { get; set; } = false;
     }
 }
@@ -3206,8 +3514,8 @@ namespace ProjectTeam01.domain.Characters.Behavior
             if (distanceToHero <= Enemy.HostilityLevel)
             {
                 Enemy.IsTriggered = true;
-                mimic.Representation = MimicsRepresentation.Mimic;
-                
+                mimic.Representation = Items.ItemType.Mimic;
+
                 if (!MoveTowards(hero))
                     MoveRandom();
             }
@@ -3465,8 +3773,8 @@ internal class BattleService
         if (alwaysHit)
             return true;
 
-        double hitChance = BattleConstants.InitialHitChance 
-            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility) 
+        double hitChance = BattleConstants.InitialHitChance
+            + (attackerBaseAgility - targetBaseAgility - BattleConstants.StandardAgility)
             * BattleConstants.AgilityFactor;
 
         // Ограничиваем шанс пределами (0-100%)
@@ -3571,7 +3879,7 @@ FILE: src/ProjectTeam01/domain/Effects/ActiveEffect.cs
         }
         public bool IsEffectOver { get; private set; }
 
-       
+
     }
 }
 
@@ -3616,7 +3924,7 @@ namespace ProjectTeam01.domain.Effects
         {
             return ActiveEffects
                 .Where(e => e.Type == statType)
-                .Sum(e => ApplyStatEffect(e)); 
+                .Sum(e => ApplyStatEffect(e));
         }
         // для эффектов сна
         private void ApplyStateEffect(ActiveEffect effect)
@@ -3651,10 +3959,10 @@ namespace ProjectTeam01.domain.Effects
                 {
                     // Сохраняем тип эффекта для проверки после удаления
                     bool wasBuffMaxHp = effect.Type == EffectTypeEnum.BuffMaxHp;
-                    
+
                     RemoveStateEffect(effect);
                     ActiveEffects.Remove(effect);
-                    
+
                     if (wasBuffMaxHp && Hero.ActualHp <= 0)
                     {
                         Hero.Heal(1 - Hero.ActualHp); // лечим героя на 1 HP
@@ -3708,8 +4016,6 @@ namespace ProjectTeam01.domain.Effects
 ================================================
 FILE: src/ProjectTeam01/domain/generation/Corridor.cs
 ================================================
-using System.Collections.Generic;
-
 namespace ProjectTeam01.domain.generation;
 
 /// Типы коридоров
@@ -3726,10 +4032,10 @@ public class Corridor
 {
     /// Тип коридора
     public CorridorType Type { get; set; }
-    
+
     /// Ключевые точки коридора (для логики генерации)
     public List<Position> Points { get; set; }
-    
+
     /// Все клетки коридора (для отрисовки и движения)
     public List<Position> Cells { get; set; }
 
@@ -3763,7 +4069,7 @@ public class DSU
 
     /// Инициализирует DSU - каждая комната в своем множестве
     private void MakeSets()
-    {   
+    {
         for (int i = 0; i < _parent.Length; i++)
         {
             _parent[i] = i;
@@ -3835,12 +4141,9 @@ public class DSU
 ================================================
 FILE: src/ProjectTeam01/domain/generation/EntityGenerator.cs
 ================================================
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.domain.generation;
 
@@ -3880,7 +4183,7 @@ internal class EntityGenerator
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
-        int baseEnemyCount = 3 + levelNumber / 2; 
+        int baseEnemyCount = 3 + levelNumber / 2;
         int enemyCount = _random.Next(baseEnemyCount, baseEnemyCount + 5);
 
         var nonStartRooms = level.Rooms.Where(r => !r.IsStartRoom).ToList();
@@ -3895,7 +4198,7 @@ internal class EntityGenerator
             if (level.HasAnyEntityAt(position.X, position.Y))
             {
                 position = FindFreePositionInRoom(room, level);
-                if (position.X == -1) continue; 
+                if (position.X == -1) continue;
             }
 
             var enemy = CreateRandomEnemy(position.X, position.Y);
@@ -3908,7 +4211,7 @@ internal class EntityGenerator
     {
         if (level == null) throw new ArgumentNullException(nameof(level));
 
-        int baseItemCount = 10 - levelNumber / 3; 
+        int baseItemCount = 10 - levelNumber / 3;
         int itemCount = Math.Max(3, _random.Next(baseItemCount, baseItemCount + 5));
 
         var nonStartRooms = level.Rooms.Where(r => !r.IsStartRoom).ToList();
@@ -3997,7 +4300,7 @@ internal class EntityGenerator
 
         if (roll < 35)
         {
-            int healthValue = _random.Next(5, 21); 
+            int healthValue = _random.Next(5, 21);
             return new Food(healthValue, x, y);
         }
         else if (roll < 60)
@@ -4056,7 +4359,7 @@ public class Level
     public int LevelNumber { get; set; }
     public Position ExitPosition { get; set; }
     public Position StartPosition { get; set; }
-    
+
     /// Сущности уровня 
     private readonly List<IGameObject> _entities;
 
@@ -4074,35 +4377,35 @@ public class Level
         ExitPosition = new Position();
         StartPosition = new Position();
     }
-    
+
     /// Получить все сущности уровня
     public IReadOnlyList<IGameObject> Entities => _entities.AsReadOnly();
-    
+
     /// Проверить, можно ли пройти по позиции (геометрия)
     public bool IsWalkable(int x, int y)
     {
         var pos = new Position(x, y);
-        
+
         // Проверка комнат
         foreach (var room in Rooms)
         {
             bool isInsideRoom = pos.X > room.TopLeft.X && pos.X < room.BottomRight.X &&
                                pos.Y > room.TopLeft.Y && pos.Y < room.BottomRight.Y;
-            
-            bool isDoor = room.Doors != null && room.Doors.Any(door => 
+
+            bool isDoor = room.Doors != null && room.Doors.Any(door =>
                 (door.X != 0 || door.Y != 0) && door.X == pos.X && door.Y == pos.Y);
-            
+
             if (isInsideRoom || isDoor)
                 return true;
         }
-        
+
         // Проверка коридоров
         foreach (var corridor in Corridors)
         {
             if (corridor.Cells != null && corridor.Cells.Contains(pos))
                 return true;
         }
-        
+
         return false;
     }
     /// Проверить, заблокирована ли клетка актором (игрок/враг).
@@ -4120,7 +4423,7 @@ public class Level
         EnsureIndex();
         return _positionIndex.ContainsKey(new Position(x, y));
     }
-    
+
     /// Получить сущность по позиции
     public IGameObject? GetEntityAt(int x, int y)
     {
@@ -4130,7 +4433,7 @@ public class Level
 
         return null;
     }
-    
+
     /// Получить все сущности на позиции
     public IReadOnlyList<IGameObject> GetEntitiesAt(int x, int y)
     {
@@ -4140,19 +4443,19 @@ public class Level
             ? list.AsReadOnly()
             : Array.Empty<IGameObject>();
     }
-    
+
     /// Получить всех врагов на уровне
     internal IReadOnlyList<Characters.Enemy> GetEnemies()
     {
         return _entities.OfType<Characters.Enemy>().ToList().AsReadOnly();
     }
-    
+
     /// Получить все предметы на уровне
     internal IReadOnlyList<Items.Item> GetItems()
     {
         return _entities.OfType<Items.Item>().ToList().AsReadOnly();
     }
-    
+
     /// Найти комнату, в которой находится указанная позиция
     internal Room? FindRoomAt(int x, int y)
     {
@@ -4165,7 +4468,7 @@ public class Level
         }
         return null;
     }
-    
+
     /// Найти коридор, в котором находится указанная позиция
     internal Corridor? FindCorridorAt(int x, int y)
     {
@@ -4177,25 +4480,25 @@ public class Level
         }
         return null;
     }
-    
+
     /// Добавить сущность на уровень
     public void AddEntity(IGameObject entity)
     {
         if (entity == null) return;
-        
+
         _entities.Add(entity);
         _indexDirty = true;
     }
-    
+
     /// Удалить сущность с уровня
     public void RemoveEntity(IGameObject entity)
     {
         if (entity == null) return;
-        
+
         _entities.Remove(entity);
         _indexDirty = true;
     }
-    
+
     /// Обновить позицию сущности в индексе (при движении)
     public void UpdateEntityPosition(IGameObject entity, Position oldPosition)
     {
@@ -4215,7 +4518,7 @@ public class Level
         }
         newList.Add(entity);
     }
-    
+
     /// Обновить индекс позиций (ленивая инициализация)
     private void EnsureIndex()
     {
@@ -4232,7 +4535,7 @@ public class Level
                 }
                 list.Add(entity);
             }
-            
+
             _indexDirty = false;
         }
     }
@@ -4249,15 +4552,424 @@ public class Level
 ================================================
 FILE: src/ProjectTeam01/domain/generation/LevelGenerator.cs
 ================================================
-[Binary file]
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("ProjectTeam01.unit_tests")]
+
+namespace ProjectTeam01.domain.generation;
+
+/// Константы для генерации уровней
+public static class GenerationConstants
+{
+    public const int RoomsPerSide = 3;
+    public const int MaxRoomsNumber = RoomsPerSide * RoomsPerSide;
+    public const int MaxCorridorsNumber = 12;
+
+    public const int MapHeight = 30;
+    public const int MapWidth = 90;
+
+    // Размеры регионов (каждая секция 3x3)
+    public const int SectorHeight = MapHeight / RoomsPerSide;
+    public const int SectorWidth = MapWidth / RoomsPerSide;
+
+    // Размеры комнат
+    public const int MinRoomWidth = 6;
+    public const int MaxRoomWidth = SectorWidth - 2;
+    public const int MinRoomHeight = 5;
+    public const int MaxRoomHeight = SectorHeight - 2;
+}
+/// Генератор уровней подземелья
+public class LevelGenerator
+{
+    private Random _random;
+    public LevelGenerator()
+    {
+        _random = new Random();
+    }
+
+    /// Генерирует уровень с комнатами и коридорами
+    public Level GenerateLevel()
+    {
+        var level = new Level();
+        var rooms = new Room[GenerationConstants.RoomsPerSide + 2, GenerationConstants.RoomsPerSide + 2];
+
+        InitializeRooms(rooms);
+        GenerateSectors(rooms, level);
+        GenerateConnections(rooms, level);
+
+        GenerateRoomsGeometry(rooms, level);
+        GenerateCorridorsGeometry(rooms, level);
+
+        SelectStartAndEndRooms(level);
+
+        return level;
+    }
+
+    /// Инициализирует массив комнат
+    private void InitializeRooms(Room[,] rooms)
+    {
+        for (int i = 0; i < GenerationConstants.RoomsPerSide + 2; i++)
+        {
+            for (int j = 0; j < GenerationConstants.RoomsPerSide + 2; j++)
+            {
+                rooms[i, j] = new Room
+                {
+                    Sector = -1
+                };
+            }
+        }
+    }
+
+    /// Генерирует секции (комнаты в сетке 3x3)
+    private void GenerateSectors(Room[,] rooms, Level level)
+    {
+        int sector = 0;
+        for (int i = 1; i < GenerationConstants.RoomsPerSide + 1; i++)
+        {
+            for (int j = 1; j < GenerationConstants.RoomsPerSide + 1; j++, sector++)
+            {
+                rooms[i, j].Sector = sector;
+                level.Rooms.Add(rooms[i, j]);
+            }
+        }
+    }
+
+    /// Генерирует геометрию комнат (размеры и позиции)
+    private void GenerateRoomsGeometry(Room[,] rooms, Level level)
+    {
+        for (int i = 0; i < level.Rooms.Count; i++)
+        {
+            var room = level.Rooms[i];
+
+            int width = _random.Next(GenerationConstants.MinRoomWidth, GenerationConstants.MaxRoomWidth + 1);
+            int height = _random.Next(GenerationConstants.MinRoomHeight, GenerationConstants.MaxRoomHeight + 1);
+
+            int column = room.Sector % GenerationConstants.RoomsPerSide;
+            int row = room.Sector / GenerationConstants.RoomsPerSide;
+
+            int leftRangeCoord = column * GenerationConstants.SectorWidth + 1;
+            int rightRangeCoord = (column + 1) * GenerationConstants.SectorWidth - width - 1;
+            int xCoord = _random.Next(leftRangeCoord, rightRangeCoord + 1);
+
+            int upRangeCoord = row * GenerationConstants.SectorHeight + 1;
+            int bottomRangeCoord = (row + 1) * GenerationConstants.SectorHeight - height - 1;
+            int yCoord = _random.Next(upRangeCoord, bottomRangeCoord + 1);
+
+            room.TopLeft = new Position(xCoord, yCoord);
+            room.BottomRight = new Position(xCoord + width - 1, yCoord + height - 1);
+
+            GenerateDoors(room);
+        }
+    }
+
+    /// Генерирует двери в комнате
+    private void GenerateDoors(Room room)
+    {
+        if (room.Connections[(int)Direction.Top] != null)
+        {
+            int doorX = _random.Next(room.TopLeft.X + 1, room.BottomRight.X);
+            room.Doors[(int)Direction.Top] = new Position(doorX, room.TopLeft.Y);
+        }
+
+        if (room.Connections[(int)Direction.Right] != null)
+        {
+            int doorY = _random.Next(room.TopLeft.Y + 1, room.BottomRight.Y);
+            room.Doors[(int)Direction.Right] = new Position(room.BottomRight.X, doorY);
+        }
+
+        if (room.Connections[(int)Direction.Bottom] != null)
+        {
+            int doorX = _random.Next(room.TopLeft.X + 1, room.BottomRight.X);
+            room.Doors[(int)Direction.Bottom] = new Position(doorX, room.BottomRight.Y);
+        }
+
+        if (room.Connections[(int)Direction.Left] != null)
+        {
+            int doorY = _random.Next(room.TopLeft.Y + 1, room.BottomRight.Y);
+            room.Doors[(int)Direction.Left] = new Position(room.TopLeft.X, doorY);
+        }
+    }
+
+    /// Структура для представления ребра между двумя комнатами
+    internal struct Edge
+    {
+        public int Room1Index;
+        public int Room2Index;
+        public Direction Direction1;
+        public Direction Direction2;
+    }
+
+    /// Генерирует соединения между комнатами используя DSU
+    internal void GenerateConnections(Room[,] rooms, Level level)
+    {
+        var edges = GenerateEdgesForRooms(level);
+
+        ShuffleEdges(edges);
+
+        var dsu = new DSU(level.Rooms.Count);
+
+        foreach (var edge in edges)
+        {
+            if (dsu.UnionSets(edge.Room1Index, edge.Room2Index))
+            {
+                var room1 = level.Rooms[edge.Room1Index];
+                var room2 = level.Rooms[edge.Room2Index];
+
+                room1.Connections[(int)edge.Direction1] = room2;
+                room2.Connections[(int)edge.Direction2] = room1;
+            }
+        }
+
+        if (!dsu.IsConnected())
+        {
+            throw new InvalidOperationException(
+                $"Граф комнат не связный! Найдено {dsu.GetConnectedComponentsCount()} компонент связности из {level.Rooms.Count} комнат.");
+        }
+    }
+
+    /// Генерирует все возможные ребра между соседними комнатами в сетке
+    internal List<Edge> GenerateEdgesForRooms(Level level)
+    {
+        var edges = new List<Edge>();
+
+        // Генерируем горизонтальные ребра
+        for (int i = 1; i < GenerationConstants.RoomsPerSide + 1; i++)
+        {
+            for (int j = 1; j < GenerationConstants.RoomsPerSide; j++)
+            {
+                int sector1 = (i - 1) * GenerationConstants.RoomsPerSide + (j - 1);
+                int sector2 = (i - 1) * GenerationConstants.RoomsPerSide + j;
+
+                edges.Add(new Edge
+                {
+                    Room1Index = sector1,
+                    Room2Index = sector2,
+                    Direction1 = Direction.Right,
+                    Direction2 = Direction.Left
+                });
+            }
+        }
+
+        // Генерируем вертикальные ребра
+        for (int i = 1; i < GenerationConstants.RoomsPerSide; i++)
+        {
+            for (int j = 1; j < GenerationConstants.RoomsPerSide + 1; j++)
+            {
+                int sector1 = (i - 1) * GenerationConstants.RoomsPerSide + (j - 1);
+                int sector2 = i * GenerationConstants.RoomsPerSide + (j - 1);
+
+                edges.Add(new Edge
+                {
+                    Room1Index = sector1,
+                    Room2Index = sector2,
+                    Direction1 = Direction.Bottom,
+                    Direction2 = Direction.Top
+                });
+            }
+        }
+
+        return edges;
+    }
+
+    /// Перемешивает массив ребер случайным образом
+    internal void ShuffleEdges(List<Edge> edges)
+    {
+        for (int i = edges.Count - 1; i > 0; i--)
+        {
+            int j = _random.Next(i + 1);
+            (edges[i], edges[j]) = (edges[j], edges[i]);
+        }
+    }
+    /// Генерирует геометрию коридоров
+    internal void GenerateCorridorsGeometry(Room[,] rooms, Level level)
+    {
+        for (int i = 1; i < GenerationConstants.RoomsPerSide + 1; i++)
+        {
+            for (int j = 1; j < GenerationConstants.RoomsPerSide + 1; j++)
+            {
+                var curRoom = rooms[i, j];
+
+                // Проверяем соединение справа 
+                if (curRoom.Connections[(int)Direction.Right] != null)
+                {
+                    var rightRoom = curRoom.Connections[(int)Direction.Right];
+                    // Проверяем, что соединение двунаправленное
+                    if (rightRoom.Connections[(int)Direction.Left] == curRoom)
+                    {
+                        var corridor = GenerateHorizontalCorridor(curRoom, rightRoom, rooms);
+                        level.Corridors.Add(corridor);
+                    }
+                }
+
+                // Проверяем соединение снизу
+                if (curRoom.Connections[(int)Direction.Bottom] != null)
+                {
+                    var bottomRoom = curRoom.Connections[(int)Direction.Bottom];
+                    var corridor = GenerateVerticalCorridor(curRoom, bottomRoom, rooms);
+                    level.Corridors.Add(corridor);
+                }
+            }
+        }
+    }
+
+    /// Генерирует горизонтальный коридор между двумя комнатами
+    internal Corridor GenerateHorizontalCorridor(Room leftRoom, Room rightRoom, Room[,] rooms)
+    {
+        var corridor = new Corridor
+        {
+            Type = CorridorType.LeftToRight
+        };
+
+        var leftDoor = leftRoom.Doors[(int)Direction.Right];
+        var rightDoor = rightRoom.Doors[(int)Direction.Left];
+
+        if (leftDoor.Y == rightDoor.Y)
+        {
+            corridor.Points.Add(leftDoor);
+            corridor.Points.Add(rightDoor);
+        }
+        else
+        {
+            int bendX = _random.Next(Math.Min(leftDoor.X, rightDoor.X) + 1, Math.Max(leftDoor.X, rightDoor.X));
+
+            corridor.Points.Add(leftDoor);
+            corridor.Points.Add(new Position(bendX, leftDoor.Y));
+            corridor.Points.Add(new Position(bendX, rightDoor.Y));
+            corridor.Points.Add(rightDoor);
+        }
+
+        GenerateCorridorCells(corridor);
+
+        return corridor;
+    }
+
+    /// Генерирует вертикальный коридор между двумя комнатами
+    internal Corridor GenerateVerticalCorridor(Room topRoom, Room bottomRoom, Room[,] rooms)
+    {
+        var corridor = new Corridor
+        {
+            Type = CorridorType.TopToBottom
+        };
+
+        var topDoor = topRoom.Doors[(int)Direction.Bottom];
+        var bottomDoor = bottomRoom.Doors[(int)Direction.Top];
+
+        if (topDoor.X == bottomDoor.X)
+        {
+            corridor.Points.Add(topDoor);
+            corridor.Points.Add(bottomDoor);
+        }
+        else
+        {
+            int bendY = _random.Next(Math.Min(topDoor.Y, bottomDoor.Y) + 1, Math.Max(topDoor.Y, bottomDoor.Y));
+
+            corridor.Points.Add(topDoor);
+            corridor.Points.Add(new Position(topDoor.X, bendY));
+            corridor.Points.Add(new Position(bottomDoor.X, bendY));
+            corridor.Points.Add(bottomDoor);
+        }
+
+        GenerateCorridorCells(corridor);
+
+        return corridor;
+    }
+
+    /// Генерирует все клетки коридора на основе ключевых точек
+    private void GenerateCorridorCells(Corridor corridor)
+    {
+        if (corridor.Points == null || corridor.Points.Count < 2)
+            return;
+
+        corridor.Cells.Clear();
+
+        for (int i = 0; i < corridor.Points.Count - 1; i++)
+        {
+            var start = corridor.Points[i];
+            var end = corridor.Points[i + 1];
+
+            bool includeEnd = (i == corridor.Points.Count - 2);
+            AddCellsBetweenPoints(corridor.Cells, start, end, includeEnd);
+        }
+    }
+
+    /// Добавляет все клетки между двумя точками используя алгоритм Брезенхема
+    private void AddCellsBetweenPoints(List<Position> cells, Position start, Position end, bool includeEnd = true)
+    {
+        int x0 = start.X;
+        int y0 = start.Y;
+        int x1 = end.X;
+        int y1 = end.Y;
+
+        int dx = Math.Abs(x1 - x0);
+        int dy = Math.Abs(y1 - y0);
+        int sx = x0 < x1 ? 1 : -1;
+        int sy = y0 < y1 ? 1 : -1;
+        int err = dx - dy;
+
+        int x = x0;
+        int y = y0;
+
+        while (true)
+        {
+            cells.Add(new Position(x, y));
+
+            if (x == x1 && y == y1)
+            {
+                {
+                    cells.RemoveAt(cells.Count - 1);
+                }
+                break;
+            }
+
+            int e2 = 2 * err;
+            if (e2 > -dy)
+            {
+                err -= dy;
+                x += sx;
+            }
+            if (e2 < dx)
+            {
+                err += dx;
+                y += sy;
+            }
+        }
+    }
+
+    /// Выбирает стартовую и конечную комнату
+    internal void SelectStartAndEndRooms(Level level)
+    {
+        if (level.Rooms.Count == 0)
+            return;
+
+        int startRoomIndex = _random.Next(0, level.Rooms.Count);
+        var startRoom = level.Rooms[startRoomIndex];
+        startRoom.IsStartRoom = true;
+
+        int startX = _random.Next(startRoom.TopLeft.X + 1, startRoom.BottomRight.X - 1);
+        int startY = _random.Next(startRoom.TopLeft.Y + 1, startRoom.BottomRight.Y - 1);
+        level.StartPosition = new Position(startX, startY);
+
+        int endRoomIndex;
+        do
+        {
+            endRoomIndex = _random.Next(0, level.Rooms.Count);
+        }
+        while (endRoomIndex == startRoomIndex);
+
+        var endRoom = level.Rooms[endRoomIndex];
+        endRoom.IsEndRoom = true;
+
+        int endX = _random.Next(endRoom.TopLeft.X + 2, endRoom.BottomRight.X - 2);
+        int endY = _random.Next(endRoom.TopLeft.Y + 2, endRoom.BottomRight.Y - 2);
+        level.ExitPosition = new Position(endX, endY);
+    }
+}
+
 
 
 ================================================
 FILE: src/ProjectTeam01/domain/generation/LevelMapQuery.cs
 ================================================
-using System;
-using System.Collections.Generic;
-
 namespace ProjectTeam01.domain.generation;
 
 /// Адаптер для использования Level через интерфейс IMapQuery для работы с картой без прямой зависимости от Level.
@@ -4265,7 +4977,7 @@ namespace ProjectTeam01.domain.generation;
 internal sealed class LevelMapQuery : IMapQuery
 {
     private readonly Level _level;
-  
+
     public LevelMapQuery(Level level)
     {
         _level = level ?? throw new ArgumentNullException(nameof(level));
@@ -4396,11 +5108,8 @@ public struct Position
 ================================================
 FILE: src/ProjectTeam01/domain/generation/RenderExample.cs
 ================================================
-using System;
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Session;
-using ProjectTeam01.presentation;
 using ProjectTeam01.presentation.Mappers;
 
 namespace ProjectTeam01.domain.generation;
@@ -4414,17 +5123,17 @@ public static class RenderExample
     {
         var generator = new LevelGenerator();
         var level = generator.GenerateLevel();
-        
+
         // Создаем героя и игровую сессию для получения ViewModel
         var hero = new Hero(level.StartPosition.X, level.StartPosition.Y);
         var gameSession = new GameSession(level, hero, level.LevelNumber);
-        
+
         // Получаем ViewModel и отрисовываем
         var gameState = gameSession.GetGameState();
         var viewModel = GameStateMapper.ToViewModel(gameState);
-        
+
         // GameStateRenderer.Render(viewModel);
-        
+
         Console.WriteLine();
         Console.WriteLine($"Level Number: {viewModel.CurrentLevelNumber}");
         Console.WriteLine($"Rooms Count: {viewModel.Level.Rooms.Count}");
@@ -4443,9 +5152,7 @@ public static class RenderExample
 ================================================
 FILE: src/ProjectTeam01/domain/generation/Room.cs
 ================================================
-﻿using System.Collections.Generic;
-
-namespace ProjectTeam01.domain.generation;
+﻿namespace ProjectTeam01.domain.generation;
 
 /// Направления для соединений комнат
 public enum Direction
@@ -4496,10 +5203,9 @@ public class Room
 ================================================
 FILE: src/ProjectTeam01/domain/Items/Elixir.cs
 ================================================
-﻿using static ProjectTeam01.domain.Effects.ActiveEffect;
-using ProjectTeam01.domain.Items.Interfaces;
-using ProjectTeam01.domain.Characters;
+﻿using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.Items.Interfaces;
 
 namespace ProjectTeam01.domain.Items
 {
@@ -4575,7 +5281,7 @@ namespace ProjectTeam01.domain.Items
             int missingHp = hero.MaxHp - hero.ActualHp;
             if (healAmount > missingHp)
                 healAmount = missingHp;
-            
+
             hero.Heal(healAmount);
         }
     }
@@ -4595,10 +5301,11 @@ FILE: src/ProjectTeam01/domain/Items/Item.cs
         Food,
         Elixir,
         Scroll,
-        Weapon
+        Weapon,
+        Mimic
     }
 
-    internal abstract class Item: GameObject
+    internal abstract class Item : GameObject
     {
         public ItemType Type { get; }
 
@@ -4668,7 +5375,7 @@ FILE: src/ProjectTeam01/domain/Items/Treasure.cs
             Level = lvl;
         }
         public int Price { get; set; }
-        public int Level { get; } 
+        public int Level { get; }
     }
 }
 
@@ -4728,7 +5435,7 @@ namespace ProjectTeam01.domain.Items.Interfaces
 {
     internal interface IUsableItem
     {
-         void Use(Hero hero);
+        void Use(Hero hero);
     }
 }
 
@@ -4843,7 +5550,7 @@ internal partial class GameSession
         else
         {
             int totalStrength = Player.BaseStrength + Player.ActiveEffectManager.GetTotalStatBonus(EffectTypeEnum.BuffStrength);
-            return (int)Math.Round(BattleConstants.InitialDamage 
+            return (int)Math.Round(BattleConstants.InitialDamage
                 + (totalStrength - BattleConstants.StandardStrength) * BattleConstants.StrengthFactor);
         }
     }
@@ -4855,14 +5562,14 @@ internal partial class GameSession
         {
             Vampire => CalculateVampireDamage(),
             Ogre => CalculateOgreDamage(enemy),
-            _ => CalculateStandardEnemyDamage(enemy) 
+            _ => CalculateStandardEnemyDamage(enemy)
         };
     }
 
     /// Урон стандартных врагов 30 + (strength - 50) * 0.3
     private int CalculateStandardEnemyDamage(Enemy enemy)
     {
-        return (int)Math.Round(BattleConstants.InitialDamage 
+        return (int)Math.Round(BattleConstants.InitialDamage
             + (enemy.BaseStrength - BattleConstants.StandardStrength) * BattleConstants.StrengthFactor);
     }
 
@@ -4902,7 +5609,7 @@ internal partial class GameSession
             + enemy.BaseStrength * BattleConstants.LootStrengthFactor
             + _random.Next(0, BattleConstants.LootRandomMax + 1)
         );
-        
+
         int levelBonus = (int)Math.Round(baseLoot * _currentLevel.LevelNumber * 0.05);
         return baseLoot + levelBonus;
     }
@@ -4931,7 +5638,70 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameSession.cs
 ================================================
-[Binary file]
+using ProjectTeam01.domain.Characters;
+using ProjectTeam01.domain.generation;
+
+namespace ProjectTeam01.domain.Session;
+
+/// Центральный агрегат для управления игровым процессом.
+/// Реализация разнесена по partial-файлам для читаемости (без изменения логики).
+internal partial class GameSession
+{
+    private Level _currentLevel;
+    private Hero _player;
+    private readonly Random _random;
+    private readonly LevelGenerator _levelGenerator;
+    private readonly EntityGenerator _entityGenerator;
+    private LevelMapQuery _mapQuery;
+    private readonly GameStatistics _statistics;
+    private bool _gameCompleted;
+
+    public Level CurrentLevel => _currentLevel;
+    public Hero Player => _player;
+    public int CurrentLevelNumber => _currentLevel.LevelNumber;
+    public GameStatistics Statistics => _statistics;
+    public bool IsGameCompleted => _gameCompleted;
+
+    /// Конструктор для создания НОВОЙ игры.
+    /// Создает новую статистику, начиная с указанного уровня.
+    public GameSession(Level level, Hero player, int levelNumber = 1)
+    {
+        _currentLevel = level ?? throw new ArgumentNullException(nameof(level));
+        _player = player ?? throw new ArgumentNullException(nameof(player));
+        _currentLevel.LevelNumber = levelNumber;
+        _random = new Random();
+        _levelGenerator = new LevelGenerator();
+        _entityGenerator = new EntityGenerator();
+        _mapQuery = new LevelMapQuery(_currentLevel);
+        _statistics = new GameStatistics(levelNumber);
+
+        // Добавляем игрока на уровень, если его там еще нет
+        if (!_currentLevel.Entities.Contains(_player))
+        {
+            _currentLevel.AddEntity(_player);
+        }
+    }
+
+    /// Конструктор для ЗАГРУЗКИ игры из сохранения.
+    /// Использует восстановленную статистику (обязательно должна быть загружена из файла).
+    public GameSession(Level level, Hero player, int levelNumber, GameStatistics statistics)
+    {
+        _currentLevel = level ?? throw new ArgumentNullException(nameof(level));
+        _player = player ?? throw new ArgumentNullException(nameof(player));
+        _statistics = statistics ?? throw new ArgumentNullException(nameof(statistics));
+        _currentLevel.LevelNumber = levelNumber;
+        _random = new Random();
+        _levelGenerator = new LevelGenerator();
+        _entityGenerator = new EntityGenerator();
+        _mapQuery = new LevelMapQuery(_currentLevel);
+
+        if (!_currentLevel.Entities.Contains(_player))
+        {
+            _currentLevel.AddEntity(_player);
+        }
+    }
+}
+
 
 
 ================================================
@@ -4997,8 +5767,8 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameSession.Inventory.cs
 ================================================
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.domain.Session;
 // отвечает за логику инвентаря
@@ -5137,8 +5907,8 @@ internal partial class GameSession
     public int GetTotalGold()
     {
         var treasure = Player.HeroBackpack.AllItems.OfType<Treasure>().ToList();
-        return treasure.Count>0? treasure[0].Price:0;
-    } 
+        return treasure.Count > 0 ? treasure[0].Price : 0;
+    }
 }
 
 
@@ -5148,7 +5918,6 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameSession.Leveling.cs
 ================================================
-using System;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Session;
@@ -5205,7 +5974,6 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameSession.Movement.cs
 ================================================
-using System.Linq;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Session;
@@ -5305,7 +6073,6 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameSession.Turn.cs
 ================================================
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.Combat;
 using ProjectTeam01.domain.Items;
@@ -5402,7 +6169,6 @@ internal partial class GameSession
 ================================================
 FILE: src/ProjectTeam01/domain/Session/GameState.cs
 ================================================
-using System.Collections.Generic;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Items;
@@ -5422,7 +6188,7 @@ internal class GameState
     public int PlayerStrength { get; set; }
     public bool PlayerIsSleep { get; set; }
     public int CurrentLevelNumber { get; set; }
-    
+
     // Инвентарь игрока
     public IReadOnlyList<Weapon> PlayerWeapons { get; set; } = new List<Weapon>().AsReadOnly();
     public IReadOnlyList<Food> PlayerFood { get; set; } = new List<Food>().AsReadOnly();
@@ -5478,7 +6244,7 @@ internal sealed class GameStatistics
     public void RecordElixirConsumed() => ElixirsConsumed++;
     public void RecordScrollConsumed() => ScrollsConsumed++;
     public void RecordMove(int cells = 1) { if (cells > 0) CellsMoved += cells; }
-    
+
     /// Записать попытку попадания
     public void RecordPlayerHitAttempt(bool hit)
     {
@@ -5517,9 +6283,9 @@ FILE: src/ProjectTeam01/presentation/GameController.cs
 using ProjectTeam01.datalayer;
 using ProjectTeam01.domain;
 using ProjectTeam01.domain.Session;
+using ProjectTeam01.presentation.Frontend;
 using ProjectTeam01.presentation.Mappers;
 using ProjectTeam01.presentation.ViewModels;
-using ProjectTeam01.presentation.Frontend;
 
 namespace ProjectTeam01.presentation;
 
@@ -5546,7 +6312,7 @@ internal class GameController
     {
         if (_inputMode == InputMode.MainMenu)
             return null;
-            
+
         var pos = _session.Player.Position;
 
         switch (command.Type)
@@ -5570,7 +6336,7 @@ internal class GameController
             case InputCommandType.FoodMenu:
                 _inputMode = InputMode.FoodMenu;
                 return null;
-                
+
             case InputCommandType.ElixirMenu:
                 _inputMode = InputMode.ElixirMenu;
                 return null;
@@ -5585,33 +6351,7 @@ internal class GameController
                 return null;
         }
     }
- 
-// // Обработка выбора в главном меню
-//     private PlayerAction? HandleMainMenuInput(char key)
-//     {
-//         switch (key)
-//         {
-//             case '1': // Начать новую игровую сессию
-//                 _inputMode = InputMode.Normal; // Переходим в игровой режим
-//                 return null; // Или можно вернуть специальное действие для новой игры
-            
-//             case '2': // Продолжить последний сеанс
-//                 // Здесь загрузка сохранения
-//                 _inputMode = InputMode.Normal;
-//                 return null;
-                
-//             case '3': // Таблица лидеров
-//                 // Здесь показ таблицы лидеров
-//                 // После показа можно вернуться в меню
-//                 return null;
-                
-//             case '4': // Выход из игры
-//                 return PlayerAction.CreateQuit();
-                
-//             default:
-//                 return null;
-//         }
-//     }
+
     public bool HandleInput(char key)
     {
         PlayerAction? action = null;
@@ -5621,49 +6361,50 @@ internal class GameController
             //     action =  HandleMainMenuInput(key);
             //     break;
             case InputMode.Normal:
-            var command = InputHandler.Read(key);
-            if (command != null)
-                action = Translate(command);
+                var command = InputHandler.Read(key);
+                if (command != null)
+                    action = Translate(command);
                 break;
             default:
                 action = HandleMenuInput(key);
                 break;
         }
-        
+
         if (action != null)
             ApplyAction(action);
 
         return _running;
     }
-   
+
     private void ApplyAction(PlayerAction action)
+    {
+        // Сохраняем номер уровня до хода для проверки перехода на новый уровень
+        int levelBeforeTurn = _session.CurrentLevelNumber;
+        _session.ProcessTurn(action);
+
+        // Сохраняем полную игру при переходе на новый уровень (по ТЗ: "После прохождения каждого уровня")
+        if (_session.CurrentLevelNumber > levelBeforeTurn)
         {
-            // Сохраняем номер уровня до хода для проверки перехода на новый уровень
-            int levelBeforeTurn = _session.CurrentLevelNumber;
-            _session.ProcessTurn(action);
-
-            // Сохраняем полную игру при переходе на новый уровень (по ТЗ: "После прохождения каждого уровня")
-            if (_session.CurrentLevelNumber > levelBeforeTurn)
-            {
-                SaveFullGame();
-            }
-
-            // Проверка выхода из игры (Quit) - сохраняем полную игру перед выходом (по ТЗ: "После перезапуска игры")
-            if (action.Type == PlayerActionType.Quit)
-            {
-                SaveFullGame();
-                _running = false;
-                return;
-            }
-
-            // Проверка окончания игры
-            if (_session.IsGameOver() || _session.IsGameCompleted)
-            {
-                // Добавляем попытку в таблицу лидеров при завершении игры
-                GameDataService.AddAttemptToScoreboard(_session.Statistics, ScoreboardFilePath);
-                _running = false;
-            }
+            SaveFullGame();
         }
+
+        // Проверка выхода из игры (Quit) - сохраняем полную игру перед выходом (по ТЗ: "После перезапуска игры")
+        if (action.Type == PlayerActionType.Quit)
+        {
+            SaveFullGame();
+            _running = false;
+            return;
+        }
+
+        // Проверка окончания игры
+        if (_session.IsGameOver() || _session.IsGameCompleted)
+        {
+            // Добавляем попытку в таблицу лидеров при завершении игры
+            GameDataService.AddAttemptToScoreboard(_session.Statistics, ScoreboardFilePath);
+
+            _running = false;
+        }
+    }
     /// Получить представление состояния игры для фронтенда
     private PlayerAction? HandleMenuInput(char key)
     {
@@ -5699,7 +6440,7 @@ internal class GameController
     }
 
     // === Обработка выбора предметов из инвентаря ===
-        private PlayerAction? HandleWeaponSelection(char key)
+    private PlayerAction? HandleWeaponSelection(char key)
     {
         var weapons = _session.GetPlayerWeapons();
         if (weapons.Count == 0)
@@ -5708,15 +6449,15 @@ internal class GameController
         if (key == '0')
             return PlayerAction.CreateUnequipWeapon();
 
-          else  if (key >= '1' && key <= '9')
+        else if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < weapons.Count)
             {
-                int index = key - '1';
-                if (index < weapons.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                 return PlayerAction.CreateEquipWeapon(weapons[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateEquipWeapon(weapons[index]);
             }
+        }
 
         return null;
     }
@@ -5726,15 +6467,15 @@ internal class GameController
         var food = _session.GetPlayerFood();
         if (food.Count == 0)
             return null;
-         if (key >= '1' && key <= '9')
+        if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < food.Count)
             {
-                int index = key - '1';
-                if (index < food.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(food[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(food[index]);
             }
+        }
         return null;
     }
 
@@ -5743,15 +6484,15 @@ internal class GameController
         var elixirs = _session.GetPlayerElixirs();
         if (elixirs.Count == 0)
             return null;
-            if (key >= '1' && key <= '9')
+        if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < elixirs.Count)
             {
-                int index = key - '1';
-                if (index < elixirs.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(elixirs[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(elixirs[index]);
             }
+        }
         return null;
     }
 
@@ -5761,17 +6502,17 @@ internal class GameController
         if (scrolls.Count == 0)
             return null;
         if (key >= '1' && key <= '9')
+        {
+            int index = key - '1';
+            if (index < scrolls.Count)
             {
-                int index = key - '1';
-                if (index < scrolls.Count)
-                {
-                    _inputMode = InputMode.Normal;
-                    return PlayerAction.CreateUseItem(scrolls[index]);
-                }
+                _inputMode = InputMode.Normal;
+                return PlayerAction.CreateUseItem(scrolls[index]);
             }
+        }
         return null;
     }
-    
+
     /// Сохранить полную игру (герой, враги, предметы, уровень, статистика)
     private void SaveFullGame()
     {
@@ -5794,50 +6535,52 @@ FILE: src/ProjectTeam01/presentation/GameStateRenderer.cs
 ================================================
 using Mindmagma.Curses;
 using ProjectTeam01.domain.Characters;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
-using ProjectTeam01.presentation.ViewModels;
+using ProjectTeam01.domain.Items;
 using ProjectTeam01.presentation.Frontend;
+using ProjectTeam01.presentation.ViewModels;
 
 
 namespace ProjectTeam01.presentation;
-///СУЩЕСТВУЕТ СЕЙЧАС ДЛЯ СТАТИЧНОЙ ОТРИСОВКИ УРОВНЯ (УДАЛЯЕМ КОГДА ПОЯВИТСЯ РЕАЛЬНЫЙ ФРОНТ)
-/// Рендерер для отрисовки состояния игры в консоль
-/// Работает с ViewModels (новый подход)
 internal static class GameStateRenderer
 {
     /// Отрисовывает состояние игры в консоль
-    public static void RenderHandler(GameStateViewModel viewModel,  nint stdscr, GameController controller,  char[,] map, MainMenu mainMenu)
+    public static void RenderHandler(GameStateViewModel viewModel, nint stdscr, GameController controller, char[,] map)
     {
         NCurses.GetMaxYX(stdscr, out int maxY, out int maxX);
         NCurses.Clear();
+        if (controller.Session.IsGameOver() || controller.Session.IsGameCompleted)
+        {
+            GameOverScreen.RenderGameOverScreen(stdscr, controller);
+            return;
+        }
 
         switch (controller.CurrentInputMode)
         {
             // case InputMode.MainMenu:
             //     mainMenu.RenderMenu();
-                // break;
+            // break;
             case InputMode.Normal:
                 RenderMap(viewModel, maxY, maxX, map);
                 break;
             case InputMode.ElixirMenu:
-               RenderMenu("Elexirs", viewModel.InventoryElixirs, maxY, maxX);
+                RenderMenu("Elexirs", viewModel.InventoryElixirs, maxY, maxX);
                 break;
             case InputMode.ScrollMenu:
-               RenderMenu("Scrolls", viewModel.InventoryScrolls, maxY, maxX);
+                RenderMenu("Scrolls", viewModel.InventoryScrolls, maxY, maxX);
                 break;
             case InputMode.WeaponMenu:
-               RenderMenu("Weapons", viewModel.InventoryWeapons, maxY, maxX);
+                RenderMenu("Weapons", viewModel.InventoryWeapons, maxY, maxX);
                 break;
             case InputMode.FoodMenu:
-               RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
+                RenderMenu("Food", viewModel.InventoryFood, maxY, maxX);
                 break;
         }
         NCurses.Refresh();
     }
-    private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX,  char[,] map)
+    private static void RenderMap(GameStateViewModel viewModel, int maxY, int maxX, char[,] map)
     {
-         // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
+        // Отрисовываем коридоры (сначала, чтобы они были под комнатами)
         foreach (var corridor in viewModel.Level.Corridors)
         {
             RenderCorridor(map, corridor);
@@ -5847,34 +6590,34 @@ internal static class GameStateRenderer
         {
             RenderRoom(map, room);
         }
-        
+
         // Отрисовываем двери
         foreach (var room in viewModel.Level.Rooms)
         {
             RenderDoors(map, room);
         }
-        
+
         // Отрисовываем стартовую позицию
         if (viewModel.Level.StartPosition.X > 0 && viewModel.Level.StartPosition.Y > 0)
         {
             map[viewModel.Level.StartPosition.Y, viewModel.Level.StartPosition.X] = 'S';
         }
-        
+
         // Отрисовываем конечную позицию
         if (viewModel.Level.ExitPosition.X > 0 && viewModel.Level.ExitPosition.Y > 0)
         {
             map[viewModel.Level.ExitPosition.Y, viewModel.Level.ExitPosition.X] = 'E';
         }
-        
+
         // Отрисовываем сущности (игрок, враги, предметы)
         RenderEntities(map, viewModel);
-        
+
         // Выводим карту в консоль
         // PrintMap(map);
         PrintMapNCurses(map, maxY, maxX, viewModel);
     }
 
-    
+
     /// Отрисовывает сущности на карте
     private static void RenderEntities(char[,] map, GameStateViewModel viewModel)
     {
@@ -5884,37 +6627,42 @@ internal static class GameStateRenderer
         {
             map[playerPos.Y, playerPos.X] = '@'; // Игрок
         }
-        
+
         // Отрисовываем врагов
         foreach (var enemy in viewModel.Enemies)
         {
             if (enemy.IsDead) continue; // Пропускаем мертвых врагов
             if (enemy.IsInvisible == true) continue; // Пропускаем невидимых призраков
-            
+
             var pos = enemy.Position;
             if (!IsValidPosition(pos, map)) continue;
-            
+
             // Если на этой позиции уже есть игрок или выход, не перезаписываем
             if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E')
                 continue;
-            
+
             // Символ врага по типу
-            char enemySymbol = GetEnemySymbol(enemy.EnemyType);
+            char enemySymbol;
+            if(enemy.EnemyType == EnemyTypeEnum.Mimic && enemy.IsTriggered)
+            {
+                enemySymbol = GetItemSymbol (enemy.MimicRepresentation);
+            }
+            else enemySymbol = GetEnemySymbol(enemy.EnemyType);
             map[pos.Y, pos.X] = enemySymbol;
-            
+
         }
-        
+
         // Отрисовываем предметы
         foreach (var item in viewModel.Items)
         {
             var pos = item.Position;
             if (!IsValidPosition(pos, map)) continue;
-            
+
             // Если на этой позиции уже есть игрок, враг или выход, не перезаписываем
-            if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E' || 
+            if (map[pos.Y, pos.X] == '@' || map[pos.Y, pos.X] == 'E' ||
                 IsEnemySymbol(map[pos.Y, pos.X]))
                 continue;
-            
+
             // Символ предмета по типу
             char itemSymbol = GetItemSymbol(item.Type);
             // Не перезаписываем пол, если это не пустое место
@@ -5925,7 +6673,7 @@ internal static class GameStateRenderer
         }
         NCurses.Refresh();
     }
-    
+
     /// Получить символ врага по типу
     private static char GetEnemySymbol(EnemyTypeEnum enemyType)
     {
@@ -5940,7 +6688,7 @@ internal static class GameStateRenderer
             _ => '?'
         };
     }
-    
+
     /// Получить символ предмета
     private static char GetItemSymbol(ItemType itemType)
     {
@@ -5954,21 +6702,21 @@ internal static class GameStateRenderer
             _ => '?'
         };
     }
-    
+
     /// Проверить, является ли символ символом врага
     private static bool IsEnemySymbol(char symbol)
     {
-        return symbol == 'z' || symbol == 'v' || symbol == 'g' || 
+        return symbol == 'z' || symbol == 'v' || symbol == 'g' ||
                symbol == 'O' || symbol == 's' || symbol == 'm';
     }
-    
+
     /// Проверить валидность позиции для отрисовки
     private static bool IsValidPosition(Position pos, char[,] map)
     {
         return pos.Y >= 0 && pos.Y < map.GetLength(0) &&
                pos.X >= 0 && pos.X < map.GetLength(1);
     }
-    
+
     /// Отрисовывает комнату на карте
     private static void RenderRoom(char[,] map, RoomViewModel room)
     {
@@ -5976,17 +6724,17 @@ internal static class GameStateRenderer
         int left = room.TopLeft.X;
         int bottom = room.BottomRight.Y;
         int right = room.BottomRight.X;
-        
+
         // Отрисовываем стены и пол
         for (int y = top; y <= bottom; y++)
         {
             for (int x = left; x <= right; x++)
             {
                 // Проверяем границы
-                if (y < 0 || y >= GenerationConstants.MapHeight || 
+                if (y < 0 || y >= GenerationConstants.MapHeight ||
                     x < 0 || x >= GenerationConstants.MapWidth)
                     continue;
-                
+
                 // Стены
                 if (y == top || y == bottom || x == left || x == right)
                 {
@@ -6004,18 +6752,18 @@ internal static class GameStateRenderer
             }
         }
     }
-    
+
     /// Отрисовывает коридор на карте
     private static void RenderCorridor(char[,] map, CorridorViewModel corridor)
     {
         if (corridor.Cells == null || corridor.Cells.Count == 0)
             return;
-        
+
         // Отрисовываем все клетки коридора
         foreach (var cell in corridor.Cells)
         {
             // Проверяем границы
-            if (cell.Y >= 0 && cell.Y < GenerationConstants.MapHeight && 
+            if (cell.Y >= 0 && cell.Y < GenerationConstants.MapHeight &&
                 cell.X >= 0 && cell.X < GenerationConstants.MapWidth)
             {
                 // Рисуем коридор ('.' для пола коридора)
@@ -6026,20 +6774,20 @@ internal static class GameStateRenderer
             }
         }
     }
-    
+
     /// Отрисовывает двери комнаты
     private static void RenderDoors(char[,] map, RoomViewModel room)
     {
         if (room.Doors == null)
             return;
-        
+
         foreach (var door in room.Doors)
         {
             // Проверяем, что дверь инициализирована
             if (door.X > 0 && door.Y > 0)
             {
                 // Проверяем границы
-                if (door.Y >= 0 && door.Y < GenerationConstants.MapHeight && 
+                if (door.Y >= 0 && door.Y < GenerationConstants.MapHeight &&
                     door.X >= 0 && door.X < GenerationConstants.MapWidth)
                 {
                     // Дверь обозначаем символом '+'
@@ -6053,7 +6801,7 @@ internal static class GameStateRenderer
         }
     }
 
-    private static void PrintMapNCurses(char[,] map,int maxY, int maxX, GameStateViewModel viewModel)
+    private static void PrintMapNCurses(char[,] map, int maxY, int maxX, GameStateViewModel viewModel)
     {
         // Получаем размеры терминала
 
@@ -6063,9 +6811,10 @@ internal static class GameStateRenderer
         // Ограничиваем размеры карты размером окна (без выхода за границы)
         int winHeight = Math.Min(mapHeight, maxY - 1);
         int winWidth = Math.Min(mapWidth, maxX - 1);
-
+        int startY = Math.Max(0, (maxY - winHeight) / 2);  // Центрируем по вертикали
+        int startX = Math.Max(0, (maxX - winWidth) / 2);
         // Создаем подокно строго для карты
-        nint win = NCurses.NewWindow(winHeight, winWidth, 0, 0);
+        nint win = NCurses.NewWindow(winHeight, winWidth, startY, startX);
 
         // Отрисовка карты
         for (int y = 0; y < winHeight; y++)
@@ -6080,34 +6829,34 @@ internal static class GameStateRenderer
                 // Безопасно пишем символ
                 NCurses.WindowMove(win, y, x);
                 if (color != 0)
-                NCurses.WindowAttributeOn(win, color);
+                    NCurses.WindowAttributeOn(win, color);
                 try
                 {
                     NCurses.WindowAddChar(win, c);
                 }
-                catch (Mindmagma.Curses.DotnetCursesException)
+                catch (DotnetCursesException)
                 {
                     // Игнорируем ошибку, чтобы программа не падала
                 }
-                        if (color != 0)
-                NCurses.WindowAttributeOff(win, color);
+                if (color != 0)
+                    NCurses.WindowAttributeOff(win, color);
             }
         }
 
         // Обновляем окно
         NCurses.WindowRefresh(win);
 
-            if(winHeight+1>maxY || winWidth + 1 > maxX)
-            {
-                NCurses.Move(winHeight, 0);
-                NCurses.AddString("Terminal is to small for stats");
-                return;
-            }
-            else
-                PrintStats(winHeight,winWidth,viewModel);
-            
-            // int legendStartY = winHeight+2; 
-            //PrintLegend(legendStartY,maxX,maxY);
+        if (winHeight + 1 > maxY || winWidth + 1 > maxX)
+        {
+            NCurses.Move(winHeight, 0);
+            NCurses.AddString("Terminal is to small for stats");
+            return;
+        }
+        else
+            PrintStats(startY + winHeight, startX, winWidth, viewModel);
+
+        // int legendStartY = winHeight+2; 
+        //PrintLegend(legendStartY,maxX,maxY);
     }
     private static void PrintLegend(int legendStartY, int maxX, int maxY)
     {
@@ -6146,31 +6895,29 @@ internal static class GameStateRenderer
         }
     }
 
-    private static void PrintStats(int winHeight, int winWidth , GameStateViewModel viewModel)
+    private static void PrintStats(int winHeight, int startX, int winWidth, GameStateViewModel viewModel)
     {
-        int  y = winHeight+1;
+        int y = winHeight + 1;
         var player = viewModel.Player;
-        // NCurses.AttributeOn(NCurses.ColorPair(1));
+
         string[] statsInfo =
         {
             $"Lvl: {viewModel.CurrentLevelNumber}",
             $"Agil: {player.Agility}",
             $"Str: {player.Strength}",
             $"HP: {player.Health}/{player.MaxHealth}",
-            $"Total gold: {viewModel.TotalGold}"  
+            $"Total gold: {viewModel.TotalGold}"
         };
 
-        int partsWith = winWidth/statsInfo.Length;
-        for(int i = 0; i < statsInfo.Length; i++)
+        int partsWith = winWidth / statsInfo.Length;
+        for (int i = 0; i < statsInfo.Length; i++)
         {
             string stat = statsInfo[i];
-            int x = partsWith * i +(partsWith-stat.Length)/2;
-            if(x<0) x=0;
-            if(x+stat.Length >= winWidth) continue;
-            NCurses.Move(y, x);
-            NCurses.AddString(stat);
+            int x = partsWith * i + (partsWith - stat.Length) / 2 + startX;
+            if (x < startX) x = startX;
+            if (x + stat.Length >= startX + winWidth) continue;
+            NCursesMethods.Print(stat, y, x);
         }
-        // NCurses.AttributeOff(NCurses.ColorPair(1));
     }
     private static uint GetColorForChar(char c)
     {
@@ -6185,16 +6932,16 @@ internal static class GameStateRenderer
             case ' ':
             case '+':
                 return NCurses.ColorPair(UiColors.White);
-            case 'z':            
+            case 'z':
             case 'S':
                 return NCurses.ColorPair(UiColors.Green);
             case 'O':
             case 'F':
                 return NCurses.ColorPair(UiColors.Yellow);
-            case 'v':            
+            case 'v':
             case '$':
             case 'E':
-                return NCurses.ColorPair(UiColors.Red);            
+                return NCurses.ColorPair(UiColors.Red);
             case 'e':
             case 'W':
                 return NCurses.ColorPair(UiColors.Blue);
@@ -6208,12 +6955,12 @@ internal static class GameStateRenderer
     {
         int y = maxY / 2;
         int titleX = Math.Max(0, (maxX - title.Length) / 2);
-        NCursesMethods.Print(title,y,titleX);
+        NCursesMethods.Print(title, y, titleX);
         if (items.Count <= 0)
         {
             string message = $"There is no items of {title} type in your invetory ";
             int messageX = Math.Max(0, (maxX - message.Length) / 2);
-            NCursesMethods.Print(message,y+1,messageX);
+            NCursesMethods.Print(message, y + 1, messageX);
             return;
         }
 
@@ -6234,15 +6981,12 @@ internal static class GameStateRenderer
 ================================================
 FILE: src/ProjectTeam01/presentation/Controllers/IGameSession.cs
 ================================================
-using ProjectTeam01.presentation.Frontend;
-
 namespace ProjectTeam01.presentation.Controllers
 {
     public interface IGameSession
     {
         bool IsGameRunning(int key);
-        void RenderGameScreen(nint stdscr, MainMenu mainMenu);
-        // char[,] GetMap();
+        void RenderGameScreen(nint stdscr);
     }
 }
 
@@ -6253,7 +6997,6 @@ FILE: src/ProjectTeam01/presentation/Controllers/StartFromSave.cs
 using ProjectTeam01.datalayer;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Session;
-using ProjectTeam01.presentation.Frontend;
 
 namespace ProjectTeam01.presentation.Controllers
 {
@@ -6271,10 +7014,10 @@ namespace ProjectTeam01.presentation.Controllers
 
         public bool IsGameRunning(int key)
         {
-            return  _controller.HandleInput((char)key);
+            return _controller.HandleInput((char)key);
         }
 
-        public void RenderGameScreen(nint stdscr, MainMenu mainMenu)
+        public void RenderGameScreen(nint stdscr)
         {
 
             // Инициализируем карту пробелами
@@ -6284,13 +7027,13 @@ namespace ProjectTeam01.presentation.Controllers
                 {
                     _map[y, x] = ' ';
                 }
-            } 
+            }
 
-            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map, mainMenu);
+            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map);
         }
-            
+
     }
-    
+
 }
 
 
@@ -6301,7 +7044,6 @@ FILE: src/ProjectTeam01/presentation/Controllers/StartNewGame.cs
 ================================================
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Session;
-using ProjectTeam01.presentation.Frontend;
 
 namespace ProjectTeam01.presentation.Controllers
 {
@@ -6318,10 +7060,10 @@ namespace ProjectTeam01.presentation.Controllers
 
         public bool IsGameRunning(int key)
         {
-            return  _controller.HandleInput((char)key);
+            return _controller.HandleInput((char)key);
         }
 
-        public void RenderGameScreen(nint stdscr, MainMenu mainMenu)
+        public void RenderGameScreen(nint stdscr)
         {
 
             // Инициализируем карту пробелами
@@ -6331,13 +7073,81 @@ namespace ProjectTeam01.presentation.Controllers
                 {
                     _map[y, x] = ' ';
                 }
-            } 
+            }
 
-            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map, mainMenu);
+            GameStateRenderer.RenderHandler(_controller.GetGameStateViewModel(), stdscr, _controller, _map);
         }
-            
+
     }
-    
+
+}
+
+
+
+
+================================================
+FILE: src/ProjectTeam01/presentation/Frontend/GameOverScreen.cs
+================================================
+using Mindmagma.Curses;
+
+namespace ProjectTeam01.presentation.Frontend
+{
+    public static class GameOverScreen
+    {
+        private static readonly string[] helloScreen =
+        {
+            "     ______ ______ __  __ ______ ______    ",
+            "    / __  // __  // / / // ____// ____/    ",
+            "   / /_/ // / / // / / // /___ / /___      ",
+            "  / _  _// / / // / / // //_ //  ___/      ",
+            " / // / / /_/ // /_/ // /__/// /___        ",
+            "/_//_/ /_____//_____//_____//_____/        ",
+            "               __     ____  __   ___ ______",
+            "              / /    /_ _/ / / _/  // ____/",
+            "             / /      //  / /_/ __// /___  ",
+            "            / /      //  /  _  /_ /  ___/  ",
+            "           / /___  _//_ / / /_  // /___    ",
+            "          /_____/ /___//_/   /_//_____/    "
+        };
+        internal static void RenderGameOverScreen(nint stdscr, GameController controller)
+        {
+            NCurses.TimeOut(-1);
+
+            NCurses.GetMaxYX(stdscr, out int _windowHeight, out int _windowWidth);
+            NCurses.Clear();
+            NCurses.AttributeOn(NCurses.ColorPair(1));
+            int y = 0;
+            int x = 0;
+            for (int i = 0; i < helloScreen.Length; i++)
+            {
+                y = _windowHeight / 2 + i - helloScreen.Length;
+                x = _windowWidth / 2 - helloScreen[i].Length / 2;
+                NCursesMethods.Print(helloScreen[i], y, x);
+            }
+
+            string resultMessage = controller.Session.IsGameOver()
+            ? "GAME OVER - You died!"
+            : "VICTORY - You completed the game!";
+
+            string instruction = "Press any key to return to main menu";
+
+            int msgY = y / 2 + helloScreen.Length + 4;
+            int msgX = _windowWidth / 2 - resultMessage.Length / 2;
+            int instrY = msgY + 2;
+            int instrX = _windowWidth / 2 - instruction.Length / 2;
+
+            NCursesMethods.Print(resultMessage, msgY, Math.Max(0, msgX));
+            NCursesMethods.Print(instruction, instrY, Math.Max(0, instrX));
+
+            NCurses.AttributeOff(NCurses.ColorPair(1));
+            NCurses.GetChar();
+            NCurses.Refresh();
+            NCurses.TimeOut(50);
+
+        }
+
+    }
+
 }
 
 
@@ -6352,7 +7162,7 @@ namespace ProjectTeam01.presentation.Frontend
 {
     public static class HelloScreen
     {
-        public static readonly string[] helloScreen =
+        private static readonly string[] helloScreen =
         {
             "     ______ ______ __  __ ______ ______    ",
             "    / __  // __  // / / // ____// ____/    ",
@@ -6373,27 +7183,33 @@ namespace ProjectTeam01.presentation.Frontend
             NCurses.Clear();
             NCurses.AttributeOn(NCurses.ColorPair(1));
 
-            for (int i = 1; i < _windowHeight - 1; i++)
-            {
-                for (int j = 1; j < _windowWidth - 1; j++)
-                {
-                    NCursesMethods.Print(".",i,j);
-                }
-            }
-            
+            // for (int i = 1; i < _windowHeight - 1; i++)
+            // {
+            //     for (int j = 1; j < _windowWidth - 1; j++)
+            //     {
+            //         NCursesMethods.Print(".",i,j);
+            //     }
+            // }
+            int x = 0;
+            int y = 0;
             for (int i = 0; i < helloScreen.Length; i++)
             {
-                var y = _windowHeight / 2 + i - helloScreen.Length;
-                var x = _windowWidth / 2 - helloScreen[i].Length / 2;
-                    NCursesMethods.Print(helloScreen[i],y, x);
+                y = _windowHeight / 2 + i - helloScreen.Length;
+                x = _windowWidth / 2 - helloScreen[i].Length / 2;
+                NCursesMethods.Print(helloScreen[i], y, x);
             }
+
+            string instruction = "Press ENTER or Q to return to main menu";
+
+            NCursesMethods.Print(instruction, y + 3, x + 1);
+
             NCurses.AttributeOff(NCurses.ColorPair(1));
 
             NCurses.Refresh();
         }
 
     }
-    
+
 }
 
 
@@ -6449,25 +7265,25 @@ namespace ProjectTeam01.presentation.Frontend
         public static InputCommand? Read(char key)
         {
             if (key == 'w' || key == 'W')
-                return new (InputCommandType.MoveUp);
+                return new(InputCommandType.MoveUp);
             if (key == 's' || key == 'S')
-                return new (InputCommandType.MoveDown);
+                return new(InputCommandType.MoveDown);
             if (key == 'a' || key == 'A')
-                return new (InputCommandType.MoveLeft);
+                return new(InputCommandType.MoveLeft);
             if (key == 'd' || key == 'D')
-                return new (InputCommandType.MoveRight);
+                return new(InputCommandType.MoveRight);
 
             if (key == 'h' || key == 'H')
-                return new (InputCommandType.WeaponMenu);
+                return new(InputCommandType.WeaponMenu);
             if (key == 'j' || key == 'J')
-                return new (InputCommandType.FoodMenu);
+                return new(InputCommandType.FoodMenu);
             if (key == 'k' || key == 'K')
-                return new (InputCommandType.ElixirMenu);
+                return new(InputCommandType.ElixirMenu);
             if (key == 'e' || key == 'E')
-                return new (InputCommandType.ScrollMenu);
+                return new(InputCommandType.ScrollMenu);
 
             if (key == 'q' || key == 'Q' || key == '\x1b')
-                return new (InputCommandType.Quit);            
+                return new(InputCommandType.Quit);
 
             return null;
         }
@@ -6481,133 +7297,143 @@ namespace ProjectTeam01.presentation.Frontend
 FILE: src/ProjectTeam01/presentation/Frontend/MainMenu.cs
 ================================================
 using Mindmagma.Curses;
-using ProjectTeam01.domain;
 using ProjectTeam01.presentation.Controllers;
 
 namespace ProjectTeam01.presentation.Frontend
 {
     public class MainMenu
     {
-        private List<string> _menu{get;set;} = new();
-        private readonly int _selectedIndex = 0;
+        private List<string> _menu { get; set; } = new();
         private readonly nint _stdscr;
-        public MainMenu (nint stdscr, List<string> menu)
+        private MenuAction _menuAction;
+        public bool GameOver { get; set; } = false;
+        IGameSession? game = null;
+        public MainMenu(nint stdscr, List<string> menu)
         {
             _menu = menu;
             _stdscr = stdscr;
         }
-          
-        // Основной метод для показа меню и получения выбора
-        public MenuResult ShowMenuAndGetChoice(nint stdscr)
+
+        public void ShowMenuAndGetChoice()
         {
             bool choiceMade = false;
-            MenuResult result = new MenuResult { Choice = -1, Action = MenuAction.None };
-            
+            _menuAction = MenuAction.None;
+
             while (!choiceMade)
             {
                 RenderMenu();
                 int key = NCurses.GetChar();
-                
-                // Обработка выбора
-                if (key == '\n') // Enter
-                {
-                    result = ProcessChoice(_selectedIndex);
-                    choiceMade = true;
-                }
-                else if (key >= '1' && key <= '4') // Выбор цифрой
+
+                if (key >= '1' && key <= '4') // Выбор цифрой
                 {
                     int index = key - '1';
                     if (index < _menu.Count)
                     {
-                        result = ProcessChoice(index);
+                        _menuAction = ProcessChoice(index);
                         choiceMade = true;
                     }
                 }
                 else if (key == 'q' || key == '\x1b') // Выход
                 {
-                    result = new MenuResult { Choice = 3, Action = MenuAction.Exit };
+                    _menuAction = MenuAction.Exit;
                     choiceMade = true;
                 }
             }
-            
-            return result;
+
         }
-        
-        private MenuResult ProcessChoice(int choiceIndex)
+
+        private MenuAction ProcessChoice(int choiceIndex)
         {
             switch (choiceIndex)
             {
                 case 0:
-                    return new MenuResult { Choice = 0, Action = MenuAction.NewGame };
+                    return MenuAction.NewGame;
                 case 1:
-                    return new MenuResult { Choice = 1, Action = MenuAction.LoadGame };
-                case 2: 
-                    return new MenuResult { Choice = 2, Action = MenuAction.Scoreboard };
+                    return MenuAction.LoadGame;
+                case 2:
+                    return MenuAction.Scoreboard;
                 case 3:
-                    return new MenuResult { Choice = 3, Action = MenuAction.Exit };
+                    return MenuAction.Exit;
                 default:
-                    return new MenuResult { Choice = -1, Action = MenuAction.None };
+                    return MenuAction.None;
             }
         }
-        
+
         public void RenderMenu()
         {
             NCurses.GetMaxYX(_stdscr, out int maxY, out int maxX);
             NCurses.Clear();
-            
+
             int startY = maxY / 2 - _menu.Count / 2;
-            
+
             for (int i = 0; i < _menu.Count; i++)
             {
                 string menuItem = _menu[i];
                 int x = maxX / 2 - menuItem.Length / 2;
                 int y = startY + i;
-                
+
                 if (x >= 0 && x < maxX && y >= 0 && y < maxY)
                 {
                     NCurses.Move(y, x);
                     NCurses.AddString(menuItem);
                 }
-                
-
             }
             string instructions = "Press 1-4 to select, ESC to exit";
-            
+
             int instX = maxX / 2 - instructions.Length / 2;
             int instY = startY + _menu.Count + 2;
-            
+
             if (instX >= 0 && instX < maxX && instY >= 0 && instY < maxY)
             {
                 NCurses.Move(instY, instX);
                 NCurses.AddString(instructions);
             }
-            
+
             NCurses.Refresh();
         }
-        
-        public IGameSession? CreateGameSession (MenuResult result, string savePath = "game_save.json")
+
+
+        private IGameSession? Mode()
         {
-            switch (result.Action)
+            switch (_menuAction)
             {
-                case MenuAction.NewGame: 
+                case MenuAction.NewGame:
                     return new StartNewGame();
-                    
                 case MenuAction.LoadGame:
-                    return new StartFromSave(savePath);
-                    
+                    return new StartFromSave("game_save.json");
+                case MenuAction.Scoreboard:
+                    return null;
                 default:
                     return null;
             }
         }
+        public bool GameCyqle()
+        {
+            ShowMenuAndGetChoice();
+            game = Mode();
+            bool isRunning = true;
+            if (game == null)
+            {
+                if (_menuAction == MenuAction.Scoreboard)
+                {
+                    PrintScoreboard.ShowScoreboard(_stdscr);
+                    return true;
+                }
+                else
+                    return false;
+            }
+
+            while (isRunning)
+            {
+                int input = NCurses.GetChar();
+                isRunning = game.IsGameRunning(input);
+                game.RenderGameScreen(_stdscr);
+            }
+            return true;
+        }
+
     }
-    
-    // Результат выбора в меню
-    public struct MenuResult
-    {
-        public int Choice { get; set; }
-        public MenuAction Action { get; set; }
-    }
-    
+
     // Действия меню
     public enum MenuAction
     {
@@ -6617,7 +7443,7 @@ namespace ProjectTeam01.presentation.Frontend
         Scoreboard,
         Exit
     }
-    
+
 }
 
 
@@ -6636,7 +7462,8 @@ namespace ProjectTeam01.presentation.Frontend
         {
             NCurses.NoEcho();
             NCurses.CBreak();
-            NCurses.Keypad(stdscr, true);            
+            NCurses.Keypad(stdscr, true);
+            NCurses.SetCursor(0);
 
             NCurses.TimeOut(50);
         }
@@ -6647,7 +7474,7 @@ namespace ProjectTeam01.presentation.Frontend
         }
 
         public static void Print(string text, int y, int x)
-        {    
+        {
             // NCurses.AttributeOn(NCurses.ColorPair(1));
             NCurses.Move(y, x);
             NCurses.AddString(text);
@@ -6666,24 +7493,66 @@ namespace ProjectTeam01.presentation.Frontend
             NCurses.UseDefaultColors();
             if (NCurses.CanChangeColor())
             {
-                NCurses.InitColor(UiColors.White,  1000, 1000, 1000);
+                NCurses.InitColor(UiColors.White, 1000, 1000, 1000);
                 NCurses.InitColor(UiColors.Yellow, 1000, 1000, 0);
-                NCurses.InitColor(UiColors.Red,    1000, 0, 0);
+                NCurses.InitColor(UiColors.Red, 1000, 0, 0);
                 NCurses.InitColor(UiColors.Green, 0, 1000, 0);
                 NCurses.InitColor(UiColors.Blue, 0, 0, 1000);
                 NCurses.InitColor(UiColors.Black, 0, 0, 0);
 
-                NCurses.InitPair(1,  UiColors.White,  UiColors.Black);
-                NCurses.InitPair(4,  UiColors.Green,  UiColors.Black);
+                NCurses.InitPair(1, UiColors.White, UiColors.Black);
+                NCurses.InitPair(4, UiColors.Green, UiColors.Black);
                 NCurses.InitPair(2, UiColors.Yellow, UiColors.Black);
-                NCurses.InitPair(3,    UiColors.Red,    UiColors.Black);
-                NCurses.InitPair(5,   UiColors.Blue,   UiColors.Black);
-                NCurses.InitPair(6,   UiColors.Black,   UiColors.Black);
+                NCurses.InitPair(3, UiColors.Red, UiColors.Black);
+                NCurses.InitPair(5, UiColors.Blue, UiColors.Black);
+                NCurses.InitPair(6, UiColors.Black, UiColors.Black);
             }
-            SetBackgroundColor(1,stdscr);
+            SetBackgroundColor(1, stdscr);
         }
     }
 }
+
+
+
+================================================
+FILE: src/ProjectTeam01/presentation/Frontend/PrintScoreboard.cs
+================================================
+using Mindmagma.Curses;
+using ProjectTeam01.datalayer;
+
+
+namespace ProjectTeam01.presentation.Frontend
+{
+    internal class PrintScoreboard
+    {
+        public static void ShowScoreboard(nint _stdscr)
+        {
+            NCurses.TimeOut(-1);
+            NCurses.Clear();
+            NCurses.GetMaxYX(_stdscr, out int maxY, out int maxX);
+
+            var scoreboard = GameDataService.LoadScoreboard("scoreboard.json").SessionStats;
+            var sortedScoreboard = scoreboard
+            .OrderByDescending(s => s.TreasuresCollected).ToList();
+            int y = maxY / 2;
+
+            for (int i = 0; i < sortedScoreboard.Count; i++)
+            {
+                string message = sortedScoreboard[i].TreasuresCollected.ToString();
+                int x = maxX / 2 - message.Length / 2;
+                NCurses.Move(y + i, x);
+                NCurses.AddString($"{i + 1}. {message}");
+            }
+
+            NCurses.GetChar();
+            NCurses.Refresh();
+            NCurses.TimeOut(50);
+        }
+
+    }
+
+}
+
 
 
 
@@ -6701,9 +7570,8 @@ namespace ProjectTeam01.presentation.Frontend
         public const short Blue = 5;
         public const short Black = 6;
 
-
     }
-    
+
 }
 
 
@@ -6747,7 +7615,7 @@ internal static class GameStateMapper
         {
             // Игрок - основная информация о персонаже
             Player = ToPlayerViewModel(gameState),
-            
+
             // Список всех врагов на уровне (включая мертвых)
             // ВАЖНО: проверяйте IsDead перед отрисовкой
             // IsDead - флаг смерти врага
@@ -6756,7 +7624,7 @@ internal static class GameStateMapper
             // Position - координаты врага на карте
             // EnemyType - тип врага
             Enemies = gameState.Enemies.Select(ToEnemyViewModel).ToList(),
-            
+
             // Список всех предметов на уровне (оружие, еда, эликсиры, свитки, сокровища)
             // Type - тип предмета
             // Position - координаты предмета на карте
@@ -6766,19 +7634,19 @@ internal static class GameStateMapper
             // ElixirType - тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
             // ScrollType - тип усиления (Strength/Agility/MaxHp)
             // Price - стоимость в золоте
-            Items = gameState.Items.Select(ToItemViewModel).ToList(),   
-            
+            Items = gameState.Items.Select(ToItemViewModel).ToList(),
+
             // Геометрия уровня - комнаты, коридоры, позиции выхода и старта
             // Rooms - список всех комнат на уровне
             // Corridors - список всех коридоров на уровне
             // ExitPosition - координаты выхода (отрисовывайте символ 'E')
             // LevelNumber - номер уровня (для отображения в UI)
             Level = ToLevelViewModel(gameState.LevelGeometry),
-            
+
             // Номер текущего уровня
             // CurrentLevelNumber - номер текущего уровня
             CurrentLevelNumber = gameState.CurrentLevelNumber,
-            
+
             // Инвентарь игрока (предметы без Position)
             // Используется для отображения списка предметов в UI при выборе (клавиши h, j, k, e)
             InventoryWeapons = gameState.PlayerWeapons.Select(ToInventoryItemViewModel).ToList(),
@@ -6924,12 +7792,12 @@ internal static class GameStateMapper
                 viewModel.ScrollType = scroll.ScrollType;
                 break;
 
-            // // СОКРОВИЩЕ: показывает стоимость
-            // case Treasure treasure:
-            //     viewModel.Price = treasure.Price;
-            //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
-            //                        // Стоимость в золоте
-            //     break;
+                // // СОКРОВИЩЕ: показывает стоимость
+                // case Treasure treasure:
+                //     viewModel.Price = treasure.Price;
+                //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
+                //                        // Стоимость в золоте
+                //     break;
         }
 
         return viewModel;
@@ -6960,12 +7828,12 @@ internal static class GameStateMapper
             case Food food:
                 viewModel.HealthValue = food.HealthValue;            // HP для восстановления (5-20)
                 viewModel.DisplayName = $"Food: + {food.HealthValue} HP)";
-            break;
+                break;
 
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
                 viewModel.ElixirType = elixir.ElixirType;          // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
-                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";   
+                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";
                 break;
 
             // СВИТОК: показывает тип усиления
@@ -7000,7 +7868,7 @@ internal static class GameStateMapper
     /// 2. Отрисуйте все коридоры (пол)
     /// 3. Отрисуйте двери в комнатах
     /// 4. Отрисуйте StartPosition и ExitPosition
-  
+
     private static LevelViewModel ToLevelViewModel(Level level)
     {
         return new LevelViewModel
@@ -7024,7 +7892,7 @@ internal static class GameStateMapper
     /// - Doors: массив позиций дверей (отрисовывайте символ '+' на каждой позиции)
     /// - IsStartRoom: true если это стартовая комната (можно выделить визуально)
     /// - IsEndRoom: true если это конечная комната (можно выделить визуально)
- 
+
     private static RoomViewModel ToRoomViewModel(Room room)
     {
         return new RoomViewModel
@@ -7062,7 +7930,6 @@ internal static class GameStateMapper
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/CorridorViewModel.cs
 ================================================
-using System.Collections.Generic;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.presentation.ViewModels;
@@ -7082,6 +7949,7 @@ FILE: src/ProjectTeam01/presentation/ViewModels/EnemyViewModel.cs
 ================================================
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.presentation.ViewModels;
 
@@ -7092,10 +7960,10 @@ public class EnemyViewModel
     public EnemyTypeEnum EnemyType { get; set; }
     public bool IsDead { get; set; }
     public bool IsTriggered { get; set; }
-    
+
     // Специфичные свойства для Mimic
-    public MimicsRepresentation? MimicRepresentation { get; set; }
-    
+    public ItemType MimicRepresentation { get; set; }
+
     // Специфичные свойства для Ghost
     public bool? IsInvisible { get; set; }
 }
@@ -7106,8 +7974,6 @@ public class EnemyViewModel
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/GameStateViewModel.cs
 ================================================
-using System.Collections.Generic;
-
 namespace ProjectTeam01.presentation.ViewModels;
 
 /// Представление состояния игры для отображения на фронтенде
@@ -7118,14 +7984,14 @@ public class GameStateViewModel
     public List<ItemViewModel> Items { get; set; } = new(); // Предметы на карте (с Position)
     public LevelViewModel Level { get; set; } = null!;
     public int CurrentLevelNumber { get; set; }
-    
+
     // Инвентарь игрока (предметы без Position)
     public List<InventoryItemViewModel> InventoryWeapons { get; set; } = new();
     public List<InventoryItemViewModel> InventoryFood { get; set; } = new();
     public List<InventoryItemViewModel> InventoryElixirs { get; set; } = new();
     public List<InventoryItemViewModel> InventoryScrolls { get; set; } = new();
 
-    public int TotalGold{get;set;} = 0;
+    public int TotalGold { get; set; } = 0;
 }
 
 
@@ -7134,8 +8000,8 @@ public class GameStateViewModel
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/InventoryItemViewModel.cs
 ================================================
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.presentation.ViewModels;
 
@@ -7146,17 +8012,17 @@ public class InventoryItemViewModel
     public ItemType Type { get; set; }
 
     public string DisplayName { get; set; } = string.Empty;
-    
+
     // Специфичные свойства для разных типов предметов
     public WeaponTypeEnum? WeaponType { get; set; }
     public int? StrengthBonus { get; set; }
-    
+
     public int? HealthValue { get; set; } // Для Food
-    
+
     public EffectTypeEnum? ElixirType { get; set; } // Для Elixir
-    
+
     public ScrollTypeEnum? ScrollType { get; set; } // Для Scroll
-    
+
     public int? Price { get; set; } // Для Treasure
 }
 
@@ -7166,9 +8032,9 @@ public class InventoryItemViewModel
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/ItemViewModel.cs
 ================================================
-using ProjectTeam01.domain.Items;
-using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Effects;
+using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.presentation.ViewModels;
 
@@ -7176,17 +8042,17 @@ namespace ProjectTeam01.presentation.ViewModels;
 public class ItemViewModel
 {
     public Position Position { get; set; }
-    public ItemType Type { get; set; }   
+    public ItemType Type { get; set; }
     // Специфичные свойства для разных типов предметов
     public WeaponTypeEnum? WeaponType { get; set; }
     public int? StrengthBonus { get; set; }
-    
+
     public int? HealthValue { get; set; } // Для Food
-    
+
     public EffectTypeEnum? ElixirType { get; set; } // Для Elixir
-    
+
     public ScrollTypeEnum? ScrollType { get; set; } // Для Scroll
-    
+
     public int? Price { get; set; } // Для Treasure
 }
 
@@ -7196,7 +8062,6 @@ public class ItemViewModel
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/LevelViewModel.cs
 ================================================
-using System.Collections.Generic;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.presentation.ViewModels;
@@ -7238,7 +8103,6 @@ public class PlayerViewModel
 ================================================
 FILE: src/ProjectTeam01/presentation/ViewModels/RoomViewModel.cs
 ================================================
-using System;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.presentation.ViewModels;
