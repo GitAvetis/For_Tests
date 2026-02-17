@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eDqeFeO6nFA=",
+  "dgSpecHash": "Oo9lXcoNduU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pearlibl\\school21\\AP1_CS_P01.ID_1364935-Team_TL_pearlibl.2e413a77_010d_4579-1\\src\\ProjectTeam01\\ProjectTeam01.csproj",
+  "projectFilePath": "E:\\GitAvetis\\For_Tests\\src\\ProjectTeam01\\ProjectTeam01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
