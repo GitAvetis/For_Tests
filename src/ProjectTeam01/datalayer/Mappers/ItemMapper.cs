@@ -40,7 +40,7 @@ namespace ProjectTeam01.datalayer.Mappers
             switch (save.Type)
             {
                 case ItemType.Treasure:
-                    return new Treasure(save.PosX, save.PosY, save.GameLevel) { Price = save.Price!.Value};
+                    return new Treasure(save.PosX, save.PosY, save.GameLevel) { Price = save.Price!.Value };
                 case ItemType.Food:
                     return new Food(save.HealthValue ?? 10, save.PosX, save.PosY);
                 case ItemType.Elixir:

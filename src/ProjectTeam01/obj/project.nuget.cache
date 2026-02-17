@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Oo9lXcoNduU=",
+  "dgSpecHash": "4XK1AgoDDic=",
   "success": true,
   "projectFilePath": "E:\\GitAvetis\\For_Tests\\src\\ProjectTeam01\\ProjectTeam01.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pearlibl\\.nuget\\packages\\dotnet-curses\\2.0.0\\dotnet-curses.2.0.0.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.2\\microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit\\2.9.3\\xunit.2.9.3.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.analyzers\\1.18.0\\xunit.analyzers.1.18.0.nupkg.sha512",
@@ -12,5 +14,15 @@
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.extensibility.core\\2.9.3\\xunit.extensibility.core.2.9.3.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file E:\\GitAvetis\\For_Tests\\src\\ProjectTeam01\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "E:\\GitAvetis\\For_Tests\\src\\ProjectTeam01\\ProjectTeam01.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\GitAvetis\\For_Tests\\src\\ProjectTeam01\\ProjectTeam01.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

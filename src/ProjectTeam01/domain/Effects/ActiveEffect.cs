@@ -68,6 +68,6 @@
         }
         public bool IsEffectOver { get; private set; }
 
-       
+
     }
 }

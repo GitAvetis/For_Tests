@@ -10,9 +10,24 @@
         Snake,
         Mimic
     }
-
+    
     internal class Enemy : Character
     {
+        public float DifficultyFactor { get; private set; } = 1.0f;
+
+        public void ApplyDifficulty(float difficultyFactor)
+        {
+            DifficultyFactor = difficultyFactor;
+            int baseStrength = BaseStrength;
+            int baseAgility = BaseAgility;
+            int baseMaxHp = BaseMaxHp;
+            BaseStrength = (int)MathF.Round(baseStrength * difficultyFactor);
+            BaseAgility = (int)MathF.Round(baseAgility * difficultyFactor);
+            BaseMaxHp = (int)MathF.Round(baseMaxHp * difficultyFactor);
+
+            ActualHp = BaseMaxHp; 
+        }
+        
         public Enemy(EnemyTypeEnum enemyType, int posX, int posY) : base(posX, posY)
         {
             EnemyType = enemyType;

@@ -1,8 +1,6 @@
 ﻿namespace ProjectTeam01.domain.Characters
 {
-    /// <summary>
     /// Представление Mimic для использования в ViewModels
-    /// </summary>
     public enum MimicsRepresentation
     {
         Food,
@@ -19,10 +17,10 @@
 
         public Mimic(int posX, int posY) : base(EnemyTypeEnum.Mimic, posX, posY)
         {
-            ActualHp = 175;
+            ActualHp = 110;
             BaseAgility = 3;
             BaseStrength = 1;
-            HostilityLevel = 1;
+            HostilityLevel = 2;
             Representation = RandomRepresentation();
         }
 
@@ -31,14 +29,14 @@
             ActualHp = actualHp;
             BaseAgility = 3;
             BaseStrength = 1;
-            HostilityLevel = 1;
+            HostilityLevel = 2;
             Representation = RandomRepresentation();
         }
 
         private MimicsRepresentation RandomRepresentation()
         {
             MimicsRepresentation mimics = (MimicsRepresentation)random.Next(0, 4);
-            return  mimics;
+            return mimics;
         }
     }
 }

@@ -1,7 +1,5 @@
-using System.Collections.Generic;
-using System.Linq;
-using ProjectTeam01.domain.Items;
 using ProjectTeam01.domain.generation;
+using ProjectTeam01.domain.Items;
 
 namespace ProjectTeam01.domain.Session;
 // отвечает за логику инвентаря
@@ -137,6 +135,11 @@ internal partial class GameSession
 
     /// Получить свитки игрока
     public IReadOnlyList<Scroll> GetPlayerScrolls() => Player.HeroBackpack.AllItems.OfType<Scroll>().ToList().AsReadOnly();
+    public int GetTotalGold()
+    {
+        var treasure = Player.HeroBackpack.AllItems.OfType<Treasure>().ToList();
+        return treasure.Count > 0 ? treasure[0].Price : 0;
+    }
 }
 
 

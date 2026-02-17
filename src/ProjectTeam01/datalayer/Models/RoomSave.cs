@@ -1,5 +1,3 @@
-using ProjectTeam01.domain.generation;
-
 namespace ProjectTeam01.datalayer.Models;
 
 /// Модель сохранения для Room

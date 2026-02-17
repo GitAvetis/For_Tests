@@ -7,6 +7,6 @@
             Level = lvl;
         }
         public int Price { get; set; }
-        public int Level { get; } 
+        public int Level { get; }
     }
 }

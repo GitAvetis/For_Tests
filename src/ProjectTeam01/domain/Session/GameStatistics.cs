@@ -39,7 +39,7 @@ internal sealed class GameStatistics
     public void RecordElixirConsumed() => ElixirsConsumed++;
     public void RecordScrollConsumed() => ScrollsConsumed++;
     public void RecordMove(int cells = 1) { if (cells > 0) CellsMoved += cells; }
-    
+
     /// Записать попытку попадания
     public void RecordPlayerHitAttempt(bool hit)
     {

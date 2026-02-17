@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.presentation.ViewModels;
@@ -8,5 +7,8 @@ public class CorridorViewModel
 {
     public CorridorType Type { get; set; }
     public List<Position> Cells { get; set; } = new();
+    public List<Position> Points { get; set; } = new();
+    public Dictionary<int, bool> SegmentVisibility { get; set; } = new();
+    public Dictionary<Position, HashSet<int>> CellToSegments { get; set; } = new(); 
 }
 

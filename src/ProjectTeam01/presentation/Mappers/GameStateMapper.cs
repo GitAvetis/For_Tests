@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using ProjectTeam01.domain;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Items;
@@ -37,7 +34,7 @@ internal static class GameStateMapper
         {
             // Игрок - основная информация о персонаже
             Player = ToPlayerViewModel(gameState),
-            
+
             // Список всех врагов на уровне (включая мертвых)
             // ВАЖНО: проверяйте IsDead перед отрисовкой
             // IsDead - флаг смерти врага
@@ -46,7 +43,7 @@ internal static class GameStateMapper
             // Position - координаты врага на карте
             // EnemyType - тип врага
             Enemies = gameState.Enemies.Select(ToEnemyViewModel).ToList(),
-            
+
             // Список всех предметов на уровне (оружие, еда, эликсиры, свитки, сокровища)
             // Type - тип предмета
             // Position - координаты предмета на карте
@@ -56,25 +53,26 @@ internal static class GameStateMapper
             // ElixirType - тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
             // ScrollType - тип усиления (Strength/Agility/MaxHp)
             // Price - стоимость в золоте
-            Items = gameState.Items.Select(ToItemViewModel).ToList(),   
-            
+            Items = gameState.Items.Select(ToItemViewModel).ToList(),
+
             // Геометрия уровня - комнаты, коридоры, позиции выхода и старта
             // Rooms - список всех комнат на уровне
             // Corridors - список всех коридоров на уровне
             // ExitPosition - координаты выхода (отрисовывайте символ 'E')
             // LevelNumber - номер уровня (для отображения в UI)
-            Level = ToLevelViewModel(gameState.LevelGeometry),
+            Level = ToLevelViewModel(gameState.LevelGeometry, gameState.FogOfWar),
             
             // Номер текущего уровня
             // CurrentLevelNumber - номер текущего уровня
             CurrentLevelNumber = gameState.CurrentLevelNumber,
-            
+
             // Инвентарь игрока (предметы без Position)
             // Используется для отображения списка предметов в UI при выборе (клавиши h, j, k, e)
             InventoryWeapons = gameState.PlayerWeapons.Select(ToInventoryItemViewModel).ToList(),
             InventoryFood = gameState.PlayerFood.Select(ToInventoryItemViewModel).ToList(),
             InventoryElixirs = gameState.PlayerElixirs.Select(ToInventoryItemViewModel).ToList(),
-            InventoryScrolls = gameState.PlayerScrolls.Select(ToInventoryItemViewModel).ToList()
+            InventoryScrolls = gameState.PlayerScrolls.Select(ToInventoryItemViewModel).ToList(),
+            TotalGold = gameState.TotalGold
         };
     }
 
@@ -130,7 +128,8 @@ internal static class GameStateMapper
             Position = enemy.Position,          // Координаты для отрисовки
             EnemyType = enemy.EnemyType,        // Тип для выбора символа/спрайта
             IsDead = enemy.IsDead,              // Флаг смерти (не отрисовывать)
-            IsTriggered = enemy.IsTriggered      // Флаг активации (враг движется к игроку)
+            IsTriggered = enemy.IsTriggered,      // Флаг активации (враг движется к игроку)
+            Difficulty = enemy.DifficultyFactor
         };
 
         // ОСОБЕННОСТИ MIMIC:
@@ -201,23 +200,24 @@ internal static class GameStateMapper
 
             // ЕДА: показывает количество восстанавливаемого HP
             case Food food:
-                viewModel.HealthValue = food.HealthValue;            // HP для восстановления (5-20)
-                break;
-
+                viewModel.HealthValue = food.HealthValue;
+                break;            // HP для восстановления (5-20)
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
-                viewModel.ElixirType = elixir.ElixirType;          // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
+                viewModel.ElixirType = elixir.ElixirType;      // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
                 break;
 
             // СВИТОК: показывает тип усиления
             case Scroll scroll:
-                viewModel.ScrollType = scroll.ScrollType;          // Тип усиления (Strength/Agility/MaxHp)
+                viewModel.ScrollType = scroll.ScrollType;
                 break;
 
-            // СОКРОВИЩЕ: показывает стоимость
-            case Treasure treasure:
-                viewModel.Price = treasure.Price;                   // Стоимость в золоте
-                break;
+                // // СОКРОВИЩЕ: показывает стоимость
+                // case Treasure treasure:
+                //     viewModel.Price = treasure.Price;
+                //     viewModel.DisplayName = $"Золото: {scroll.ScrollType})";      // Тип усиления (Strength/Agility/MaxHp)
+                //                        // Стоимость в золоте
+                //     break;
         }
 
         return viewModel;
@@ -239,22 +239,27 @@ internal static class GameStateMapper
             // ОРУЖИЕ: показывает тип и бонус к силе
             case Weapon weapon:
                 viewModel.WeaponType = weapon.WeaponType;           // Тип оружия для отображения
-                viewModel.StrengthBonus = weapon.StrengthBonus;      // Бонус силы для UI
+                viewModel.StrengthBonus = weapon.StrengthBonus;
+                viewModel.DisplayName =
+                $"Weapon: {weapon.WeaponType} (+{weapon.StrengthBonus} Str";      // Бонус силы для UI
                 break;
 
             // ЕДА: показывает количество восстанавливаемого HP
             case Food food:
                 viewModel.HealthValue = food.HealthValue;            // HP для восстановления (5-20)
+                viewModel.DisplayName = $"Food: + {food.HealthValue} HP)";
                 break;
 
             // ЭЛИКСИР: показывает тип эффекта
             case Elixir elixir:
                 viewModel.ElixirType = elixir.ElixirType;          // Тип эффекта (BuffStrength/BuffAgility/BuffMaxHp)
+                viewModel.DisplayName = $"Elixir: {elixir.ElixirType}";
                 break;
 
             // СВИТОК: показывает тип усиления
             case Scroll scroll:
-                viewModel.ScrollType = scroll.ScrollType;          // Тип усиления (Strength/Agility/MaxHp)
+                viewModel.ScrollType = scroll.ScrollType;
+                viewModel.DisplayName = $"Scroll: {scroll.ScrollType}";      // Тип усиления (Strength/Agility/MaxHp)
                 break;
 
             // СОКРОВИЩЕ: показывает стоимость
@@ -284,12 +289,12 @@ internal static class GameStateMapper
     /// 3. Отрисуйте двери в комнатах
     /// 4. Отрисуйте StartPosition и ExitPosition
   
-    private static LevelViewModel ToLevelViewModel(Level level)
+    private static LevelViewModel ToLevelViewModel(Level level, FogOfWar fogOfWar)
     {
         return new LevelViewModel
         {
-            Rooms = level.Rooms.Select(ToRoomViewModel).ToList(),           // Комнаты для отрисовки
-            Corridors = level.Corridors.Select(ToCorridorViewModel).ToList(), // Коридоры для отрисовки
+            Rooms = level.Rooms.Select(room => ToRoomViewModel(room, fogOfWar)).ToList(), // Комнаты для отрисовки
+            Corridors = level.Corridors.Select((corridor, index) => ToCorridorViewModel(corridor, fogOfWar, index)).ToList(), // Коридоры для отрисовки
             ExitPosition = level.ExitPosition,                               // Позиция выхода (символ 'E')
             StartPosition = level.StartPosition,                             // Стартовая позиция (символ 'S')
             LevelNumber = level.LevelNumber                                   // Номер уровня (для UI)
@@ -308,8 +313,27 @@ internal static class GameStateMapper
     /// - IsStartRoom: true если это стартовая комната (можно выделить визуально)
     /// - IsEndRoom: true если это конечная комната (можно выделить визуально)
  
-    private static RoomViewModel ToRoomViewModel(Room room)
+    private static RoomViewModel ToRoomViewModel(Room room, FogOfWar fogOfWar)
     {
+        int sector = room.Sector;
+        bool isVisited = fogOfWar.IsRoomVisited(sector);
+        bool isCurrentlyInRoom = fogOfWar.IsPlayerInRoom(sector);
+        
+        // Получаем карту видимости для текущей комнаты
+        Dictionary<Position, bool> visibilityMap = new();
+        if (isCurrentlyInRoom)
+        {
+            // Заполняем карту видимости для всех позиций в комнате
+            for (int y = room.TopLeft.Y; y <= room.BottomRight.Y; y++)
+            {
+                for (int x = room.TopLeft.X; x <= room.BottomRight.X; x++)
+                {
+                    var pos = new Position(x, y);
+                    visibilityMap[pos] = fogOfWar.IsPositionVisible(x, y);
+                }
+            }
+        }
+        
         return new RoomViewModel
         {
             TopLeft = room.TopLeft,              // Левый верхний угол для отрисовки
@@ -317,7 +341,11 @@ internal static class GameStateMapper
             // Фильтруем пустые двери (где X=0 и Y=0) - они не используются
             Doors = room.Doors.Where(d => d.X != 0 || d.Y != 0).ToArray(),
             IsStartRoom = room.IsStartRoom,      // Флаг стартовой комнаты (для выделения)
-            IsEndRoom = room.IsEndRoom           // Флаг конечной комнаты (для выделения)
+            IsEndRoom = room.IsEndRoom,          // Флаг конечной комнаты (для выделения)
+            Sector = sector,                      // Сектор комнаты (уникальный идентификатор)
+            IsVisited = isVisited,                // Была ли комната посещена
+            IsCurrentlyInRoom = isCurrentlyInRoom, // Находится ли игрок в комнате
+            VisibilityMap = visibilityMap        // Карта видимости позиций
         };
     }
 
@@ -329,12 +357,27 @@ internal static class GameStateMapper
     /// - Type: тип коридора (Horizontal, Vertical, LShape, TShape, Cross)
     /// - Cells: список всех клеток коридора (отрисовывайте символ '.' на каждой)
 
-    private static CorridorViewModel ToCorridorViewModel(Corridor corridor)
+    private static CorridorViewModel ToCorridorViewModel(Corridor corridor, FogOfWar fogOfWar, int corridorIndex)
     {
+        Dictionary<int, bool> segmentVisibility = new();
+        
+        if (corridor.Points != null && corridor.Points.Count >= 2)
+        {
+            for (int i = 0; i < corridor.Points.Count - 1; i++)
+            {
+                bool isVisible = fogOfWar.IsCorridorSegmentVisible(corridorIndex, i);
+                segmentVisibility[i] = isVisible;
+            }
+        }
+        
+        // Используем маппинг клеток к сегментам, вычисленный при генерации коридора
         return new CorridorViewModel
         {
-            Type = corridor.Type,                    // Тип коридора (для стилизации)
-            Cells = corridor.Cells.ToList()          // Все клетки коридора для отрисовки
+            Type = corridor.Type,                    // Тип коридора
+            Cells = corridor.Cells?.ToList() ?? new List<Position>(), // Все клетки коридора для отрисовки
+            Points = corridor.Points?.ToList() ?? new List<Position>(), // Ключевые точки коридора
+            SegmentVisibility = segmentVisibility,    // Видимость сегментов
+            CellToSegments = corridor.CellToSegments ?? new Dictionary<Position, HashSet<int>>() // Маппинг клеток к сегментам 
         };
     }
 }

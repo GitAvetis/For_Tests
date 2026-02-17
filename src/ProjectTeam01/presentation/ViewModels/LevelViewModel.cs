@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.presentation.ViewModels;

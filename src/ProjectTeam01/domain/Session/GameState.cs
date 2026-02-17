@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using ProjectTeam01.domain.Characters;
 using ProjectTeam01.domain.generation;
 using ProjectTeam01.domain.Items;
@@ -18,11 +17,15 @@ internal class GameState
     public int PlayerStrength { get; set; }
     public bool PlayerIsSleep { get; set; }
     public int CurrentLevelNumber { get; set; }
-    
+
     // Инвентарь игрока
     public IReadOnlyList<Weapon> PlayerWeapons { get; set; } = new List<Weapon>().AsReadOnly();
     public IReadOnlyList<Food> PlayerFood { get; set; } = new List<Food>().AsReadOnly();
     public IReadOnlyList<Elixir> PlayerElixirs { get; set; } = new List<Elixir>().AsReadOnly();
     public IReadOnlyList<Scroll> PlayerScrolls { get; set; } = new List<Scroll>().AsReadOnly();
+    public int TotalGold { get; set; } = 0;
+    
+    // Туман войны
+    public FogOfWar FogOfWar { get; set; } = null!;
 }
 

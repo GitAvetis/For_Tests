@@ -10,7 +10,7 @@
         Weapon
     }
 
-    internal abstract class Item: GameObject
+    internal abstract class Item : GameObject
     {
         public ItemType Type { get; }
 

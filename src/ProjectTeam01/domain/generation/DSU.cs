@@ -15,7 +15,7 @@ public class DSU
 
     /// Инициализирует DSU - каждая комната в своем множестве
     private void MakeSets()
-    {   
+    {
         for (int i = 0; i < _parent.Length; i++)
         {
             _parent[i] = i;

@@ -1,5 +1,4 @@
-﻿using ProjectTeam01.domain;
-using ProjectTeam01.domain.Effects;
+﻿using ProjectTeam01.domain.Effects;
 
 namespace ProjectTeam01.domain.Characters
 {
@@ -47,22 +46,6 @@ namespace ProjectTeam01.domain.Characters
 
         }
         private int _actualHp;
-
-        public void MaxHpDecrease(int decreaseValue, bool debuffIsAtive)
-        {
-            if (debuffIsAtive)
-            {
-                BaseMaxHp -= decreaseValue;
-                if (ActualHp > MaxHp)
-                {
-                    ActualHp = MaxHp;
-                }
-            }
-            else
-            {
-                BaseMaxHp += decreaseValue;
-            }
-        }
 
         public override int ActualHp
         {

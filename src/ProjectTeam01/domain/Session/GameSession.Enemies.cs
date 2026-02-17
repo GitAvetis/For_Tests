@@ -32,6 +32,8 @@ internal partial class GameSession
 
                 if (Player.ActualHp < hpBefore)
                     _statistics.RecordHitTaken();
+
+                if (Player.IsDead) break; // Остановить обработку, если игрок умер
             }
         }
     }

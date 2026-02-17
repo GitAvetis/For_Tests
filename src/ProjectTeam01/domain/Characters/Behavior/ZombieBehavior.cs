@@ -1,4 +1,5 @@
-﻿using ProjectTeam01.domain.generation;
+﻿using ProjectTeam01.domain.Combat;
+using ProjectTeam01.domain.generation;
 
 namespace ProjectTeam01.domain.Characters.Behavior
 {
@@ -7,6 +8,14 @@ namespace ProjectTeam01.domain.Characters.Behavior
         public override void Tick(Hero hero)
         {
             int distanceToHero = DistanceToHero(hero);
+            
+            if (distanceToHero == 1)
+            {
+                Enemy.IsTriggered = true;
+                Attack(hero);
+                return;
+            }
+            
             if (distanceToHero <= Enemy.HostilityLevel)
             {
                 Enemy.IsTriggered = true;
@@ -18,10 +27,20 @@ namespace ProjectTeam01.domain.Characters.Behavior
             {
                 MoveRandom();
             }
-
-            if (DistanceToHero(hero) == 1)
-                Attack(hero);
         }
 
+        public override bool Attack(Character target)
+        {
+            if (target is not Hero hero)
+                return false;
+                
+            if (BattleService.HitSuccess(Enemy.BaseAgility, target.BaseAgility))
+            {
+                int damage = EnemyDamageCalculator.CalculateDamage(Enemy, hero);
+                target.TakeDamage(damage);
+                return true;
+            }
+            return false;
+        }
     }
 }

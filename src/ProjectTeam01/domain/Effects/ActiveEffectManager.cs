@@ -34,15 +34,18 @@ namespace ProjectTeam01.domain.Effects
         {
             return ActiveEffects
                 .Where(e => e.Type == statType)
-                .Sum(e => ApplyStatEffect(e)); 
+                .Sum(e => ApplyStatEffect(e));
         }
-        // для эффектов сна
+        // для эффектов сна и других состояний
         private void ApplyStateEffect(ActiveEffect effect)
         {
             switch (effect.Type)
             {
                 case EffectTypeEnum.Sleep:
                     Hero.ApplySleep();
+                    break;
+                case EffectTypeEnum.BuffMaxHp:
+                    Hero.Heal(effect.Value);
                     break;
                 default:
                     break;
@@ -69,10 +72,10 @@ namespace ProjectTeam01.domain.Effects
                 {
                     // Сохраняем тип эффекта для проверки после удаления
                     bool wasBuffMaxHp = effect.Type == EffectTypeEnum.BuffMaxHp;
-                    
+
                     RemoveStateEffect(effect);
                     ActiveEffects.Remove(effect);
-                    
+
                     if (wasBuffMaxHp && Hero.ActualHp <= 0)
                     {
                         Hero.Heal(1 - Hero.ActualHp); // лечим героя на 1 HP
