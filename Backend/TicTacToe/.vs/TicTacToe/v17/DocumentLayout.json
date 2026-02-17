@@ -1,31 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe\\",
+  "WorkspaceRootPath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe\\web\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\entitys\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\singuprequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\web\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:web\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.datasource\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.application\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.application\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.datasource\\tictactoedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.datasource\\mappers\\gameentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.datasource\\entitys\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|c:\\users\\pearlibl\\school21\\backend\\ap1_cs_t04b.id_1421421-1\\src\\tictactoe.datasource\\entitys\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,40 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe\\Web\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe\\Web\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Web\\Controllers\\GameController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAIAwwBAAAAAJAAAAAAAAAA==",
+              "Title": "GameEntity.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T08:29:06.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Application\\IGameService.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\IGameService.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Application\\IGameService.cs",
-              "RelativeToolTip": "..\\TicTacToe.Application\\IGameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T08:19:38.397Z",
+              "WhenOpened": "2026-02-17T09:28:40.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Application\\GameService.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\GameService.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Application\\GameService.cs",
-              "RelativeToolTip": "..\\TicTacToe.Application\\GameService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAANAAAAAAAAAA==",
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "..\\TicTacToe.Application\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T08:07:18.879Z",
+              "WhenOpened": "2026-02-17T09:22:01.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\AuthService.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\AuthService.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\AuthService.cs",
+              "RelativeToolTip": "..\\TicTacToe.Application\\AuthService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwCgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:21:24.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SingUpRequest.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\SingUpRequest.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\SingUpRequest.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\SingUpRequest.cs",
+              "RelativeToolTip": "..\\TicTacToe.Application\\SingUpRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:15:17.582Z",
               "EditorCaption": ""
             },
             {
@@ -82,67 +86,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameEntityMapper.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T22:16:26.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T22:01:26.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\GameRepository.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\GameRepository.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\GameRepository.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\GameRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T22:05:15.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "TicTacToeDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\TicTacToeDbContext.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\TicTacToeDbContext.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\TicTacToeDbContext.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\TicTacToeDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Title": "GameController.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\GameController.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Web\\Controllers\\GameController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T21:59:36.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameEntity.cs",
-              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "ToolTip": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T21:50:48.467Z",
+              "WhenOpened": "2026-02-17T08:29:06.832Z",
               "EditorCaption": ""
             }
           ]

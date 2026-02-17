@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TicTacToe.Domain.Models;
 using TicTacToe.Contracts.DTO;
-using TicTacToe.Application;
+using TicTacToe.Application.Interfaces;
 
 namespace TicTacToe.Web.Controllers
 {

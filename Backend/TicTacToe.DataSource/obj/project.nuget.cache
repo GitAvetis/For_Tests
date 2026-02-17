@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OUdwXneRMO4=",
+  "dgSpecHash": "6NQFOgM2F+E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj",
+  "projectFilePath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pearlibl\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

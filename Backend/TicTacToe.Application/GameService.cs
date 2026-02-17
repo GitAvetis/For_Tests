@@ -1,4 +1,5 @@
-﻿using TicTacToe.Domain;
+﻿using TicTacToe.Application.Interfaces;
+using TicTacToe.Domain;
 using TicTacToe.Domain.Models;
 
 namespace TicTacToe.Application

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicTacToe.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0629aad48eaa7dd69fcfab02881fba1b5f415e92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2ccb068e49deb205f561100f5e2261bc3a37c1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicTacToe.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicTacToe.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

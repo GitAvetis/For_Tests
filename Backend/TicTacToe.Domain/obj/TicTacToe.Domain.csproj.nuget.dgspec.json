@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {}
+    "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
+    "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\TicTacToe.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+        "projectUniqueName": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
         "projectName": "TicTacToe.Domain",
-        "projectPath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
+        "projectPath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\TicTacToe.Domain.csproj",
         "packagesPath": "C:\\Users\\pearlibl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Domain\\obj\\",
+        "outputPath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

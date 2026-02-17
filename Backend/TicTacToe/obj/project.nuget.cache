@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JhdYTz5OIgA=",
+  "dgSpecHash": "tI/6NIFcXmE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe\\TicTacToe.csproj",
+  "projectFilePath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\TicTacToe.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pearlibl\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.11\\microsoft.entityframeworkcore.8.0.11.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.11\\microsoft.entityframeworkcore.abstractions.8.0.11.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.11\\microsoft.entityframeworkcore.analyzers.8.0.11.nupkg.sha512",

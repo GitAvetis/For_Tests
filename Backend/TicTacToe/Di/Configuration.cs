@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using TicTacToe.Application;
+using TicTacToe.Application.Interfaces;
 using TicTacToe.DataSource;
 using TicTacToe.Domain;
 

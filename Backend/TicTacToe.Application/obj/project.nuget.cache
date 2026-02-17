@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6flCQPmNxXk=",
+  "dgSpecHash": "M6GPiJMEVvU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pearlibl\\school21\\Backend\\AP1_CS_T04B.ID_1421421-1\\src\\TicTacToe.Application\\TicTacToe.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\TicTacToe.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pearlibl\\.nuget\\packages\\bcrypt.net-next\\4.1.0\\bcrypt.net-next.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

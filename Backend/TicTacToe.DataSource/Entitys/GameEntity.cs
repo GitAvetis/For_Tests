@@ -3,6 +3,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TicTacToe.DataSource.Entitys
 {
+    public enum GameState
+    {
+        Waiting,
+        PlayerXTurn,
+        PlayerOTurn,
+        Draw,
+        XWin,
+        OWin
+    }
+
     [Table("games")]
     public class GameEntity
     {
@@ -21,5 +31,9 @@ namespace TicTacToe.DataSource.Entitys
         
         [Required]
         public DateTime CreatedAt { get; set; }
+
+        public Guid? PlayerXId { get; set; }
+        public Guid? PlayerOId { get; set; }
+        public GameState State { get; set; }
     }
 }

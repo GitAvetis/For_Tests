@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using TicTacToe.Application.Interfaces;
 using TicTacToe.DataSource.Entitys;
 using TicTacToe.DataSource.Mappers;
-using TicTacToe.Domain;
 using TicTacToe.Domain.Models;
 
 

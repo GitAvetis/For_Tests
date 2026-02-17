@@ -1,6 +1,6 @@
 ﻿using TicTacToe.Domain.Models;
 
-namespace TicTacToe.Domain
+namespace TicTacToe.Application.Interfaces
 {
     public interface IGameRepository
     {
