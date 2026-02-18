@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicTacToe.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2ccb068e49deb205f561100f5e2261bc3a37c1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f439099192607ef4a6d34712544a25c3601899f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicTacToe.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicTacToe.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,9 +15,9 @@ namespace TicTacToe.Application
             _domainService = serviceDomain;
         }
 
-        public async Task<GameSessionModel> CreateGameAsync(int size)
+        public async Task<GameSessionModel> CreateGameAsync(int size, Guid userId, bool isVsAi)
         {
-            var game = new GameSessionModel(size,Guid.NewGuid());
+            var game = new GameSessionModel(size, Guid.NewGuid(), userId, isVsAi);
             await _repository.AddAsync(game);
             return game;
         }
@@ -27,28 +27,28 @@ namespace TicTacToe.Application
             return await _repository.GetByIdAsync(id);
         }
 
-        public async Task<MoveStatus> MakeMoveAsync(Guid id, int x, int y, bool vsAi)
+        public async Task<MoveStatus> MakeMoveAsync(Guid id, int x, int y, Guid userId)
         {
             GameSessionModel session = await _repository.GetByIdAsync(id);
 
             if (session == null)
                 return MoveStatus.StateError;
 
-            MoveStatus moveStatus = session.TryMakeMove(x, y);
+            bool vsAi = session.PlayerOId == null;
 
-            if (moveStatus == MoveStatus.Suсcsess && vsAi && session.Result == GameResult.InProgress)
+            MoveStatus moveStatus = session.TryMakeMove(userId, x, y);
+
+            if (moveStatus != MoveStatus.Suсcsess)
+                return moveStatus;
+
+            if (session.IsVsAi && session.Result == GameResult.InProgress)
             {
-                (int aiX, int aiY) = _domainService.GetNextMove(session);
-                session.TryMakeMove(aiX, aiY);
+                var (aiX, aiY) = _domainService.GetNextMove(session);
+                session.MakeAIMove(aiX, aiY);
             }
 
-            //if (!_domainService.ValidateField(session))
-            //    return MoveStatus.StateError;
+            await _repository.UpdateAsync(session);
 
-            //if (_domainService.IsGameOver(session))
-            //    return MoveStatus.GameIsOver;
-
-            _repository.UpdateAsync(session);
             return moveStatus;
         }
     }

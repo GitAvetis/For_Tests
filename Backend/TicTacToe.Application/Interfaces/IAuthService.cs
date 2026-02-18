@@ -2,7 +2,7 @@
 {
     public interface IAuthService
     {
-        Task<bool> RegisterAsync(SingUpRequest request);
+        Task<bool> RegisterAsync(SignUpRequest request);
         Task<Guid?> AuthenticateAsync(string login, string password);
     }
 }

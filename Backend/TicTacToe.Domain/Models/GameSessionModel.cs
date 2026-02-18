@@ -14,13 +14,18 @@
         public GameFieldModel Field { get; private set; }
         public CellState CurrentPlayer { get; private set; }
         public GameResult Result { get; private set; }
+        public Guid? PlayerXId { get; private set; }
+        public Guid? PlayerOId { get; private set; }
+        public bool IsVsAi { get; private set; }
 
-        public GameSessionModel(int dimension, Guid id)
+        public GameSessionModel(int dimension, Guid id, Guid creatorId, bool isVsAi)
         {
             Id = id;
             Field = new GameFieldModel(dimension);
             CurrentPlayer = CellState.X;
             Result = GameResult.InProgress;
+            PlayerXId = creatorId;
+            IsVsAi = isVsAi;
         }
 
         private GameSessionModel(Guid id, GameFieldModel field, CellState currentPlayer, GameResult result)
@@ -37,34 +42,78 @@
             return new GameSessionModel(id, gameField, currentPlayer, result);
         }
 
-        public MoveStatus TryMakeMove(int x, int y)
+        public MoveStatus TryMakeMove(Guid userId, int x, int y)
         {
             if (Result != GameResult.InProgress)
                 return MoveStatus.GameIsOver;
 
+            if (userId != PlayerXId && userId != PlayerOId)
+                return MoveStatus.NotYourGame;
+
+            var playerSymbol = userId == PlayerXId ? CellState.X : CellState.O;
+
+            if (playerSymbol != CurrentPlayer)
+                return MoveStatus.NotYourTurn;
+
             MoveStatus moveStatus = Field.MakeMove(x, y, CurrentPlayer);
+            if (moveStatus == MoveStatus.Suсcsess)
+                UpdateGameStateAfterMove();
+
+            return moveStatus;
+        }
+
+        public MoveStatus MakeAIMove(int x, int y)
+        {
+            if (!IsVsAi)
+                return MoveStatus.StateError;
+
+            if (Result != GameResult.InProgress)
+                return MoveStatus.GameIsOver;
+
+            if (CurrentPlayer != CellState.O)
+                return MoveStatus.NotYourTurn;
+
+            var moveStatus = Field.MakeMove(x, y, CellState.O);
 
             if (moveStatus == MoveStatus.Suсcsess)
-            {
-                if (Field.CheckWin() != CellState.Empty)
-                {
-                    Result = CurrentPlayer == CellState.X ? GameResult.WinX : GameResult.WinO;
-                }
-                else if (Field.IsFieldFull())
-                {
-                    Result = GameResult.Draw;
-                }
-                else
-                {
-                    SwitchPlayer();
-                }
-            }
+                UpdateGameStateAfterMove();
+
             return moveStatus;
+        }
+
+        private void UpdateGameStateAfterMove()
+        {
+            if (Field.CheckWin() != CellState.Empty)
+            {
+                Result = CurrentPlayer == CellState.X
+                    ? GameResult.WinX
+                    : GameResult.WinO;
+            }
+            else if (Field.IsFieldFull())
+            {
+                Result = GameResult.Draw;
+            }
+            else
+            {
+                SwitchPlayer();
+            }
         }
 
         private void SwitchPlayer()
         {
             CurrentPlayer = CurrentPlayer == CellState.X ? CellState.O : CellState.X;
+        }
+
+        public bool Join(Guid userId)
+        {
+            if (PlayerOId != null)
+                return false;
+
+            if (userId == PlayerXId)
+                return false;
+
+            PlayerOId = userId;
+            return true;
         }
     }
 }

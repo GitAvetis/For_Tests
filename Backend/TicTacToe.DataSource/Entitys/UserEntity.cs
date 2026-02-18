@@ -11,10 +11,12 @@ namespace TicTacToe.DataSource.Entitys
         public Guid Id { get; set; }
 
         [Required]
+        [MinLength(3)]
         public string Login { get; set; } = null!;
 
         [Required]
-        public string PasswordHash { get; set; } = null!;
+        [MinLength(6)]
+        public string Password { get; set; } = null!;
 
     }
 }

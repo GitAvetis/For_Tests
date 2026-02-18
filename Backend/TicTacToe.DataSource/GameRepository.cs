@@ -8,7 +8,7 @@ using TicTacToe.Domain.Models;
 
 namespace TicTacToe.DataSource
 {
-    internal class GameRepository : IGameRepository
+    public class GameRepository : IGameRepository
     {
         private readonly TicTacToeDbContext _dbContext;
 

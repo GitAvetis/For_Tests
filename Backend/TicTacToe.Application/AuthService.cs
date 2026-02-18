@@ -12,7 +12,7 @@ namespace TicTacToe.Application
             _userRepository = userRepository;
         }
 
-        public async Task<bool> RegisterAsync(SingUpRequest request)
+        public async Task<bool> RegisterAsync(SignUpRequest request)
         {
             var user = await _userRepository.GetByLoginAsync(request.Login);
             if (user != null)
@@ -23,6 +23,7 @@ namespace TicTacToe.Application
             await _userRepository.AddAsync(newUser);
             return true;
         }
+
         public async Task<Guid?> AuthenticateAsync(string login, string password)
         {
             var user = await _userRepository.GetByLoginAsync(login);

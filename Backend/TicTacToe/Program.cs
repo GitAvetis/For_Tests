@@ -30,6 +30,8 @@ namespace TicTacToe
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.MapRazorPages();

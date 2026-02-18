@@ -23,12 +23,28 @@ namespace TicTacToe.Application
                     board[i][j] = CellStateToString(fieldCopy[i, j]);
                 }
             }
+
             return new GameDto
             {
                 Id = model.Id,
-                CurrentPlayer = model.CurrentPlayer,
-                Result = model.Result,
-                PrettyField = BuildPrettyField(board)
+                Size = size,
+                CurrentPlayer = CellStateToString(model.CurrentPlayer),
+                Result = GameResultToString(model.Result),
+                PrettyField = BuildPrettyField(board),
+                PlayerOId = model.PlayerOId,
+                PlayerXId = model.PlayerXId,
+                WinnerId = GetWinner(model),
+                IsVsAi = model.IsVsAi
+            };
+        }
+
+        private static Guid GetWinner(GameSessionModel model)
+        {
+            return model.Result switch
+            {
+                GameResult.WinX => model.PlayerXId ?? Guid.Empty,
+                GameResult.WinO => model.PlayerOId ?? Guid.Empty,
+                _ => Guid.Empty
             };
         }
 
@@ -52,6 +68,18 @@ namespace TicTacToe.Application
             }
 
             return lines.ToArray();
+        }
+
+        private static string GameResultToString(GameResult result)
+        {
+            return result switch
+            {
+                GameResult.InProgress => "In Progress",
+                GameResult.Draw => "Draw",
+                GameResult.WinX => "X Wins",
+                GameResult.WinO => "O Wins",
+                _ => "Unknown"
+            };
         }
     }
 }
