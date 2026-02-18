@@ -24,5 +24,6 @@ namespace TicTacToe.DataSource.Entitys
 
         public Guid? PlayerXId { get; set; }
         public Guid? PlayerOId { get; set; }
+        public bool IsVsAi { get; set; }
     }
 }

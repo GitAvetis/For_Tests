@@ -2,7 +2,7 @@
 using TicTacToe.Domain.Models;
 
 
-namespace TicTacToe.Application
+namespace TicTacToe.Application.Mappers
 {
     public class GameMapper
     {

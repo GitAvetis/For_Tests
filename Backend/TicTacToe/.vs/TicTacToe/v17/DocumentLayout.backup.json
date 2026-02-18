@@ -75,8 +75,7 @@
               "RelativeToolTip": "..\\TicTacToe.Domain\\Models\\GameSessionModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:18:34.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T10:18:34.419Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Web\\Controllers\\GameController.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T08:29:06.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T08:29:06.832Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Web\\Controllers\\AuthController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAwwCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T09:58:03.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T09:58:03.923Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\MoveRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:06:42.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T15:06:42.222Z"
             },
             {
               "$type": "Document",
@@ -140,8 +136,7 @@
               "RelativeToolTip": "Di\\Configuration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T14:29:53.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T14:29:53.966Z"
             },
             {
               "$type": "Document",
@@ -153,8 +148,7 @@
               "RelativeToolTip": "..\\TicTacToe.Application\\GameMapper.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:08:16.15Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T15:08:16.15Z"
             },
             {
               "$type": "Document",
@@ -166,8 +160,7 @@
               "RelativeToolTip": "..\\TicTacToe.DataSource\\GameRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:35:25.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T15:35:25.809Z"
             },
             {
               "$type": "Document",
@@ -179,8 +172,7 @@
               "RelativeToolTip": "..\\TicTacToe.Domain\\Models\\GameFieldModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:23:46.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T10:23:46.481Z"
             },
             {
               "$type": "Document",
@@ -192,8 +184,7 @@
               "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\CreateGameRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:06:14.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T15:06:14.883Z"
             },
             {
               "$type": "Document",
@@ -205,8 +196,7 @@
               "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\GameDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:06:55.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T15:06:55.121Z"
             },
             {
               "$type": "Document",
@@ -218,8 +208,7 @@
               "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAwwBkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:18:59.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T10:18:59.283Z"
             },
             {
               "$type": "Document",
@@ -231,8 +220,7 @@
               "RelativeToolTip": "..\\TicTacToe.Application\\Interfaces\\IGameService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:11:38.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T10:11:38.575Z"
             },
             {
               "$type": "Document",
@@ -244,8 +232,7 @@
               "RelativeToolTip": "..\\TicTacToe.Application\\GameService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:11:08.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T10:11:08.466Z"
             },
             {
               "$type": "Document",
@@ -257,8 +244,7 @@
               "RelativeToolTip": "..\\TicTacToe.DataSource\\Auth\\BasicAuthenticationHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T09:44:41.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-17T09:44:41.179Z"
             }
           ]
         }

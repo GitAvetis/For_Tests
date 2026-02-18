@@ -18,7 +18,7 @@ namespace TicTacToe.Web.Controllers
 
         [AllowAnonymous]
         [HttpPost("signup")]
-        public async Task<IActionResult> SingUp([FromBody] SignUpRequest request)
+        public async Task<IActionResult> SignUp([FromBody] SignUpRequest request)
         {
             bool result = await _authService.RegisterAsync(request);
 

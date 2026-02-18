@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using TicTacToe.Application;
 using TicTacToe.Application.Interfaces;
+using TicTacToe.Application.Mappers;
 using TicTacToe.Contracts.DTO;
 using TicTacToe.Domain.Models;
 
@@ -39,16 +39,16 @@ namespace TicTacToe.Web.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetGame(Guid id)
+        [HttpGet("{gameId}")]
+        public async Task<IActionResult> GetGame(Guid gameId)
         {
-            GameSessionModel? session = await _gameService.GetGameAsync(id);
+            GameSessionModel? session = await _gameService.GetGameAsync(gameId);
             if (session == null)
                 return NotFound();
             return Ok(GameMapper.ToDto(session));
         }
 
-        [HttpPost("{id}/move")]
+        [HttpPost("{gameId}/move")]
         public async Task<IActionResult> MakeMove(Guid gameId, [FromBody] MoveRequestDto moveRequest)
         {
             Guid userId = GetCurrentUserId();

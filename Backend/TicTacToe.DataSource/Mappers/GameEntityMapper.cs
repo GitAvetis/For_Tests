@@ -14,7 +14,8 @@ namespace TicTacToe.DataSource.Mappers
                 JsonField = JsonSerializer.Serialize(game.Field.GetFieldCopy()),
                 CurrentPlayer = (int)game.CurrentPlayer,
                 Result = (int)game.Result,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
+                IsVsAi = game.IsVsAi
             };
         }
 

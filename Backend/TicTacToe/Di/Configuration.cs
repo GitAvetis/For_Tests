@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
-using TicTacToe.Application;
 using TicTacToe.Application.Interfaces;
+using TicTacToe.Application.Services;
 using TicTacToe.DataSource;
 using TicTacToe.DataSource.Auth;
 using TicTacToe.Domain;
@@ -18,6 +18,7 @@ namespace TicTacToe.Di
             builder.Services.AddScoped<IGameService, GameService>();
             builder.Services.AddScoped<IServiceDomain, GameDomainService>();
             builder.Services.AddScoped<IGameRepository, GameRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services
                 .AddControllers()

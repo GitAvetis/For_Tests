@@ -3,53 +3,61 @@
   "WorkspaceRootPath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{98630DA9-B2EB-453F-859F-EA1973976686}|..\\TicTacToe.Domain\\TicTacToe.Domain.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.domain\\models\\gamesessionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\mappers\\gameentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\entitys\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\mappers\\userentitymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\entitys\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\di\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:di\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\gamemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A682D39-5684-43FF-BD5A-E471A796B80D}|..\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.contracts\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A682D39-5684-43FF-BD5A-E471A796B80D}|..\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.contracts\\dto\\moverequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:web\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\web\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:web\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A682D39-5684-43FF-BD5A-E471A796B80D}|..\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.contracts\\dto\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7A72F52-9F70-4321-BDD1-D9D5C34CA74D}|TicTacToe.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{98630DA9-B2EB-453F-859F-EA1973976686}|..\\TicTacToe.Domain\\TicTacToe.Domain.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.domain\\models\\gamefieldmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{98630DA9-B2EB-453F-859F-EA1973976686}|..\\TicTacToe.Domain\\TicTacToe.Domain.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.domain\\models\\gamesessionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A682D39-5684-43FF-BD5A-E471A796B80D}|..\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.contracts\\dto\\creategamerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A682D39-5684-43FF-BD5A-E471A796B80D}|..\\TicTacToe.Contracts\\TicTacToe.Contracts.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.contracts\\dto\\moverequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\auth\\basicauthenticationhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAECDEA6-324B-4438-9D45-B98BEA7328A7}|..\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.datasource\\entitys\\gameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD420498-116E-4598-B6EA-25CD04DE45D8}|..\\TicTacToe.Application\\TicTacToe.Application.csproj|e:\\gitavetis\\for_tests\\backend\\tictactoe.application\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,47 +67,141 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameEntityMapper.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\Mappers\\GameEntityMapper.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAgwBoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T13:03:03.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserEntityMapper.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Mappers\\UserEntityMapper.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Mappers\\UserEntityMapper.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Mappers\\UserEntityMapper.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\Mappers\\UserEntityMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T12:54:43.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T12:53:50.501Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\UserRepository.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\UserRepository.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\UserRepository.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T12:20:51.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\GameRepository.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\GameRepository.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\GameRepository.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\GameRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T15:35:25.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameEntity.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T10:18:59.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GameSessionModel.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\Models\\GameSessionModel.cs",
               "RelativeDocumentMoniker": "..\\TicTacToe.Domain\\Models\\GameSessionModel.cs",
               "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\Models\\GameSessionModel.cs",
               "RelativeToolTip": "..\\TicTacToe.Domain\\Models\\GameSessionModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:18:34.419Z"
+              "WhenOpened": "2026-02-17T10:18:34.419Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\GameController.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\GameController.cs",
-              "RelativeToolTip": "Web\\Controllers\\GameController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAwwEAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Di\\Configuration.cs",
+              "RelativeDocumentMoniker": "Di\\Configuration.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Di\\Configuration.cs",
+              "RelativeToolTip": "Di\\Configuration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T08:29:06.832Z"
+              "WhenOpened": "2026-02-17T14:29:53.966Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\AuthController.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Web\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAwwCkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Contracts\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Contracts\\DTO\\UserDto.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Contracts\\DTO\\UserDto.cs",
+              "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T09:58:03.923Z"
+              "WhenOpened": "2026-02-18T12:27:25.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Mappers\\UserMapper.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\Mappers\\UserMapper.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Mappers\\UserMapper.cs",
+              "RelativeToolTip": "..\\TicTacToe.Application\\Mappers\\UserMapper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T12:25:29.316Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -111,11 +213,25 @@
               "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\MoveRequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:06:42.222Z"
+              "WhenOpened": "2026-02-17T15:06:42.222Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Web\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Web\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwBQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T09:58:03.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -128,43 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Configuration.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Di\\Configuration.cs",
-              "RelativeDocumentMoniker": "Di\\Configuration.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe\\Di\\Configuration.cs",
-              "RelativeToolTip": "Di\\Configuration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T14:29:53.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameMapper.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\GameMapper.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\GameMapper.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\GameMapper.cs",
-              "RelativeToolTip": "..\\TicTacToe.Application\\GameMapper.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:08:16.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameRepository.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\GameRepository.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\GameRepository.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\GameRepository.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\GameRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:35:25.809Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "GameFieldModel.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Domain\\Models\\GameFieldModel.cs",
               "RelativeDocumentMoniker": "..\\TicTacToe.Domain\\Models\\GameFieldModel.cs",
@@ -176,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "CreateGameRequestDto.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Contracts\\DTO\\CreateGameRequestDto.cs",
               "RelativeDocumentMoniker": "..\\TicTacToe.Contracts\\DTO\\CreateGameRequestDto.cs",
@@ -188,31 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GameDto.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Contracts\\DTO\\GameDto.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.Contracts\\DTO\\GameDto.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Contracts\\DTO\\GameDto.cs",
-              "RelativeToolTip": "..\\TicTacToe.Contracts\\DTO\\GameDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T15:06:55.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GameEntity.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "RelativeToolTip": "..\\TicTacToe.DataSource\\Entitys\\GameEntity.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBkAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:18:59.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "IGameService.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Interfaces\\IGameService.cs",
               "RelativeDocumentMoniker": "..\\TicTacToe.Application\\Interfaces\\IGameService.cs",
@@ -224,19 +280,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "GameService.cs",
-              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\GameService.cs",
-              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\GameService.cs",
-              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\GameService.cs",
-              "RelativeToolTip": "..\\TicTacToe.Application\\GameService.cs",
+              "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Services\\GameService.cs",
+              "RelativeDocumentMoniker": "..\\TicTacToe.Application\\Services\\GameService.cs",
+              "ToolTip": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.Application\\Services\\GameService.cs",
+              "RelativeToolTip": "..\\TicTacToe.Application\\Services\\GameService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T10:11:08.466Z"
+              "WhenOpened": "2026-02-17T10:11:08.466Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "BasicAuthenticationHandler.cs",
               "DocumentMoniker": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\Auth\\BasicAuthenticationHandler.cs",
               "RelativeDocumentMoniker": "..\\TicTacToe.DataSource\\Auth\\BasicAuthenticationHandler.cs",

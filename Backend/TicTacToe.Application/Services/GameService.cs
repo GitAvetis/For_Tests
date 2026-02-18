@@ -2,7 +2,7 @@
 using TicTacToe.Domain;
 using TicTacToe.Domain.Models;
 
-namespace TicTacToe.Application
+namespace TicTacToe.Application.Services
 {
     public class GameService : IGameService
     {

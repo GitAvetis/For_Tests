@@ -1,7 +1,7 @@
 ﻿using TicTacToe.Application.Interfaces;
 using TicTacToe.Domain.Models;
 
-namespace TicTacToe.Application
+namespace TicTacToe.Application.Services
 {
     public class AuthService : IAuthService
     {
