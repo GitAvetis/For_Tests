@@ -48,6 +48,28 @@ namespace TicTacToe.Web.Controllers
             return Ok(GameMapper.ToDto(session));
         }
 
+        [HttpGet("waiting")]
+        public async Task<IActionResult> GetWaitingGames()
+        {
+            var games = await _gameService.GetWaitingGamesAsync();
+            return Ok(games.Select(GameMapper.ToDto));
+        }
+
+        [HttpPost("{gameId}/join")]
+        public async Task<IActionResult> JoinGame(Guid gameId)
+        {
+            try
+            {
+                var userId = GetCurrentUserId();
+                var game = await _gameService.JoinGameAsync(gameId, userId);
+                return Ok(GameMapper.ToDto(game));
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("{gameId}/move")]
         public async Task<IActionResult> MakeMove(Guid gameId, [FromBody] MoveRequestDto moveRequest)
         {

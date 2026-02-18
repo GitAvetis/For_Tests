@@ -14,6 +14,7 @@
         public GameFieldModel Field { get; private set; }
         public CellState CurrentPlayer { get; private set; }
         public GameResult Result { get; private set; }
+        public GameStatus Status { get; private set; }
         public Guid? PlayerXId { get; private set; }
         public Guid? PlayerOId { get; private set; }
         public bool IsVsAi { get; private set; }
@@ -26,26 +27,41 @@
             Result = GameResult.InProgress;
             PlayerXId = creatorId;
             IsVsAi = isVsAi;
+            Status = isVsAi ? GameStatus.InProgress : GameStatus.WaitingForOpponent;
         }
 
-        private GameSessionModel(Guid id, GameFieldModel field, CellState currentPlayer, GameResult result)
+        private GameSessionModel(
+            Guid id,
+            GameFieldModel field,
+            CellState currentPlayer,
+            GameResult result,
+            GameStatus status)
         {
             Id = id;
             Field = field;
             CurrentPlayer = currentPlayer;
             Result = result;
+            Status = status;
         }
 
-        public static GameSessionModel Restore(Guid id, CellState[,] field, CellState currentPlayer, GameResult result)
+        public static GameSessionModel Restore(
+            Guid id,
+            CellState[,] field,
+            CellState currentPlayer,
+            GameResult result,
+            GameStatus status)
         {
             var gameField = new GameFieldModel(field);
-            return new GameSessionModel(id, gameField, currentPlayer, result);
+            return new GameSessionModel(id, gameField, currentPlayer, result, status);
         }
 
         public MoveStatus TryMakeMove(Guid userId, int x, int y)
         {
             if (Result != GameResult.InProgress)
                 return MoveStatus.GameIsOver;
+
+            if (!IsVsAi && PlayerOId == null)
+                return MoveStatus.GameNotStarted;
 
             if (userId != PlayerXId && userId != PlayerOId)
                 return MoveStatus.NotYourGame;
@@ -88,10 +104,12 @@
                 Result = CurrentPlayer == CellState.X
                     ? GameResult.WinX
                     : GameResult.WinO;
+                Status = GameStatus.Finished;
             }
             else if (Field.IsFieldFull())
             {
                 Result = GameResult.Draw;
+                Status = GameStatus.Finished;
             }
             else
             {
@@ -113,6 +131,7 @@
                 return false;
 
             PlayerOId = userId;
+            Status = GameStatus.InProgress;
             return true;
         }
     }

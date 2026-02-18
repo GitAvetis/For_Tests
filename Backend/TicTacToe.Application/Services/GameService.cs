@@ -51,5 +51,42 @@ namespace TicTacToe.Application.Services
 
             return moveStatus;
         }
+
+        public async Task<List<GameSessionModel>> GetWaitingGamesAsync()
+        {
+            return await _repository.GetWaitingGamesAsync();
+        }
+
+        public async Task<GameSessionModel> JoinGameAsync(Guid gameId, Guid userId)
+        {
+            var game = await _repository.GetByIdAsync(gameId);
+
+            if (game == null)
+                return null;
+
+            if (game.IsVsAi)
+            {
+                throw new InvalidOperationException("This is vs AI game");
+            }
+
+            if (game.Status != GameStatus.WaitingForOpponent)
+            {
+                throw new InvalidOperationException("Game is not waiting for Opponent");
+            }
+
+            if (game.PlayerXId == userId) throw new InvalidOperationException("Cannot join your own game");
+
+            var joined = game.Join(userId);
+            if (!joined) throw new InvalidOperationException("Failed to join game");
+
+            await _repository.UpdateAsync(game);
+            return game;
+        }
+
+        public async Task DeleteAsync(Guid gameId)
+        {
+            return await _repository.DeleteAsync(gameId);
+        }
+
     }
 }

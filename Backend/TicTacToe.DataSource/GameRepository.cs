@@ -47,6 +47,8 @@ namespace TicTacToe.DataSource
             entity.JsonField = JsonSerializer.Serialize(game.Field.GetFieldCopy());
             entity.CurrentPlayer = (int)game.CurrentPlayer;
             entity.Result = (int)game.Result;
+            entity.Status = (int)game.Status;
+            entity.PlayerOId = game.PlayerOId;
 
             await _dbContext.SaveChangesAsync();
         }
@@ -70,7 +72,28 @@ namespace TicTacToe.DataSource
 
             return entities
                 .Select(GameEntityMapper.ToGameSessionModel)
-        .       ToList();
+                .ToList();
+        }
+
+        public async Task<List<GameSessionModel>> GetWaitingGamesAsync()
+        {
+            var entities = await _dbContext.Games
+                .Where(g => g.Status == (int)GameStatus.WaitingForOpponent && !g.IsVsAi).ToListAsync();
+            return entities
+                .Select(GameEntityMapper.ToGameSessionModel)
+                .ToList();
+        }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            GameEntity entity = await _dbContext.Games.
+                FirstOrDefaultAsync(g => g.Id == id);
+
+            if (entity == null) return;
+
+            _dbContext.Games.Remove(entity);
+
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

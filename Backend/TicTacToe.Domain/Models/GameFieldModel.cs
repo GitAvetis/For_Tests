@@ -13,6 +13,7 @@
         CellIsNotEmpty,
         IncorrectCoordinates,
         StateError,
+        GameNotStarted,
         NotYourTurn,
         NotYourGame,
         GameIsOver

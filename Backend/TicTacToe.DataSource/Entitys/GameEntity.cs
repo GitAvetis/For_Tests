@@ -22,8 +22,13 @@ namespace TicTacToe.DataSource.Entitys
         [Required]
         public DateTime CreatedAt { get; set; }
 
+        [Required]
+        public int Status { get; set; }
+
+        [Required]
+        public bool IsVsAi { get; set; }
+        
         public Guid? PlayerXId { get; set; }
         public Guid? PlayerOId { get; set; }
-        public bool IsVsAi { get; set; }
     }
 }

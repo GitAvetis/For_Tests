@@ -7,5 +7,7 @@ namespace TicTacToe.Application.Interfaces
         Task AddAsync(GameSessionModel game);
         Task<GameSessionModel?> GetByIdAsync(Guid id);
         Task UpdateAsync(GameSessionModel game);
+        Task<List<GameSessionModel>> GetWaitingGamesAsync();
+        Task DeleteAsync(Guid id);
     }
 }

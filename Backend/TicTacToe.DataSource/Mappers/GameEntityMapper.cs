@@ -15,7 +15,8 @@ namespace TicTacToe.DataSource.Mappers
                 CurrentPlayer = (int)game.CurrentPlayer,
                 Result = (int)game.Result,
                 CreatedAt = DateTime.UtcNow,
-                IsVsAi = game.IsVsAi
+                IsVsAi = game.IsVsAi,
+                Status = (int)game.Status
             };
         }
 
@@ -24,7 +25,8 @@ namespace TicTacToe.DataSource.Mappers
             CellState[,] field = JsonSerializer.Deserialize<CellState[,]>(entity.JsonField);
             CellState currentPlayer = (CellState)entity.CurrentPlayer;
             GameResult result = (GameResult)entity.Result;
-            return GameSessionModel.Restore(entity.Id, field, currentPlayer, result);
+            GameStatus status = (GameStatus)entity.Status;
+            return GameSessionModel.Restore(entity.Id, field, currentPlayer, result, status);
         }
     }
 }
