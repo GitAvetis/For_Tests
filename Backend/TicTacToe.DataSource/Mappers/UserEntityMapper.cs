@@ -17,7 +17,7 @@ namespace TicTacToe.DataSource.Mappers
 
         public static UserModel ToUserModel(UserEntity entity)
         {
-            return UserModel.Create(entity.Id, entity.Login, entity.Password);
+            return UserModel.Restore(entity.Id, entity.Login, entity.Password);
         }
     }
 }

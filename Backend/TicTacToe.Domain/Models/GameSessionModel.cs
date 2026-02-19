@@ -35,13 +35,19 @@
             GameFieldModel field,
             CellState currentPlayer,
             GameResult result,
-            GameStatus status)
+            GameStatus status,
+            Guid? playerXId,
+            Guid? playerOId,
+            bool isVsAi)
         {
             Id = id;
             Field = field;
             CurrentPlayer = currentPlayer;
             Result = result;
             Status = status;
+            PlayerXId = playerXId;
+            PlayerOId = playerOId;
+            IsVsAi = isVsAi;
         }
 
         public static GameSessionModel Restore(
@@ -49,10 +55,21 @@
             CellState[,] field,
             CellState currentPlayer,
             GameResult result,
-            GameStatus status)
+            GameStatus status,
+            Guid? playerXId,
+            Guid? playerOId,
+            bool isVsAi)
         {
             var gameField = new GameFieldModel(field);
-            return new GameSessionModel(id, gameField, currentPlayer, result, status);
+            return new GameSessionModel(
+                id,
+                gameField,
+                currentPlayer,
+                result,
+                status,
+                playerXId,
+                playerOId,
+                isVsAi);
         }
 
         public MoveStatus TryMakeMove(Guid userId, int x, int y)

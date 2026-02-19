@@ -44,7 +44,7 @@ namespace TicTacToe.DataSource
             if (entity == null)
                 return;
 
-            entity.JsonField = JsonSerializer.Serialize(game.Field.GetFieldCopy());
+            entity.JsonField = GameEntityMapper.SerializeField(game.Field.GetFieldCopy());
             entity.CurrentPlayer = (int)game.CurrentPlayer;
             entity.Result = (int)game.Result;
             entity.Status = (int)game.Status;

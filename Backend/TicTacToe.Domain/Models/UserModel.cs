@@ -13,6 +13,11 @@
             PasswordHash = passwordHash;
         }
 
+        public static UserModel Restore(Guid id, string login, string passwordHash)
+        {
+            return new UserModel(id, login, passwordHash);
+        }
+
         public static UserModel Create(Guid id, string login, string password)
         {
             var passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
