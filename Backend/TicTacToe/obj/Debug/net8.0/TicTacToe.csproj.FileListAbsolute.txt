@@ -256,3 +256,8 @@ E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\ru\Microsoft.CodeAnaly
 E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\obj\Debug\net8.0\TicTacToe.MvcApplicationPartsAssemblyInfo.cs

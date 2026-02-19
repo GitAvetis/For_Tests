@@ -95,5 +95,19 @@ namespace TicTacToe.Web.Controllers
 
             return Ok(gameDto);
         }
+
+        [HttpDelete("{gameId}")]
+        public async Task<IActionResult> DeleteGame(Guid gameId)
+        {
+            var game = await _gameService.GetGameAsync(gameId);
+            if (game == null) return NotFound();
+
+            //// Дополнительно можно проверить, что пользователь имеет право удалять игру (например, он создатель)
+            //var userId = GetCurrentUserId();
+            //if (game.PlayerXId != userId) return Forbid();
+
+            await _gameService.DeleteAsync(gameId);
+            return NoContent(); // 204 No Content — успешное удаление
+        }
     }
 }

@@ -85,7 +85,7 @@ namespace TicTacToe.Application.Services
 
         public async Task DeleteAsync(Guid gameId)
         {
-            return await _repository.DeleteAsync(gameId);
+            await _repository.DeleteAsync(gameId);
         }
 
     }

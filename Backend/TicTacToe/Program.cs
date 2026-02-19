@@ -8,8 +8,9 @@ namespace TicTacToe
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddRazorPages();
+            //// Add services to the container.
+            //builder.Services.AddRazorPages();
+
 
             Configuration.ConfigureServices(builder);
 
@@ -25,6 +26,12 @@ namespace TicTacToe
                 app.UseHsts();
             }
 
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -34,7 +41,7 @@ namespace TicTacToe
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
+            //app.MapRazorPages();
 
             app.MapControllers();
 
