@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace TicTacToe.DataSource.Entitys
 {
     [Table("users")]
-
     public class UserEntity
     {
         [Key]

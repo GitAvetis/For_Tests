@@ -66,7 +66,8 @@ namespace TicTacToe.DataSource.Mappers
                 status, 
                 entity.PlayerXId,
                 entity.PlayerOId,
-                entity.IsVsAi);
+                entity.IsVsAi,
+                entity.CreatedAt);
         }
     }
 }

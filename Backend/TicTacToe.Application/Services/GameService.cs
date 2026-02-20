@@ -88,5 +88,14 @@ namespace TicTacToe.Application.Services
             await _repository.DeleteAsync(gameId);
         }
 
+        public async Task<List<GameSessionModel>> GetLedaderBoarByIdAsync()
+        {
+
+        }
+
+        public async Task<List<GameSessionModel>> FinishedGamesByUserIdAsync(Guid userId)
+        {
+            return await _repository.GetFinishedGamesAsync(userId);
+        }
     }
 }

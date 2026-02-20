@@ -33,3 +33,4 @@ E:\GitAvetis\For_Tests\Backend\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domai
 E:\GitAvetis\For_Tests\Backend\TicTacToe.Domain\obj\Debug\net8.0\refint\TicTacToe.Domain.dll
 E:\GitAvetis\For_Tests\Backend\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.pdb
 E:\GitAvetis\For_Tests\Backend\TicTacToe.Domain\obj\Debug\net8.0\ref\TicTacToe.Domain.dll
+C:\Users\pearlibl\school21\Backend\AP1_CS_T04B.ID_1421421-1\src\TicTacToe.Domain\obj\Debug\net8.0\TicTacToe.Domain.csproj.AssemblyReference.cache

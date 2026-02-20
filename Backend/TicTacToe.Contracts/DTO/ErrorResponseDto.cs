@@ -1,7 +1,4 @@
-﻿using System.Collections.Concurrent;
-using TicTacToe.Domain.Models;
-
-namespace TicTacToe.Contracts.DTO
+﻿namespace TicTacToe.Contracts.DTO
 {
     public class ErrorResponseDto
     {

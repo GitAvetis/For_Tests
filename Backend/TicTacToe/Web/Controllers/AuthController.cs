@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TicTacToe.Application;
 using TicTacToe.Application.Interfaces;
 
@@ -34,8 +35,8 @@ namespace TicTacToe.Web.Controllers
         {
             // В Basic Auth логин происходит автоматически через header.
             // Если мы сюда дошли — значит авторизация прошла.
-
-            return Ok("Authorized");
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            return Ok(new { UserId = userId });
         }
     }
 }

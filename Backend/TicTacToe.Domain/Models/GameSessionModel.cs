@@ -18,6 +18,7 @@
         public Guid? PlayerXId { get; private set; }
         public Guid? PlayerOId { get; private set; }
         public bool IsVsAi { get; private set; }
+        public DateTime CreatedAt { get; private set; }
 
         public GameSessionModel(int dimension, Guid id, Guid creatorId, bool isVsAi)
         {
@@ -28,6 +29,7 @@
             PlayerXId = creatorId;
             IsVsAi = isVsAi;
             Status = isVsAi ? GameStatus.InProgress : GameStatus.WaitingForOpponent;
+            CreatedAt = DateTime.UtcNow;
         }
 
         private GameSessionModel(
@@ -38,7 +40,9 @@
             GameStatus status,
             Guid? playerXId,
             Guid? playerOId,
-            bool isVsAi)
+            bool isVsAi,
+            DateTime createdAt)
+
         {
             Id = id;
             Field = field;
@@ -48,6 +52,7 @@
             PlayerXId = playerXId;
             PlayerOId = playerOId;
             IsVsAi = isVsAi;
+            CreatedAt = createdAt;
         }
 
         public static GameSessionModel Restore(
@@ -58,7 +63,8 @@
             GameStatus status,
             Guid? playerXId,
             Guid? playerOId,
-            bool isVsAi)
+            bool isVsAi,
+            DateTime CreatedAt)
         {
             var gameField = new GameFieldModel(field);
             return new GameSessionModel(
@@ -69,7 +75,8 @@
                 status,
                 playerXId,
                 playerOId,
-                isVsAi);
+                isVsAi,
+                CreatedAt);
         }
 
         public MoveStatus TryMakeMove(Guid userId, int x, int y)
