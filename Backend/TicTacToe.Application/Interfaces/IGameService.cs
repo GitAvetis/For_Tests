@@ -1,4 +1,5 @@
-﻿using TicTacToe.Domain.Models;
+﻿using TicTacToe.Contracts.DTO;
+using TicTacToe.Domain.Models;
 
 namespace TicTacToe.Application.Interfaces
 {
@@ -11,5 +12,6 @@ namespace TicTacToe.Application.Interfaces
         Task DeleteAsync(Guid id);
         Task<GameSessionModel> JoinGameAsync(Guid gameId, Guid userId);
         Task<GameSessionModel> FinishedGamesByUserIdAsync(Guid userId);
+        Task<List<LeaderboardDto>> GetLeaderboardAsync(int n);
     }
 }

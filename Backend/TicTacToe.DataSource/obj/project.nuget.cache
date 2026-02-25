@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "i70Y6n+siIE=",
+  "dgSpecHash": "KzSpBMbq1SM=",
   "success": true,
   "projectFilePath": "E:\\GitAvetis\\For_Tests\\Backend\\TicTacToe.DataSource\\TicTacToe.DataSource.csproj",
   "expectedPackageFiles": [
@@ -46,6 +46,10 @@
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.extensions.webencoders\\8.0.11\\microsoft.extensions.webencoders.8.0.11.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.11.0\\microsoft.identitymodel.abstractions.8.11.0.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.11.0\\microsoft.identitymodel.jsonwebtokens.8.11.0.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.identitymodel.logging\\8.11.0\\microsoft.identitymodel.logging.8.11.0.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.11.0\\microsoft.identitymodel.tokens.8.11.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.net.http.headers\\2.3.0\\microsoft.net.http.headers.2.3.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
@@ -61,6 +65,7 @@
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.composition.hosting\\6.0.0\\system.composition.hosting.6.0.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.composition.runtime\\6.0.0\\system.composition.runtime.6.0.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.composition.typedparts\\6.0.0\\system.composition.typedparts.6.0.0.nupkg.sha512",
+    "C:\\Users\\pearlibl\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.11.0\\system.identitymodel.tokens.jwt.8.11.0.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.reflection.metadata\\6.0.1\\system.reflection.metadata.6.0.1.nupkg.sha512",
     "C:\\Users\\pearlibl\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

@@ -110,7 +110,7 @@ namespace TicTacToe.DataSource
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<LeaderboardDto>> GetLedaderBoardAsync(int n)
+        public async Task<List<LeaderboardDto>> GetLeaderBoardAsync(int n)
         {
             var xStats = _dbContext.Games
                 .Where(g => g.Status == (int)GameStatus.Finished && !g.IsVsAi && g.PlayerXId != null)

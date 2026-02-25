@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using System.Text;
 using System.Text.Json.Serialization;
 using TicTacToe.Application.Interfaces;
 using TicTacToe.Application.Services;
 using TicTacToe.DataSource;
-using TicTacToe.DataSource.Auth;
 using TicTacToe.Domain;
 
 namespace TicTacToe.Di
@@ -17,13 +16,14 @@ namespace TicTacToe.Di
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
-                c.AddSecurityDefinition("basic", new OpenApiSecurityScheme
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
                     Type = SecuritySchemeType.Http,
-                    Scheme = "basic",
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "Basic Authorization header using the Basic scheme."
+                    Description = "Enter 'Bearer' [space] and then your token"
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
@@ -33,7 +33,7 @@ namespace TicTacToe.Di
                             Reference = new OpenApiReference
                             {
                                 Type = ReferenceType.SecurityScheme,
-                                Id = "basic"
+                                Id = "Bearer"
                             }
                         },
                         new string[] {}
@@ -55,11 +55,28 @@ namespace TicTacToe.Di
                     options.JsonSerializerOptions.Converters
                     .Add(new JsonStringEnumConverter());
                 });
-            builder.Services.AddAuthentication("Basic")
-                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);
-            builder.Services.AddAuthorization();
+            //builder.Services.AddAuthentication("Basic")
+            //    .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("Basic", null);
+            //builder.Services.AddAuthorization();
 
+            builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("Jwt"));
+            builder.Services.AddScoped<JwtProvider>();
 
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+               .AddJwtBearer(options =>
+               {
+                   var jwtOptions = builder.Configuration.GetSection("Jwt").Get<JwtOptions>();
+                   options.TokenValidationParameters = new TokenValidationParameters
+                   {
+                       ValidateIssuer = true,
+                       ValidateAudience = true,
+                       ValidateLifetime = true,
+                       ValidateIssuerSigningKey = true,
+                       ValidIssuer = jwtOptions.Issuer,
+                       ValidAudience = jwtOptions.Audience,
+                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey))
+                   };
+               });
         }
     }
 

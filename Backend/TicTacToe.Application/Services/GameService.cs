@@ -1,4 +1,5 @@
 ﻿using TicTacToe.Application.Interfaces;
+using TicTacToe.Contracts.DTO;
 using TicTacToe.Domain;
 using TicTacToe.Domain.Models;
 
@@ -88,9 +89,9 @@ namespace TicTacToe.Application.Services
             await _repository.DeleteAsync(gameId);
         }
 
-        public async Task<List<GameSessionModel>> GetLedaderBoarByIdAsync()
+        public async Task<List<LeaderboardDto>> GetLeaderboardAsync(int n)
         {
-
+            return await _repository.GetLeaderBoardAsync(n);
         }
 
         public async Task<List<GameSessionModel>> FinishedGamesByUserIdAsync(Guid userId)

@@ -1,4 +1,7 @@
-﻿using TicTacToe.Application.Interfaces;
+﻿using System.Security.Claims;
+using TicTacToe.Application.Interfaces;
+using TicTacToe.Application.Jwt;
+using TicTacToe.Contracts.DTO;
 using TicTacToe.Domain.Models;
 
 namespace TicTacToe.Application.Services
@@ -6,10 +9,12 @@ namespace TicTacToe.Application.Services
     public class AuthService : IAuthService
     {
         private readonly IUserRepository _userRepository;
+        private readonly JwtProvider _jwtProvider;
 
-        public AuthService(IUserRepository userRepository)
+        public AuthService(IUserRepository userRepository, JwtProvider jwtProvider)
         {
             _userRepository = userRepository;
+            _jwtProvider = jwtProvider;
         }
 
         public async Task<bool> RegisterAsync(SignUpRequest request)
@@ -24,22 +29,67 @@ namespace TicTacToe.Application.Services
             return true;
         }
 
-        public async Task<Guid?> AuthenticateAsync(string login, string password)
+        public async Task<JwtResponse> LoginAsync(JwtRequest request)
         {
-            var user = await _userRepository.GetByLoginAsync(login);
+            var user = await _userRepository.GetByLoginAsync(request.Login);
             if (user == null)
             {
-                return null;
+                throw new UnauthorizedAccessException("Invalid login");
             }
+            else if (user.ValidatePassword(request.Password) == false)
+                throw new UnauthorizedAccessException("Invalid password");
 
-            if (user.ValidatePassword(password))
+            var accessToken = _jwtProvider.GenerateAccessToken(user);
+            var refreshToken = _jwtProvider.GenerateRefreshToken(user);
+
+            return new JwtResponse
             {
-                return user.Id;
-            }
-            else
+                AccessToken = accessToken,
+                RefreshToken = refreshToken
+            };
+        }
+
+        public async Task<JwtResponse> RefreshAccessTokenAsync(string refreshToken)
+        {
+            var principal = _jwtProvider.GetPrincipalFromToken(refreshToken) ??
+                throw new UnauthorizedAccessException("Invalid refresh token");
+
+            var userId = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value ??
+                throw new UnauthorizedAccessException("Invalid token claims");
+
+            var user = await _userRepository.GetByIdAsync(Guid.Parse(userId)) ??
+                throw new UnauthorizedAccessException("User not found");
+
+            var newAccessToken = _jwtProvider.GenerateAccessToken(user);
+
+            return new JwtResponse
             {
-                return null;
-            }
+                AccessToken = newAccessToken,
+                RefreshToken = refreshToken
+            };
+
+        }
+
+        public async Task<JwtResponse> RefreshRefreshTokenAsync(string refreshToken)
+        {
+            var principal = _jwtProvider.GetPrincipalFromToken(refreshToken) ??
+                throw new UnauthorizedAccessException("Invalid refresh token");
+
+            var userId = principal.FindFirst(ClaimTypes.NameIdentifier)?.Value ??
+                throw new UnauthorizedAccessException("Invalid token claims");
+
+            var user = await _userRepository.GetByIdAsync(Guid.Parse(userId)) ??
+                throw new UnauthorizedAccessException("User not found");
+
+            var newAccessToken = _jwtProvider.GenerateAccessToken(user);
+            var newRefreshToken = _jwtProvider.GenerateRefreshToken(user);
+
+            return new JwtResponse
+            {
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken
+            };
+
         }
 
     }
