@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using TicTacToe.Application;
 using TicTacToe.Application.Interfaces;
+using TicTacToe.Contracts.DTO;
 
 namespace TicTacToe.Web.Controllers
 {
@@ -31,12 +31,47 @@ namespace TicTacToe.Web.Controllers
 
         [AllowAnonymous]
         [HttpPost("login")]
-        public IActionResult Login()
+        public async Task<IActionResult> Login([FromBody] JwtRequest request)
         {
-            // В Basic Auth логин происходит автоматически через header.
-            // Если мы сюда дошли — значит авторизация прошла.
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            return Ok(new { UserId = userId });
+            try
+            {
+                var response = await _authService.LoginAsync(request);
+                return Ok(response);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPost("refresh-access")]
+        public async Task<IActionResult> Refresh([FromBody] RefreshJwtRequest request)
+        {
+            try
+            {
+                var response = await _authService.RefreshAccessTokenAsync(request.RefreshToken);
+                return Ok(response);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+        }
+
+        [AllowAnonymous]
+        [HttpPost("refresh-refresh")]
+        public async Task<IActionResult> RefreshRefresh([FromBody] RefreshJwtRequest request)
+        {
+            try
+            {
+                var response = await _authService.RefreshRefreshTokenAsync(request.RefreshToken);
+                return Ok(response);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(ex.Message);
+            }
         }
     }
 }

@@ -127,8 +127,8 @@ namespace TicTacToe.DataSource
                 .Select(g => new
                 {
                     UserId = g.PlayerOId.Value,
-                    IsWin = g.Result == (int)GameResult.WinX ? 1 : 0,
-                    IsLoss = g.Result == (int)GameResult.WinO ? 1 : 0,
+                    IsWin = g.Result == (int)GameResult.WinO ? 1 : 0,
+                    IsLoss = g.Result == (int)GameResult.WinX ? 1 : 0,
                     IsDraw = g.Result == (int)GameResult.Draw ? 1 : 0
                 });
 

@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.core\\mazegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|solutionrelative:maze.core\\mazegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|solutionrelative:maze.gui\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.core\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|solutionrelative:maze.core\\maze.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.core\\mazesolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|solutionrelative:maze.core\\mazesolver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.gui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|solutionrelative:maze.gui\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.core\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8425586D-D946-4F30-9689-798E35BB28A0}|Maze.Core\\Core.csproj|solutionrelative:maze.core\\point.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBB675A-47F1-45A4-B051-39313F5481D5}|Maze.Infrasructure\\Infrasructure.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.infrasructure\\mazefileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DBB675A-47F1-45A4-B051-39313F5481D5}|Maze.Infrasructure\\Infrasructure.csproj|solutionrelative:maze.infrasructure\\mazefileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.gui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|solutionrelative:maze.gui\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.gui\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{57B8359F-75D6-45CB-B9CE-5B4CB7E3ED9D}|Maze.Gui\\Gui.csproj|solutionrelative:maze.gui\\gui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DBB675A-47F1-45A4-B051-39313F5481D5}|Maze.Infrasructure\\Infrasructure.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.infrasructure\\infrasructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5DBB675A-47F1-45A4-B051-39313F5481D5}|Maze.Infrasructure\\Infrasructure.csproj|solutionrelative:maze.infrasructure\\infrasructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5E0CFD9-8D03-407C-BF32-037D0898EFD8}|Maze.Tests\\Tests.csproj|c:\\users\\pearlibl\\school21\\a1_maze_c_sharp.id_1391888-team_tl_branstod.f3daf4f3_5f29_4581-1\\src\\maze\\maze.tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E5E0CFD9-8D03-407C-BF32-037D0898EFD8}|Maze.Tests\\Tests.csproj|solutionrelative:maze.tests\\tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Maze.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Maze.cs",
+              "RelativeDocumentMoniker": "Maze.Core\\Maze.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Maze.cs",
+              "RelativeToolTip": "Maze.Core\\Maze.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:25:32.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Point.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Point.cs",
+              "RelativeDocumentMoniker": "Maze.Core\\Point.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Point.cs",
+              "RelativeToolTip": "Maze.Core\\Point.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:25:27.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MazeSolver.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\MazeSolver.cs",
+              "RelativeDocumentMoniker": "Maze.Core\\MazeSolver.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\MazeSolver.cs",
+              "RelativeToolTip": "Maze.Core\\MazeSolver.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:25:21.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MazeFileService.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\MazeFileService.cs",
+              "RelativeDocumentMoniker": "Maze.Infrasructure\\MazeFileService.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\MazeFileService.cs",
+              "RelativeToolTip": "Maze.Infrasructure\\MazeFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:25:18.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Maze.Gui\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\MainWindow.xaml",
+              "RelativeToolTip": "Maze.Gui\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-12T14:24:46.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MazeGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\MazeGenerator.cs",
+              "RelativeDocumentMoniker": "Maze.Core\\MazeGenerator.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\MazeGenerator.cs",
+              "RelativeToolTip": "Maze.Core\\MazeGenerator.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAAAIMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:12:41.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\App.xaml",
+              "RelativeDocumentMoniker": "Maze.Gui\\App.xaml",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\App.xaml",
+              "RelativeToolTip": "Maze.Gui\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-12T14:26:10.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Maze.Gui\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\AssemblyInfo.cs",
+              "RelativeToolTip": "Maze.Gui\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T14:24:42.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Gui.csproj",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\Gui.csproj",
+              "RelativeDocumentMoniker": "Maze.Gui\\Gui.csproj",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\Gui.csproj",
+              "RelativeToolTip": "Maze.Gui\\Gui.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-12T13:44:54.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Tests\\Tests.csproj",
+              "RelativeDocumentMoniker": "Maze.Tests\\Tests.csproj",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Tests\\Tests.csproj",
+              "RelativeToolTip": "Maze.Tests\\Tests.csproj",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-12T13:41:40.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Infrasructure.csproj",
+              "DocumentMoniker": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\Infrasructure.csproj",
+              "RelativeDocumentMoniker": "Maze.Infrasructure\\Infrasructure.csproj",
+              "ToolTip": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\Infrasructure.csproj",
+              "RelativeToolTip": "Maze.Infrasructure\\Infrasructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-12T13:40:16.433Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

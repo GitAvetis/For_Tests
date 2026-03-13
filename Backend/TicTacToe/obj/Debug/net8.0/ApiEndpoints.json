@@ -6,7 +6,45 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TicTacToe.Contracts.DTO.JwtRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicTacToe.Web.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "api/auth/refresh-access",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TicTacToe.Contracts.DTO.RefreshJwtRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicTacToe.Web.Controllers.AuthController",
+    "Method": "RefreshRefresh",
+    "RelativePath": "api/auth/refresh-refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TicTacToe.Contracts.DTO.RefreshJwtRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -112,6 +150,32 @@
   },
   {
     "ContainingType": "TicTacToe.Web.Controllers.GameController",
+    "Method": "GetGameHistory",
+    "RelativePath": "api/game/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicTacToe.Web.Controllers.GameController",
+    "Method": "GetLeaderboard",
+    "RelativePath": "api/game/leaderboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "top",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicTacToe.Web.Controllers.GameController",
     "Method": "GetWaitingGames",
     "RelativePath": "api/game/waiting",
     "HttpMethod": "GET",
@@ -134,6 +198,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TicTacToe.Web.Controllers.UsersController",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

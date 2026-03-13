@@ -1,0 +1,127 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
+      "Infrasructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrasructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrasructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Maze.Core/Core.csproj",
+      "msbuildProject": "../Maze.Core/Core.csproj"
+    },
+    "Infrasructure/1.0.0": {
+      "type": "project",
+      "path": "../Maze.Infrasructure/Infrasructure.csproj",
+      "msbuildProject": "../Maze.Infrasructure/Infrasructure.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Core >= 1.0.0",
+      "Infrasructure >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\pearlibl\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\Gui.csproj",
+      "projectName": "Gui",
+      "projectPath": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\Gui.csproj",
+      "packagesPath": "C:\\Users\\pearlibl\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Gui\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\pearlibl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {
+            "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Core\\Core.csproj"
+            },
+            "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\Infrasructure.csproj": {
+              "projectPath": "C:\\Users\\pearlibl\\school21\\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\\src\\Maze\\Maze.Infrasructure\\Infrasructure.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

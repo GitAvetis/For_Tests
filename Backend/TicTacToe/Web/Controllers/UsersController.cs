@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TicTacToe.Application.Interfaces;
 using TicTacToe.Application.Mappers;
 
@@ -12,7 +13,8 @@ namespace TicTacToe.Web.Controllers
     {
         private readonly IUserRepository _userRepository;
 
-        public UsersController(IUserRepository userRepository) {
+        public UsersController(IUserRepository userRepository)
+        {
             _userRepository = userRepository;
         }
 
@@ -20,11 +22,23 @@ namespace TicTacToe.Web.Controllers
         public async Task<IActionResult> GetUsers(Guid id)
         {
             var user = await _userRepository.GetByIdAsync(id);
-            if(user == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
+            return Ok(UserMapper.ToDto(user));
+        }
+
+        [HttpGet("me")]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+                return Unauthorized();
+            var user = await _userRepository.GetByIdAsync(Guid.Parse(userId));
+            if (user == null)
+                return NotFound();
             return Ok(UserMapper.ToDto(user));
         }
     }

@@ -341,3 +341,11 @@ C:\Users\pearlibl\school21\Backend\AP1_CS_T04B.ID_1421421-1\src\TicTacToe\bin\De
 C:\Users\pearlibl\school21\Backend\AP1_CS_T04B.ID_1421421-1\src\TicTacToe\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\pearlibl\school21\Backend\AP1_CS_T04B.ID_1421421-1\src\TicTacToe\obj\Debug\net8.0\TicTacToe.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\pearlibl\school21\Backend\AP1_CS_T04B.ID_1421421-1\src\TicTacToe\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+E:\GitAvetis\For_Tests\Backend\TicTacToe\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -112,5 +112,13 @@ namespace TicTacToe.Web.Controllers
             var result = await _gameService.GetLeaderboardAsync(top);
             return Ok(result);
         }
+
+        [HttpGet("history")]
+        public async Task<IActionResult> GetGameHistory()
+        {
+            var userId = GetCurrentUserId();
+            var games = await _gameService.FinishedGamesByUserIdAsync(userId);
+            return Ok(games.Select(GameMapper.ToDto));
+        }
     }
 }

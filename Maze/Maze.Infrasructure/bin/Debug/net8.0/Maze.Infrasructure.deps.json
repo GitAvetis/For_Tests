@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Maze.Infrasructure/1.0.0": {
+        "runtime": {
+          "Maze.Infrasructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Maze.Infrasructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

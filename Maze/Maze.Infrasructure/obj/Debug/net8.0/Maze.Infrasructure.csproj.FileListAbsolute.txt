@@ -1,0 +1,12 @@
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\bin\Debug\net8.0\Maze.Infrasructure.deps.json
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\bin\Debug\net8.0\Maze.Infrasructure.dll
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\bin\Debug\net8.0\Maze.Infrasructure.pdb
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.AssemblyInfoInputs.cache
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.AssemblyInfo.cs
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.csproj.CoreCompileInputs.cache
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.dll
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\refint\Maze.Infrasructure.dll
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.pdb
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\ref\Maze.Infrasructure.dll
+C:\Users\Regina\Desktop\SCHOOL21\A1_Maze_C_sharp.ID_1391888-Team_TL_branstod.f3daf4f3_5f29_4581-1\src\Maze\Maze.Infrasructure\obj\Debug\net8.0\Maze.Infrasructure.csproj.AssemblyReference.cache

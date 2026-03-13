@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
 using TicTacToe.Application.Interfaces;
+using TicTacToe.Application.Jwt;
 using TicTacToe.Application.Services;
 using TicTacToe.DataSource;
 using TicTacToe.Domain;
