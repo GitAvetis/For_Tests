@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="Algorithms/Algorithms.csproj" />
+    <Project Path="Application/Application.csproj" />
+    <Project Path="ConsoleUI/ConsoleUI.csproj" />
+    <Project Path="Containers/Containers.csproj" />
+    <Project Path="Graph/Graph.csproj" />
+    <Project Path="Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="UnitTests/UnitTests.csproj" />
+  </Folder>
+</Solution>
